@@ -69,6 +69,10 @@ border-bottom:1px solid var(--accent-light);
 .focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
 .focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
 
+/* Изображения недель */
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden;margin:-30px -20px 30px -20px}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+
 /* Недели */
 .week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
 .week-subtitle{font-size:12px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
@@ -127,6 +131,7 @@ body{background:#fff!important}
 .day-part{page-break-inside:avoid}
 .cover{page-break-after:always}
 .letter{page-break-before:always}
+.week-image{display:none}
 }
 </style>
 </head>
@@ -220,6 +225,9 @@ body{background:#fff!important}
 
 <!-- Неделя 1 -->
 <div class="section" id="week-1">
+<div class="week-image">
+<img src="../../../Image/01_image.jpeg" alt="Подготовка к путешествию — фото-обложка недели">
+</div>
 <div class="week-header">
 <div class="week-subtitle">Первая неделя • 1-10 сентября</div>
 <div class="week-title">Подготовка к путешествию</div>
@@ -325,6 +333,9 @@ body{background:#fff!important}
 
 <!-- Неделя 2 -->
 <div class="section" id="week-2">
+<div class="week-image">
+<img src="../../../Image/02_image.jpeg" alt="Путешествие: начало — фото-обложка недели">
+</div>
 <div class="week-header">
 <div class="week-subtitle">Вторая неделя • 11-17 сентября</div>
 <div class="week-title">Путешествие: начало</div>
@@ -417,6 +428,9 @@ body{background:#fff!important}
 
 <!-- Неделя 3 -->
 <div class="section" id="week-3">
+<div class="week-image">
+<img src="../../../Image/03_image.jpeg" alt="Путешествие: продолжение — фото-обложка недели">
+</div>
 <div class="week-header">
 <div class="week-subtitle">Третья неделя • 18-26 сентября</div>
 <div class="week-title">Путешествие: продолжение</div>
