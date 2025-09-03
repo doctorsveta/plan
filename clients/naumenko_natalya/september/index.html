@@ -3,1186 +3,671 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>План восстановления • Сентябрь 2025</title>
+<title>План восстановления — Наталья • Сентябрь 2025</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
-
-:root {
-  --primary-warm: #6b5d56;
-  --secondary-warm: #8b7468;
-  --accent-soft: #d4b5a0;
-  --accent-light: #f0e8e0;
-  --bg-cream: #fdfcfb;
-  --bg-soft: #faf8f5;
-  --text-main: #3a3a3a;
-  --text-soft: #8a756b;
-}
-
-body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  line-height: 1.7;
-  color: var(--text-main);
-  background: white;
-  font-size: 17px;
-  font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
-.document {
-  width: 100%;
-  max-width: 595px;
-  margin: 0 auto;
-  background: white;
-}
-
-/* === НАВИГАЦИЯ === */
-.nav-header {
-  position: sticky;
-  top: 0;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--accent-light);
-  z-index: 10001;
-}
-
-.nav-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  cursor: pointer;
-  width: 100%;
-  background: transparent;
-  border: 0;
-}
-
-.nav-toggle:focus-visible {
-  outline: 2px solid var(--accent-soft);
-}
-
-.nav-title {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  color: var(--secondary-warm);
-  text-transform: uppercase;
-}
-
-.nav-icon {
-  width: 24px;
-  height: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-.nav-icon span {
-  width: 100%;
-  height: 2px;
-  background: var(--secondary-warm);
-  transition: 0.3s;
-}
-
-.nav-icon.active span:first-child {
-  transform: rotate(45deg) translate(3px, 3px);
-}
-
-.nav-icon.active span:last-child {
-  transform: rotate(-45deg) translate(3px, -3px);
-}
-
-.nav-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background: #fff;
-  border-bottom: 1px solid var(--accent-light);
-}
-
-.nav-content.active {
-  max-height: 60vh;
-  overflow-y: auto;
-}
-
-.nav-list {
-  padding: 10px 0;
-}
-
-.nav-section-title {
-  padding: 8px 20px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--text-soft);
-  background: var(--bg-soft);
-  border-top: 1px solid var(--accent-light);
-  border-bottom: 1px solid var(--accent-light);
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  padding: 14px 20px;
-  cursor: pointer;
-  transition: 0.2s;
-  border-bottom: 1px solid rgba(240, 232, 224, 0.5);
-}
-
-.nav-item:last-child {
-  border-bottom: none;
-}
-
-.nav-item:active {
-  background: var(--bg-soft);
-}
-
-.nav-item-name {
-  flex: 1;
-  font-size: 15px;
-  color: var(--text-main);
-  font-weight: 400;
-}
-
-.nav-badge {
-  font-size: 11px;
-  padding: 3px 10px;
-  border-radius: 12px;
-  background: var(--accent-light);
-  color: var(--secondary-warm);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-}
-
-/* === ОБЛОЖКА === */
-.cover {
-  padding: 50px 30px;
-  text-align: center;
-  background: linear-gradient(180deg, #faf8f5 0%, #fff 100%);
-  border-bottom: 1px solid #f0e8e0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.brand-logo {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 16px;
-  background: linear-gradient(135deg, #d4b5a0 0%, #c9a188 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: white;
-  box-shadow: 0 6px 16px rgba(212, 181, 160, 0.25);
-}
-
-.brand-name {
-  font-family: 'Comfortaa', cursive;
-  font-size: 20px;
-  font-weight: 500;
-  color: #8b7468;
-  margin-bottom: 60px;
-  letter-spacing: 0.3px;
-}
-
-.client-name {
-  font-family: 'Comfortaa', cursive;
-  font-size: 42px;
-  font-weight: 600;
-  color: #6b5d56;
-  margin-bottom: 40px;
-  line-height: 1.1;
-}
-
-.plan-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  color: #6b5d56;
-  line-height: 1.3;
-  margin-bottom: 12px;
-}
-
-.plan-period {
-  font-family: 'Inter', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: #c5b8b0;
-  letter-spacing: 0.5px;
-}
-
-/* === СТРАНИЦЫ === */
-.page {
-  padding: 40px 30px;
-  border-bottom: 1px solid #f5f0eb;
-  page-break-after: always;
-  min-height: 100vh;
-}
-
-.page-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 26px;
-  font-weight: 600;
-  color: #6b5d56;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.page-subtitle {
-  font-size: 13px;
-  color: #a89a91;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 35px;
-  font-weight: 300;
-}
-
-/* === ФОКУСЫ === */
-.focus-list {
-  margin-bottom: 30px;
-}
-
-.focus-item {
-  background: #fdfcfa;
-  border-radius: 16px;
-  padding: 20px 22px;
-  margin-bottom: 14px;
-  border-left: 3px solid #d4b5a0;
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  transition: all 0.3s ease;
-}
-
-.focus-item:hover {
-  transform: translateX(2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.focus-icon {
-  width: 40px;
-  height: 40px;
-  background: #edccbc;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.focus-text {
-  font-size: 16px;
-  line-height: 1.65;
-  color: #5d5d5d;
-  flex: 1;
-}
-
-.focus-text strong {
-  color: #6b5d56;
-  font-weight: 600;
-}
-
-/* === НЕДЕЛИ === */
-.week-block {
-  margin-bottom: 40px;
-}
-
-.week-header {
-  background: #f5ede6;
-  color: #6b5d56;
-  padding: 22px 26px;
-  border-radius: 16px;
-  margin-bottom: 26px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(212, 181, 160, 0.15);
-  border: 1px solid #e5d5c8;
-}
-
-.week-number {
-  font-size: 13px;
-  color: #8b7468;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-  font-weight: 400;
-}
-
-.week-title {
-  font-size: 22px;
-  font-weight: 600;
-  color: #6b5d56;
-}
-
-.week-intro {
-  font-size: 16px;
-  line-height: 1.75;
-  color: #6d6d6d;
-  margin-bottom: 30px;
-  padding: 0 10px;
-}
-
-/* === БЛОКИ ДНЯ === */
-.day-part {
-  margin-bottom: 35px;
-}
-
-.part-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.part-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-}
-
-.morning-icon {
-  background: #fff3e0;
-}
-
-.nutrition-icon {
-  background: #e8f5e9;
-}
-
-.exercise-icon {
-  background: #fce4ec;
-}
-
-.ritual-icon {
-  background: #f3e5f5;
-}
-
-.evening-icon {
-  background: #e3f2fd;
-}
-
-.part-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #6b5d56;
-}
-
-/* === ПРИВЫЧКИ === */
-.habits {
-  margin-left: 46px;
-}
-
-.habit {
-  margin-bottom: 18px;
-  padding-left: 16px;
-  border-left: 2px solid #f0e8e0;
-}
-
-.habit-title {
-  font-size: 16px;
-  font-weight: 500;
-  color: #4a4a4a;
-  margin-bottom: 4px;
-}
-
-.habit-desc {
-  font-size: 14px;
-  color: #8a8a8a;
-  line-height: 1.5;
-}
-
-.recipe-ref {
-  color: #8b7468;
-  font-size: 14px;
-  font-weight: normal;
-  margin-left: 4px;
-}
-
-/* === УПРАЖНЕНИЕ === */
-.exercise-box {
-  background: linear-gradient(135deg, #faf8f5 0%, #fff 100%);
-  border-radius: 16px;
-  padding: 20px;
-  margin: 20px 0 30px 46px;
-  border: 1px solid #f0e8e0;
-}
-
-.exercise-title {
-  font-size: 17px;
-  font-weight: 600;
-  color: #6b5d56;
-  margin-bottom: 8px;
-}
-
-.exercise-duration {
-  font-size: 14px;
-  color: #a89a91;
-  margin-bottom: 12px;
-}
-
-.exercise-desc {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #6d6d6d;
-  margin-bottom: 16px;
-}
-
-.video-link {
-  display: inline-block;
-  background: #ff8fa3;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.video-link:hover {
-  background: #ff6b8a;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 143, 163, 0.3);
-}
-
-/* === РАЗДЕЛИТЕЛИ === */
-.week-separator {
-  text-align: center;
-  padding: 30px 0;
-  color: #d4b5a0;
-  font-size: 20px;
-}
-
-/* === ФИНАЛЬНАЯ СТРАНИЦА === */
-.final-message {
-  padding: 60px 30px;
-  text-align: center;
-  background: linear-gradient(180deg, #faf8f5 0%, #fff 100%);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.final-icon {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 20px;
-  background: linear-gradient(135deg, #d4b5a0 0%, #c9a188 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: white;
-}
-
-.final-title {
-  font-family: 'Comfortaa', cursive;
-  font-size: 28px;
-  font-weight: 600;
-  color: #6b5d56;
-  margin-bottom: 20px;
-}
-
-.final-text {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #6d6d6d;
-  margin-bottom: 30px;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.final-note {
-  font-size: 14px;
-  color: #a89a91;
-  line-height: 1.6;
-}
-
-/* === НОМЕРА СТРАНИЦ === */
-.page-number {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  font-size: 12px;
-  color: #c5b8b0;
-}
-
-/* === АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ === */
-@media screen and (max-width: 600px) {
-  .document {
-    max-width: 100%;
-  }
-
-  .cover, .page {
-    padding: 30px 20px;
-  }
-
-  .client-name {
-    font-size: 36px;
-  }
-
-  .page-title {
-    font-size: 22px;
-  }
-
-  .habits {
-    margin-left: 0;
-  }
-
-  .exercise-box {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-/* === ПЕЧАТЬ === */
-@media print {
-  @page {
-    size: A4;
-    margin: 0;
-  }
-
-  .nav-header {
-    display: none !important;
-  }
-
-  .page {
-    page-break-after: always;
-    page-break-inside: avoid;
-  }
-
-  .week-block {
-    page-break-inside: avoid;
-  }
-
-  .day-part {
-    page-break-inside: avoid;
-  }
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fff;border-bottom:1px solid var(--accent-light)}
+.nav-content.active{max-height:60vh;overflow-y:auto}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+
+/* Недели */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:12px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:16px}
+.week-intro{font-size:16px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+.video-link{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--primary-warm);padding:12px 24px;border:1.5px solid var(--accent-soft);border-radius:10px;text-decoration:none;font-size:14px;font-weight:400;transition:all .3s;cursor:pointer}
+.video-link:hover{background:var(--bg-soft);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.video-link:active{transform:translateY(0)}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Разделитель */
+.week-separator{text-align:center;padding:30px 0;color:var(--accent-soft);font-size:20px}
+
+/* Адаптация */
+@media(max-width:380px){
+.cover-name{font-size:42px}
+.week-title{font-size:22px}
+.letter-content{font-size:18px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week-header{page-break-inside:avoid}
+.day-part{page-break-inside:avoid}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
 }
 </style>
 </head>
 <body>
 
-<div class="document">
-  <!-- === НАВИГАЦИЯ === -->
-  <div class="nav-header">
-    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
-      <div class="nav-title">Содержание</div>
-      <div class="nav-icon" id="navIcon"><span></span><span></span></div>
-    </button>
-    <div class="nav-content" id="navContent">
-      <div class="nav-list">
-        <!-- Основные страницы -->
-        <div class="nav-section-title">Основное</div>
-        <div class="nav-item" onclick="scrollToSection('cover')">
-          <span class="nav-item-name">Обложка</span>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('key-focuses')">
-          <span class="nav-item-name">Ключевые фокусы месяца</span>
-        </div>
-        
-        <!-- Недели -->
-        <div class="nav-section-title">Недели</div>
-        <div class="nav-item" onclick="scrollToSection('week-1')">
-          <span class="nav-item-name">Подготовка к путешествию</span>
-          <span class="nav-badge">Неделя 1</span>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('week-2')">
-          <span class="nav-item-name">Путешествие: начало</span>
-          <span class="nav-badge">Неделя 2</span>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('week-3')">
-          <span class="nav-item-name">Путешествие: продолжение</span>
-          <span class="nav-badge">Неделя 3</span>
-        </div>
-        <div class="nav-item" onclick="scrollToSection('week-4')">
-          <span class="nav-item-name">Возвращение домой</span>
-          <span class="nav-badge">Неделя 4</span>
-        </div>
-        
-        <!-- Завершение -->
-        <div class="nav-section-title">Завершение</div>
-        <div class="nav-item" onclick="scrollToSection('final-message')">
-          <span class="nav-item-name">Заключительное слово</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
 
-  <!-- === ОБЛОЖКА === -->
-  <div class="cover" id="cover">
-    <div class="brand-logo">♡</div>
-    <div class="brand-name">Доктор Света</div>
-    
-    <div class="client-name">Наталья</div>
-    
-    <div class="plan-title">План восстановления</div>
-    <div class="plan-period">Сентябрь 2025</div>
-  </div>
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Подготовка к путешествию</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Путешествие: начало</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Путешествие: продолжение</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Возвращение домой</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Завершение</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Заключительное слово</span>
+</div>
+</div>
+</div>
+</div>
 
-  <!-- === КЛЮЧЕВЫЕ ФОКУСЫ === -->
-  <div class="page" id="key-focuses">
-    <div class="page-title">Ключевые фокусы месяца</div>
-    <div class="page-subtitle">Наш путь в сентябре 2025</div>
+<!-- Обложка -->
+<div class="section cover" id="cover">
+<div class="cover-icon">♡</div>
+<div class="cover-subtitle">Доктор Света</div>
+<div class="cover-name">Наталья</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.5"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">Пятый месяц заботы о себе</div>
+<div class="cover-dedication-line">Шаг за шагом к полному восстановлению</div>
+</div>
+<div class="cover-date">Сентябрь 2025</div>
+</div>
 
-    <div class="focus-list">
-      <!-- Фокус 1 -->
-      <div class="focus-item">
-        <div class="focus-icon">💎</div>
-        <div class="focus-text"><strong>Железо — финишная прямая!</strong> Наталья, мы подняли гемоглобин до 109 — это невероятный результат! Теперь доведём его до 120+ и поднимем ферритин с 14 до 30+.</div>
-      </div>
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в сентябре 2025</div>
+<div class="focus-tags">
+<span class="focus-tag">Железо 109→120</span>
+<span class="focus-tag">Путешествие</span>
+<span class="focus-tag">Осенний иммунитет</span>
+<span class="focus-tag">Стабильность</span>
+</div>
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Железо — финишная прямая!</div>
+<div class="focus-item-desc">Наталья, мы подняли гемоглобин до 109 — это невероятный результат! Теперь доведём его до 120+ и поднимем ферритин с 14 до 30+.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Путешествие с комфортом</div>
+<div class="focus-item-desc">С 11 по 26 сентября — автопутешествие. Сохраним базовые привычки в упрощённом формате.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Подготовка к осени</div>
+<div class="focus-item-desc">Укрепляем иммунитет перед сезоном простуд. Добавляем витамин С с цинком.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Стабилизация достижений</div>
+<div class="focus-item-desc">Сохраняем всё, чего достигли: энергию, красивую кожу, крепкий сон и внутреннюю радость!</div>
+</div>
+</div>
+</div>
 
-      <!-- Фокус 2 -->
-      <div class="focus-item">
-        <div class="focus-icon">🚗</div>
-        <div class="focus-text"><strong>Путешествие с комфортом</strong> С 11 по 26 сентября — автопутешествие. Сохраним базовые привычки в упрощённом формате.</div>
-      </div>
+<!-- Неделя 1 -->
+<div class="section" id="week-1">
+<div class="week-header">
+<div class="week-subtitle">Первая неделя • 1-10 сентября</div>
+<div class="week-title">Подготовка к путешествию</div>
+<div class="week-intro">Наталья, на этой неделе готовим организм к поездке — усиленно поддерживаем железо и готовим домашние заготовки.</div>
+</div>
 
-      <!-- Фокус 3 -->
-      <div class="focus-item">
-        <div class="focus-icon">🍂</div>
-        <div class="focus-text"><strong>Подготовка к осени</strong> Укрепляем иммунитет перед сезоном простуд. Добавляем витамин С с цинком.</div>
-      </div>
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Настой шиповника с мёдом</div>
+<div class="habit-desc">Заварите с вечера в термосе. Витамин С поможет усвоить железо из завтрака.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Железо хелатное с витамином С</div>
+<div class="habit-desc">18 мг железа с 100 мг витамина С между едой. Ваш главный помощник!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Спирулина утром</div>
+<div class="habit-desc">1 ч.л. в воде или таблетки. Дополнительное железо и B12 для энергии.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- Фокус 4 -->
-      <div class="focus-item">
-        <div class="focus-icon">✨</div>
-        <div class="focus-text"><strong>Стабилизация достижений</strong> Сохраняем всё, чего достигли: энергию, красивую кожу, крепкий сон и внутреннюю радость!</div>
-      </div>
-    </div>
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Печень куриная с гречкой и луком</div>
+<div class="habit-desc">Максимум железа! Готовьте 2-3 раза на этой неделе перед поездкой.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Говядина тушёная с гречкой</div>
+<div class="habit-desc">Ваша любимая гречка с говядиной — классика для восполнения железа.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Борщ вегетарианский со сметаной</div>
+<div class="habit-desc">Свёкла для железа и детокса. Приготовьте большую кастрюлю на несколько дней.</div>
+</div>
+</li>
+</ul>
+</div>
 
-    <div class="page-number">2</div>
-  </div>
+<div class="day-part">
+<div class="part-title">Упражнение недели</div>
+<div class="exercise-box">
+<div class="exercise-title">Открытая книга (мобилизация грудного отдела)</div>
+<div class="exercise-duration">2-4 минуты • есть видео</div>
+<div class="exercise-desc">Пока вы дома, используйте возможность полноценной растяжки. Раскрывает грудную клетку, снимает зажимы в плечах.</div>
+<a href="https://disk.yandex.ru/i/JHMZyy6sk-tZrw" class="video-link">📹 Смотреть видео</a>
+</div>
+</div>
 
-  <!-- === НЕДЕЛЯ 1 === -->
-  <div class="page" id="week-1">
-    <div class="week-block">
-      <div class="week-header">
-        <div class="week-number">Первая неделя • 1-10 сентября</div>
-        <div class="week-title">Подготовка к путешествию</div>
-      </div>
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Постукивание по тимусу</div>
+<div class="habit-desc">20 лёгких постукиваний по центру груди. Активация иммунитета перед поездкой!</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <div class="week-intro">Наталья, на этой неделе готовим организм к поездке — усиленно поддерживаем железо и готовим домашние заготовки.</div>
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вращение стоп сидя</div>
+<div class="habit-desc">10 кругов в каждую сторону для каждой стопы. Подготовка ног к долгой дороге.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подъём на носки у опоры</div>
+<div class="habit-desc">15 подъёмов у стены. Укрепление икр перед поездкой — профилактика судорог.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подготовка дорожной аптечки</div>
+<div class="habit-desc">Соберите все БАДы в таблетницу по дням. Железо, омега, витамин D, магний, цинк+С.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 
-      <!-- УТРО -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon morning-icon">☀️</div>
-          <div class="part-title">Утро</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Настой шиповника с мёдом</div>
-            <div class="habit-desc">Заварите с вечера в термосе. Витамин С поможет усвоить железо из завтрака.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Железо хелатное с витамином С</div>
-            <div class="habit-desc">18 мг железа с 100 мг витамина С между едой. Ваш главный помощник!</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Спирулина утром</div>
-            <div class="habit-desc">1 ч.л. в воде или таблетки. Дополнительное железо и B12 для энергии.</div>
-          </div>
-        </div>
-      </div>
+<div class="week-separator">✦</div>
 
-      <!-- ПИТАНИЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon nutrition-icon">🌱</div>
-          <div class="part-title">Добавим в рацион</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Печень куриная с гречкой и луком</div>
-            <div class="habit-desc">Максимум железа! Готовьте 2-3 раза на этой неделе перед поездкой.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Говядина тушёная с гречкой</div>
-            <div class="habit-desc">Ваша любимая гречка с говядиной — классика для восполнения железа.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Борщ вегетарианский со сметаной</div>
-            <div class="habit-desc">Свёкла для железа и детокса. Приготовьте большую кастрюлю на несколько дней.</div>
-          </div>
-        </div>
-      </div>
+<!-- Неделя 2 -->
+<div class="section" id="week-2">
+<div class="week-header">
+<div class="week-subtitle">Вторая неделя • 11-17 сентября</div>
+<div class="week-title">Путешествие: начало</div>
+<div class="week-intro">Наталья, начинается путешествие! Упрощаем программу — только самое важное и выполнимое в дороге.</div>
+</div>
 
-      <!-- УПРАЖНЕНИЕ НЕДЕЛИ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon exercise-icon">💫</div>
-          <div class="part-title">Упражнение недели</div>
-        </div>
-        <div class="exercise-box">
-          <div class="exercise-title">Открытая книга (мобилизация грудного отдела)</div>
-          <div class="exercise-duration">2-4 минуты • есть видео</div>
-          <div class="exercise-desc">Пока вы дома, используйте возможность полноценной растяжки. Раскрывает грудную клетку, снимает зажимы в плечах.</div>
-          <a href="https://disk.yandex.ru/i/JHMZyy6sk-tZrw" class="video-link">📹 Смотреть видео</a>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Утро в дороге</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Все БАДы из таблетницы</div>
+<div class="habit-desc">Железо, цинк+С, омега — по расписанию, даже в пути. Запивайте водой с лимоном.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Три глубоких вдоха перед едой</div>
+<div class="habit-desc">Простая практика активации пищеварения — особенно важно в дороге!</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- МИКРОРИТУАЛ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon ritual-icon">✨</div>
-          <div class="part-title">Микроритуал дня</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Постукивание по тимусу</div>
-            <div class="habit-desc">20 лёгких постукиваний по центру груди. Активация иммунитета перед поездкой!</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Простое питание в пути</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яичница (в отеле)</div>
+<div class="habit-desc">Простой завтрак с железом. Можно с красной фасолью из банки или орехами.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречневая каша (быстрого приготовления)</div>
+<div class="habit-desc">Залить кипятком из термоса. Добавьте яйцо вкрутую из контейнера.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Черника и орехи (перекусы)</div>
+<div class="habit-desc">Горсть черники для глаз, орехи для железа. Порционно в пакетиках.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- ВЕЧЕР -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon evening-icon">🌙</div>
-          <div class="part-title">Вечер</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Вращение стоп сидя</div>
-            <div class="habit-desc">10 кругов в каждую сторону для каждой стопы. Подготовка ног к долгой дороге.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Подъём на носки у опоры</div>
-            <div class="habit-desc">15 подъёмов у стены. Укрепление икр перед поездкой — профилактика судорог.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Подготовка дорожной аптечки</div>
-            <div class="habit-desc">Соберите все БАДы в таблетницу по дням. Железо, омега, витамин D, магний, цинк+С.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="day-part">
+<div class="part-title">Упражнение в машине</div>
+<div class="exercise-box">
+<div class="exercise-title">Вращение стоп сидя</div>
+<div class="exercise-duration">2-3 минуты • прямо в машине</div>
+<div class="exercise-desc">На остановках или пока муж за рулём. 10 кругов в каждую сторону для каждой стопы. Профилактика судорог и отёков.</div>
+</div>
+</div>
 
-    <div class="page-number">3</div>
-  </div>
+<div class="day-part">
+<div class="part-title">Микроритуал путешественника</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гимнастика для глаз 20-20-20</div>
+<div class="habit-desc">Каждые 20 минут смотрите 20 секунд вдаль. Снимает напряжение от дороги.</div>
+</div>
+</li>
+</ul>
+</div>
 
-  <!-- === РАЗДЕЛИТЕЛЬ === -->
-  <div class="week-separator">
-    <span class="week-separator-icon">✦</span>
-  </div>
+<div class="day-part">
+<div class="part-title">Вечер в отеле</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подъём на носки у стены</div>
+<div class="habit-desc">15 раз перед душем. Разгоняет кровь после дня в машине.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Имбирный чай</div>
+<div class="habit-desc">Пакетик имбирного чая после ужина. Улучшит пищеварение.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 
-  <!-- === НЕДЕЛЯ 2 === -->
-  <div class="page" id="week-2">
-    <div class="week-block">
-      <div class="week-header">
-        <div class="week-number">Вторая неделя • 11-17 сентября</div>
-        <div class="week-title">Путешествие: начало</div>
-      </div>
+<div class="week-separator">✦</div>
 
-      <div class="week-intro">Наталья, начинается путешествие! Упрощаем программу — только самое важное и выполнимое в дороге.</div>
+<!-- Неделя 3 -->
+<div class="section" id="week-3">
+<div class="week-header">
+<div class="week-subtitle">Третья неделя • 18-26 сентября</div>
+<div class="week-title">Путешествие: продолжение</div>
+<div class="week-intro">Наталья, вы уже адаптировались к дорожному режиму. Продолжаем базовые практики.</div>
+</div>
 
-      <!-- УТРО В ДОРОГЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon morning-icon">☀️</div>
-          <div class="part-title">Утро в дороге</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Все БАДы из таблетницы</div>
-            <div class="habit-desc">Железо, цинк+С, омега — по расписанию, даже в пути. Запивайте водой с лимоном.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Три глубоких вдоха перед едой</div>
-            <div class="habit-desc">Простая практика активации пищеварения — особенно важно в дороге!</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Утренние ритуалы</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ферментированная капуста (если найдёте)</div>
+<div class="habit-desc">2-3 ложки квашеной капусты из магазина. Пробиотики для иммунитета.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Продолжаем все БАДы</div>
+<div class="habit-desc">Не пропускайте железо! Это наш главный фокус.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- ПРОСТОЕ ПИТАНИЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon nutrition-icon">🌱</div>
-          <div class="part-title">Простое питание в пути</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Яичница (в отеле)</div>
-            <div class="habit-desc">Простой завтрак с железом. Можно с красной фасолью из банки или орехами.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Гречневая каша (быстрого приготовления)</div>
-            <div class="habit-desc">Залить кипятком из термоса. Добавьте яйцо вкрутую из контейнера.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Черника и орехи (перекусы)</div>
-            <div class="habit-desc">Горсть черники для глаз, орехи для железа. Порционно в пакетиках.</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Доступное питание</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Творожная запеканка</div>
+<div class="habit-desc">Можно купить готовую в магазине или кафе. Ваш любимый творог!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Салат из чечевицы</div>
+<div class="habit-desc">Консервированная чечевица + овощи. Можно заказать в кафе.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Базовые принципы</div>
+<div class="habit-desc">Выбирайте блюда с гречкой, яйцами, говядиной, зелёными овощами.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- УПРАЖНЕНИЕ В МАШИНЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon exercise-icon">💫</div>
-          <div class="part-title">Упражнение в машине</div>
-        </div>
-        <div class="exercise-box">
-          <div class="exercise-title">Вращение стоп сидя</div>
-          <div class="exercise-duration">2-3 минуты • прямо в машине</div>
-          <div class="exercise-desc">На остановках или пока муж за рулём. 10 кругов в каждую сторону для каждой стопы. Профилактика судорог и отёков.</div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Движение на остановках</div>
+<div class="exercise-box">
+<div class="exercise-title">Подъём ног сидя</div>
+<div class="exercise-duration">5 минут • можно в машине</div>
+<div class="exercise-desc">Сядьте на край сиденья, поднимайте ноги поочерёдно. Удерживайте 5-10 секунд. По 10 раз для каждой ноги. Снимает отёчность!</div>
+</div>
+</div>
 
-      <!-- МИКРОРИТУАЛ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon ritual-icon">✨</div>
-          <div class="part-title">Микроритуал путешественника</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Гимнастика для глаз 20-20-20</div>
-            <div class="habit-desc">Каждые 20 минут смотрите 20 секунд вдаль. Снимает напряжение от дороги.</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Продолжаем микроритуалы</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Постукивание по тимусу</div>
+<div class="habit-desc">Даже в машине — 20 постукиваний. 30 секунд для иммунитета!</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- ВЕЧЕР В ОТЕЛЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon evening-icon">🌙</div>
-          <div class="part-title">Вечер в отеле</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Подъём на носки у стены</div>
-            <div class="habit-desc">15 раз перед душем. Разгоняет кровь после дня в машине.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Имбирный чай</div>
-            <div class="habit-desc">Пакетик имбирного чая после ужина. Улучшит пищеварение.</div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div class="day-part">
+<div class="part-title">Вечерняя разгрузка</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Комбинация упражнений для ног</div>
+<div class="habit-desc">Вращение стоп + подъём на носки. Профилактика судорог после дня в дороге.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Магний перед сном</div>
+<div class="habit-desc">200-400 мг магния бисглицината. Крепкий сон в новом месте.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 
-    <div class="page-number">4</div>
-  </div>
+<div class="week-separator">✦</div>
 
-  <!-- === РАЗДЕЛИТЕЛЬ === -->
-  <div class="week-separator">
-    <span class="week-separator-icon">✦</span>
-  </div>
+<!-- Неделя 4 -->
+<div class="section" id="week-4">
+<div class="week-image">
+<img src="../../../Image/04_image.jpeg" alt="Возвращение домой — фото-обложка недели">
+</div>
+<div class="week-header">
+<div class="week-subtitle">Четвёртая неделя • 27-30 сентября</div>
+<div class="week-title">Возвращение домой</div>
+<div class="week-intro">Наталья, вы вернулись! Восстанавливаем полную программу и готовимся к октябрю.</div>
+</div>
 
-  <!-- === НЕДЕЛЯ 3 === -->
-  <div class="page" id="week-3">
-    <div class="week-block">
-      <div class="week-header">
-        <div class="week-number">Третья неделя • 18-26 сентября</div>
-        <div class="week-title">Путешествие: продолжение</div>
-      </div>
+<div class="day-part">
+<div class="part-title">Полное восстановление</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Суставная гимнастика 40 минут</div>
+<div class="habit-desc">Возвращаемся к любимой утренней практике всей семьёй!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный комплекс БАДов</div>
+<div class="habit-desc">Все препараты по расписанию: железо, омега, D3, магний, цинк+С.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Контрольный анализ крови</div>
+<div class="habit-desc">28-29 сентября: ОАК + ферритин. Проверим результаты месяца!</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <div class="week-intro">Наталья, вы уже адаптировались к дорожному режиму. Продолжаем базовые практики.</div>
+<div class="day-part">
+<div class="part-title">Осенний детокс</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Суп-пюре из чечевицы с куркумой</div>
+<div class="habit-desc">Согревающий суп с противовоспалительной куркумой. Железо + иммунитет!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Тыквенный крем-суп с имбирём</div>
+<div class="habit-desc">Осенняя классика! Тыква + имбирь для иммунитета.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Пшенная каша с тыквой и орехами</div>
+<div class="habit-desc">Питательный завтрак с сезонными продуктами.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- УТРЕННИЕ РИТУАЛЫ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon morning-icon">☀️</div>
-          <div class="part-title">Утренние ритуалы</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Ферментированная капуста (если найдёте)</div>
-            <div class="habit-desc">2-3 ложки квашеной капусты из магазина. Пробиотики для иммунитета.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Продолжаем все БАДы</div>
-            <div class="habit-desc">Не пропускайте железо! Это наш главный фокус.</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Полная программа упражнений</div>
+<div class="exercise-box">
+<div class="exercise-title">Мобилизация шейно-воротниковой зоны</div>
+<div class="exercise-duration">7-8 минут • есть видео</div>
+<div class="exercise-desc">Полный комплекс после поездки. Снимаем напряжение с шеи и плеч.</div>
+<a href="https://disk.yandex.ru/i/mmCmnnJqurwNFw" class="video-link">📹 Смотреть видео</a>
+</div>
+</div>
 
-      <!-- ДОСТУПНОЕ ПИТАНИЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon nutrition-icon">🌱</div>
-          <div class="part-title">Доступное питание</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Творожная запеканка</div>
-            <div class="habit-desc">Можно купить готовую в магазине или кафе. Ваш любимый творог!</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Салат из чечевицы</div>
-            <div class="habit-desc">Консервированная чечевица + овощи. Можно заказать в кафе.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Базовые принципы</div>
-            <div class="habit-desc">Выбирайте блюда с гречкой, яйцами, говядиной, зелёными овощами.</div>
-          </div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Подготовка к октябрю</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подведение итогов</div>
+<div class="habit-desc">Запишите достижения месяца. 5 месяцев позади — вы невероятная!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Планирование октября</div>
+<div class="habit-desc">После получения анализов определим фокусы следующего месяца.</div>
+</div>
+</li>
+</ul>
+</div>
 
-      <!-- ДВИЖЕНИЕ НА ОСТАНОВКАХ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon exercise-icon">💫</div>
-          <div class="part-title">Движение на остановках</div>
-        </div>
-        <div class="exercise-box">
-          <div class="exercise-title">Подъём ног сидя</div>
-          <div class="exercise-duration">5 минут • можно в машине</div>
-          <div class="exercise-desc">Сядьте на край сиденья, поднимайте ноги поочерёдно. Удерживайте 5-10 секунд. По 10 раз для каждой ноги. Снимает отёчность!</div>
-        </div>
-      </div>
+<div class="day-part">
+<div class="part-title">Вечерние ритуалы</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Танцы 2 раза в неделю</div>
+<div class="habit-desc">Возвращаемся к любимым танцам! Радость движения.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Семейная растяжка</div>
+<div class="habit-desc">Все вместе — муж, дочери. Завершение дня в единстве.</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
 
-      <!-- ПРОДОЛЖАЕМ МИКРОРИТУАЛЫ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon ritual-icon">✨</div>
-          <div class="part-title">Продолжаем микроритуалы</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Постукивание по тимусу</div>
-            <div class="habit-desc">Даже в машине — 20 постукиваний. 30 секунд для иммунитета!</div>
-          </div>
-        </div>
-      </div>
+<!-- Финальная страница -->
+<div class="section letter" id="final-message">
+<div class="letter-content">
+<p><strong>Дорогая Наталья!</strong></p>
+<p>Вы прошли невероятный путь за эти 5 месяцев! Гемоглобин вырос с 64 до 109, полностью ушли боли в спине, кожа сияет, волосы перестали выпадать, появилась внутренняя радость и любовь ко всему.</p>
+<p>Сентябрь — особенный месяц. Вы сохраните все достижения даже в путешествии, потому что мы адаптировали программу под вашу поездку. Простые, но эффективные практики помогут поддержать здоровье в дороге.</p>
+<p>К концу сентября мы увидим новые цифры анализов. Уверена, гемоглобин приблизится к 120, а ферритин начнёт расти. Продолжайте принимать железо — это ваш приоритет!</p>
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и восхищением вашими результатами,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
 
-      <!-- ВЕЧЕРНЯЯ РАЗГРУЗКА -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon evening-icon">🌙</div>
-          <div class="part-title">Вечерняя разгрузка</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Комбинация упражнений для ног</div>
-            <div class="habit-desc">Вращение стоп + подъём на носки. Профилактика судорог после дня в дороге.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Магний перед сном</div>
-            <div class="habit-desc">200-400 мг магния бисглицината. Крепкий сон в новом месте.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-number">5</div>
-  </div>
-
-  <!-- === РАЗДЕЛИТЕЛЬ === -->
-  <div class="week-separator">
-    <span class="week-separator-icon">✦</span>
-  </div>
-
-  <!-- === НЕДЕЛЯ 4 === -->
-  <div class="page" id="week-4">
-    <div class="week-block">
-      <div class="week-header">
-        <div class="week-number">Четвёртая неделя • 27-30 сентября</div>
-        <div class="week-title">Возвращение домой</div>
-      </div>
-
-      <div class="week-intro">Наталья, вы вернулись! Восстанавливаем полную программу и готовимся к октябрю.</div>
-
-      <!-- ПОЛНОЕ ВОССТАНОВЛЕНИЕ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon morning-icon">☀️</div>
-          <div class="part-title">Полное восстановление</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Суставная гимнастика 40 минут</div>
-            <div class="habit-desc">Возвращаемся к любимой утренней практике всей семьёй!</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Полный комплекс БАДов</div>
-            <div class="habit-desc">Все препараты по расписанию: железо, омега, D3, магний, цинк+С.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Контрольный анализ крови</div>
-            <div class="habit-desc">28-29 сентября: ОАК + ферритин. Проверим результаты месяца!</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ОСЕННИЙ ДЕТОКС -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon nutrition-icon">🌱</div>
-          <div class="part-title">Осенний детокс</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Суп-пюре из чечевицы с куркумой</div>
-            <div class="habit-desc">Согревающий суп с противовоспалительной куркумой. Железо + иммунитет!</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Тыквенный крем-суп с имбирём</div>
-            <div class="habit-desc">Осенняя классика! Тыква + имбирь для иммунитета.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Пшенная каша с тыквой и орехами</div>
-            <div class="habit-desc">Питательный завтрак с сезонными продуктами.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ПОЛНАЯ ПРОГРАММА УПРАЖНЕНИЙ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon exercise-icon">💫</div>
-          <div class="part-title">Полная программа упражнений</div>
-        </div>
-        <div class="exercise-box">
-          <div class="exercise-title">Мобилизация шейно-воротниковой зоны</div>
-          <div class="exercise-duration">7-8 минут • есть видео</div>
-          <div class="exercise-desc">Полный комплекс после поездки. Снимаем напряжение с шеи и плеч.</div>
-          <a href="https://disk.yandex.ru/i/mmCmnnJqurwNFw" class="video-link">📹 Смотреть видео</a>
-        </div>
-      </div>
-
-      <!-- ПОДГОТОВКА К ОКТЯБРЮ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon ritual-icon">✨</div>
-          <div class="part-title">Подготовка к октябрю</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Подведение итогов</div>
-            <div class="habit-desc">Запишите достижения месяца. 5 месяцев позади — вы невероятная!</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Планирование октября</div>
-            <div class="habit-desc">После получения анализов определим фокусы следующего месяца.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ВЕЧЕРНИЕ РИТУАЛЫ -->
-      <div class="day-part">
-        <div class="part-header">
-          <div class="part-icon evening-icon">🌙</div>
-          <div class="part-title">Вечерние ритуалы</div>
-        </div>
-        <div class="habits">
-          <div class="habit">
-            <div class="habit-title">Танцы 2 раза в неделю</div>
-            <div class="habit-desc">Возвращаемся к любимым танцам! Радость движения.</div>
-          </div>
-          <div class="habit">
-            <div class="habit-title">Семейная растяжка</div>
-            <div class="habit-desc">Все вместе — муж, дочери. Завершение дня в единстве.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="page-number">6</div>
-  </div>
-
-  <!-- === ФИНАЛЬНАЯ СТРАНИЦА === -->
-  <div class="final-message" id="final-message">
-    <div class="final-icon">✨</div>
-    <div class="final-title">Дорогая Наталья!</div>
-    
-    <div class="final-text">
-      Вы прошли невероятный путь за эти 5 месяцев! Гемоглобин вырос с 64 до 109, полностью ушли боли в спине, кожа сияет, волосы перестали выпадать, появилась внутренняя радость и любовь ко всему.
-    </div>
-    
-    <div class="final-text">
-      Сентябрь — особенный месяц. Вы сохраните все достижения даже в путешествии, потому что мы адаптировали программу под вашу поездку. Простые, но эффективные практики помогут поддержать здоровье в дороге.
-    </div>
-    
-    <div class="final-text">
-      К концу сентября мы увидим новые цифры анализов. Уверена, гемоглобин приблизится к 120, а ферритин начнёт расти. Продолжайте принимать железо — это ваш приоритет!
-    </div>
-    
-    <div class="final-text" style="font-size: 24px; font-weight: 600; color: #6b5d56; margin-top: 40px;">
-      С заботой и восхищением вашими результатами,<br>
-      Доктор Света
-    </div>
-  </div>
 </div>
 
 <script>
-// Навигация
-function toggleNav() {
-  const navContent = document.getElementById('navContent');
-  const navIcon = document.getElementById('navIcon');
-  const toggle = document.getElementById('navToggle');
-  const open = !navContent.classList.contains('active');
-  navContent.classList.toggle('active');
-  navIcon.classList.toggle('active');
-  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
 }
 
-function scrollToSection(sectionId) {
-  const nav = document.getElementById('navContent');
-  const icon = document.getElementById('navIcon');
-  nav.classList.remove('active');
-  icon.classList.remove('active');
-  document.getElementById('navToggle')?.setAttribute('aria-expanded', 'false');
-  
-  // Небольшая задержка для закрытия меню
-  setTimeout(() => {
-    const el = document.getElementById(sectionId);
-    if (!el) return;
-    
-    // Получаем позицию элемента относительно документа
-    const rect = el.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const navHeight = document.querySelector('.nav-header').offsetHeight || 60;
-    
-    // Целевая позиция - самое начало элемента с учетом навигации
-    const targetPosition = rect.top + scrollTop - navHeight;
-    
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }, 100);
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition,behavior:'smooth'});
+},100);
 }
 
-// Инициализация
-document.addEventListener('DOMContentLoaded', () => {
-  // Навигация
-  const t = document.getElementById('navToggle');
-  if (t) {
-    t.addEventListener('click', toggleNav);
-    t.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggleNav();
-      }
-    });
-  }
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
 });
 </script>
 
