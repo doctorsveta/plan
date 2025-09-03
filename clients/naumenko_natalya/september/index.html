@@ -48,6 +48,12 @@ border-bottom:1px solid var(--accent-light);
 .section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
 .section:last-child{border-bottom:none}
 
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
 /* Обложка */
 .cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
 .cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
@@ -69,11 +75,7 @@ border-bottom:1px solid var(--accent-light);
 .focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
 .focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
 
-/* Изображения недель */
-.week-image{width:calc(100% + 40px);height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden;margin:0 -20px 30px -20px}
-.week-image img{width:100%;height:100%;object-fit:cover;display:block}
-
-/* Недели */
+/* Заголовки недель */
 .week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
 .week-subtitle{font-size:12px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
 .week-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:16px}
@@ -110,9 +112,6 @@ border-bottom:1px solid var(--accent-light);
 .letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
 .letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
 
-/* Разделитель */
-.week-separator{text-align:center;padding:30px 0;color:var(--accent-soft);font-size:20px}
-
 /* Адаптация */
 @media(max-width:380px){
 .cover-name{font-size:42px}
@@ -127,8 +126,7 @@ body{background:#fff!important}
 .container{max-width:none;background:#fff}
 .nav-header{display:none!important}
 .section{padding:20px;border:0;page-break-inside:avoid}
-.week-header{page-break-inside:avoid}
-.day-part{page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
 .cover{page-break-after:always}
 .letter{page-break-before:always}
 .week-image{display:none}
@@ -224,10 +222,11 @@ body{background:#fff!important}
 </div>
 
 <!-- Неделя 1 -->
-<div class="section" id="week-1">
+<div class="section week" id="week-1">
 <div class="week-image">
 <img src="../../../Image/01_image.jpeg" alt="Подготовка к путешествию — фото-обложка недели">
 </div>
+<div class="week-content">
 <div class="week-header">
 <div class="week-subtitle">Первая неделя • 1-10 сентября</div>
 <div class="week-title">Подготовка к путешествию</div>
@@ -328,14 +327,14 @@ body{background:#fff!important}
 </ul>
 </div>
 </div>
-
-<div class="week-separator">✦</div>
+</div>
 
 <!-- Неделя 2 -->
-<div class="section" id="week-2">
+<div class="section week" id="week-2">
 <div class="week-image">
 <img src="../../../Image/02_image.jpeg" alt="Путешествие: начало — фото-обложка недели">
 </div>
+<div class="week-content">
 <div class="week-header">
 <div class="week-subtitle">Вторая неделя • 11-17 сентября</div>
 <div class="week-title">Путешествие: начало</div>
@@ -423,14 +422,14 @@ body{background:#fff!important}
 </ul>
 </div>
 </div>
-
-<div class="week-separator">✦</div>
+</div>
 
 <!-- Неделя 3 -->
-<div class="section" id="week-3">
+<div class="section week" id="week-3">
 <div class="week-image">
 <img src="../../../Image/03_image.jpeg" alt="Путешествие: продолжение — фото-обложка недели">
 </div>
+<div class="week-content">
 <div class="week-header">
 <div class="week-subtitle">Третья неделя • 18-26 сентября</div>
 <div class="week-title">Путешествие: продолжение</div>
@@ -518,14 +517,14 @@ body{background:#fff!important}
 </ul>
 </div>
 </div>
-
-<div class="week-separator">✦</div>
+</div>
 
 <!-- Неделя 4 -->
-<div class="section" id="week-4">
+<div class="section week" id="week-4">
 <div class="week-image">
 <img src="../../../Image/04_image.jpeg" alt="Возвращение домой — фото-обложка недели">
 </div>
+<div class="week-content">
 <div class="week-header">
 <div class="week-subtitle">Четвёртая неделя • 27-30 сентября</div>
 <div class="week-title">Возвращение домой</div>
@@ -624,6 +623,7 @@ body{background:#fff!important}
 </div>
 </li>
 </ul>
+</div>
 </div>
 </div>
 
