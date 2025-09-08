@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Наталья • Сентябрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fff;border-bottom:1px solid var(--accent-light)}
+.nav-content.active{max-height:60vh;overflow-y:auto}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Информационные блоки */
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:16px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:15px;color:#6b5d56;line-height:1.6}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Адаптация для мобильных устройств */
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Мягкий старт</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Закрепление привычек</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Расширение практик</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Интеграция в жизнь</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('special-guide')">
+<span class="nav-item-name">Гид по здоровью ЖКТ</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+<div class="section cover" id="cover">
+<div class="cover-icon">🌱</div>
+<div class="cover-subtitle">Доктор Света</div>
+<div class="cover-name">Наталья</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.5"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">1 месяц заботы о себе</div>
+<div class="cover-dedication-line">От дискомфорта к легкости</div>
+</div>
+<div class="cover-date">Сентябрь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в сентябре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Пищеварение</span>
+<span class="focus-tag">Вздутие</span>
+<span class="focus-tag">Микрофлора</span>
+<span class="focus-tag">Режим питания</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Устранение вздутия</div>
+<div class="focus-item-desc">Наталья, начнем с самого беспокоящего — уберем вздутие через <span class="focus-item-important">правильное сочетание продуктов и режим питания</span>. Уже через 3 дня вы почувствуете облегчение!</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Нормализация работы ЖКТ</div>
+<div class="focus-item-desc">Восстановим правильную работу кишечника через <span class="focus-item-important">щадящие методы готовки и пробиотические продукты</span>. Это основа вашего хорошего самочувствия.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Восстановление микрофлоры</div>
+<div class="focus-item-desc">Учитывая удаление щитовидной железы и прием препаратов, будем <span class="focus-item-important">бережно восстанавливать микрофлору</span> через ферментированные продукты.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Снижение нагрузки на печень</div>
+<div class="focus-item-desc">С учетом лекарств и возраста, будем <span class="focus-item-important">поддерживать печень легкими блюдами</span> без жареного и с минимумом соли.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Мягкий старт">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">8-14 сентября • Первая неделя</div>
+<div class="week-title">Мягкий старт</div>
+<div class="week-intro">Наталья, начнем очень бережно и аккуратно. Эта неделя — про то, чтобы дать вашему животику отдохнуть и начать восстанавливаться.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Стакан теплой воды за 20 минут до еды</div>
+<div class="habit-desc">Подготовит желудок к приему пищи и запустит пищеварение. Вода должна быть именно теплой, не горячей.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак без спешки</div>
+<div class="habit-desc">Выделите 20 минут на спокойный завтрак. Жуйте медленно — это критически важно для пищеварения.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овсянка с печеным яблоком на завтрак</div>
+<div class="habit-desc"><span class="habit-important">4 ст.л. овсянки + печеное яблоко с корицей</span> — пектин из яблока успокоит кишечник, овсянка даст мягкую сытость. Готовится 20 минут.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Крем-суп из брокколи на обед</div>
+<div class="habit-desc"><span class="habit-important">Брокколи + цветная капуста + 2 ст.л. сливок</span> — нежная текстура не раздражает ЖКТ. Варите 20 минут, пюрируйте блендером.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запеченная тыква на ужин</div>
+<div class="habit-desc"><span class="habit-important">200г тыквы с корицей и каплей масла гхи</span> — легкий ужин, который не вызовет вздутия. Запекайте 20 минут.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Пауза после еды — 5 минут</div>
+<div class="habit-desc">После каждого приема пищи посидите спокойно 5 минут. Не вскакивайте сразу — дайте желудку начать работу в покое.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ужин за 3-4 часа до сна</div>
+<div class="habit-desc">Это даст время пище перевариться. Ложиться с полным желудком — прямой путь к утреннему вздутию.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Травяной чай вместо обычного</div>
+<div class="habit-desc">Ромашка или мята за час до сна. Успокоит не только нервы, но и кишечник.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Массаж живота</div>
+<div class="exercise-duration">2 минуты перед сном</div>
+<div class="exercise-desc">
+1. Лягте на спину, колени слегка согнуты<br>
+2. Положите правую ладонь на живот<br>
+3. Делайте мягкие круговые движения по часовой стрелке<br>
+4. Начните от пупка, постепенно расширяя круги<br>
+5. 10 кругов по часовой, затем 10 против часовой<br>
+6. Давление легкое, как будто гладите кошку<br><br>
+Это улучшит перистальтику и уменьшит вздутие уже к утру.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 2 -->
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Закрепление привычек">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">15-21 сентября • Вторая неделя</div>
+<div class="week-title">Закрепление привычек</div>
+<div class="week-intro">Наталья, вы уже чувствуете, что живот стал спокойнее? Продолжаем бережную работу и добавляем новые элементы для усиления эффекта.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Теплая вода + спокойный завтрак (продолжаем)</div>
+<div class="habit-desc">Это уже входит в привычку. Заметили, как желудок благодарно откликается?</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Добавляем пробиотик</div>
+<div class="habit-desc">Натуральный йогурт без добавок (2-3 ложки) или аптечный пробиотик после завтрака. Начинаем восстанавливать микрофлору.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яйцо всмятку с гречкой</div>
+<div class="habit-desc"><span class="habit-important">1 яйцо + 3 ст.л. гречки + ч.л. оливкового масла</span> — гречка без глютена идеальна для чувствительного кишечника. 15 минут готовки.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Тушеная индейка с кабачками</div>
+<div class="habit-desc"><span class="habit-important">150г индейки + кабачок + немного лука</span> — все тушится под крышкой 25 минут. Мягко, нежно, без раздражения.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Крем-суп из цветной капусты</div>
+<div class="habit-desc"><span class="habit-important">150г капусты + овощной бульон</span> — без сливок, чисто овощной. Идеальный легкий ужин.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Правило трех глотков</div>
+<div class="habit-desc">Перед каждым приемом пищи — 3 глотка теплой воды. Между блюдами — 3 глотка. Это поможет пище лучше усваиваться.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневник питания</div>
+<div class="habit-desc">Записывайте, что ели и как чувствовал себя живот. Так мы найдем ваши идеальные продукты.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Легкая прогулка после ужина</div>
+<div class="habit-desc">10 минут медленной ходьбы. Можно даже по квартире. Это запустит мягкую перистальтику.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Дыхание животом</div>
+<div class="exercise-duration">5 минут утром и вечером</div>
+<div class="exercise-desc">
+1. Сядьте удобно или лягте<br>
+2. Одна рука на груди, другая на животе<br>
+3. Вдох через нос — надуваем живот (грудь неподвижна)<br>
+4. Считаем до 4<br>
+5. Выдох через рот — втягиваем живот<br>
+6. Считаем до 6<br>
+7. Повторите 10 раз<br><br>
+Это массирует внутренние органы и улучшает пищеварение. Если появилось легкое головокружение — это нормально, уменьшите глубину дыхания.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 3 -->
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Расширение практик">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">22-28 сентября • Третья неделя</div>
+<div class="week-title">Расширение практик</div>
+<div class="week-intro">Наталья, вздутие уже почти не беспокоит, правда? Теперь углубляем работу и добавляем разнообразие в питание.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный утренний ритуал</div>
+<div class="habit-desc">Вода, пробиотик, спокойный завтрак — это уже ваша здоровая рутина.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Добавляем клетчатку</div>
+<div class="habit-desc">1 ч.л. молотого льняного семени в кашу или йогурт. Начинаем с малого, чтобы не спровоцировать вздутие.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ферменты при необходимости</div>
+<div class="habit-desc">Если предстоит более плотный обед — можно принять ферментный препарат. Но не каждый день!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Омлет на пару с зеленью</div>
+<div class="habit-desc"><span class="habit-important">2 яйца + молоко + укроп</span> — готовится на пару 10 минут или в микроволновке 3 минуты. Нежнейшая текстура!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Индейка с тушеной брокколи</div>
+<div class="habit-desc"><span class="habit-important">150г индейки + 100г брокколи</span> — тушим вместе 20 минут. Брокколи улучшает детокс печени.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запеченная рыба с цветной капустой</div>
+<div class="habit-desc"><span class="habit-important">130г трески + 100г капусты + лимон</span> — запекаем 20 минут. Легкий белок на ужин.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Правило 30 жеваний</div>
+<div class="habit-desc">Каждый кусочек жуем минимум 30 раз. Да, считайте! Это революция для вашего пищеварения.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Теплое питье между едой</div>
+<div class="habit-desc">Через час после еды — стакан теплой воды или травяного чая. Помогает пище двигаться по кишечнику.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Масло для кишечника</div>
+<div class="habit-desc">1 ч.л. оливкового или льняного масла за час до сна. Смазка для кишечника — утром все будет работать как часы.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Теплые носки на ночь</div>
+<div class="habit-desc">Теплые ноги улучшают кровообращение в животе. Простой трюк для лучшего пищеварения.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Йога для кишечника</div>
+<div class="exercise-duration">10 минут, лучше утром</div>
+<div class="exercise-desc">
+<strong>Поза кошки-коровы (3 минуты):</strong><br>
+1. Встаньте на четвереньки<br>
+2. На вдохе прогнитесь (голова вверх, живот вниз)<br>
+3. На выдохе округлите спину (подбородок к груди)<br>
+4. Повторите 10 раз медленно<br><br>
+
+<strong>Скрутка лежа (3 минуты):</strong><br>
+1. Лягте на спину, руки в стороны<br>
+2. Согните колени, опустите их вправо<br>
+3. Голову поверните влево<br>
+4. Держите 1 минуту, повторите в другую сторону<br><br>
+
+<strong>Поза ребенка (4 минуты):</strong><br>
+1. Сядьте на пятки<br>
+2. Наклонитесь вперед, лоб к полу<br>
+3. Руки вытяните вперед или вдоль тела<br>
+4. Дышите глубоко животом<br><br>
+Эти позы массируют органы пищеварения и снимают спазмы.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 4 -->
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Интеграция в жизнь">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">29 сентября - 5 октября • Четвёртая неделя</div>
+<div class="week-title">Интеграция в жизнь</div>
+<div class="week-intro">Наталья, какой путь вы прошли! Живот спокоен, вздутия почти нет, пищеварение работает. Теперь закрепляем все навсегда.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ваш идеальный утренний ритуал</div>
+<div class="habit-desc">Теплая вода, пробиотик, клетчатка, спокойный завтрак — все это теперь происходит автоматически.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Планирование питания на день</div>
+<div class="habit-desc">Утром решите, что будете есть. Спонтанные перекусы — враг хорошего пищеварения.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Творожная запеканка с яблоком</div>
+<div class="habit-desc"><span class="habit-important">200г творога 5% + яйцо + яблоко</span> — запекаем 25 минут. Можно готовить на 2 дня.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Крем-суп из кабачков и брокколи</div>
+<div class="habit-desc"><span class="habit-important">Кабачок + брокколи + картофелина</span> — все ваши любимые супы в ротации. Готовьте на 2 дня.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный набор из 12 блюд</div>
+<div class="habit-desc">У вас теперь есть проверенное меню. Чередуйте, находите любимые сочетания, экспериментируйте с травами.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Проверка самочувствия в 14:00</div>
+<div class="habit-desc">Оцените состояние живота. Есть вздутие? Тяжесть? Корректируйте ужин — делайте его легче.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Благодарность животу</div>
+<div class="habit-desc">Серьезно! Поблагодарите свой живот за работу. Позитивные эмоции улучшают пищеварение.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полная вечерняя программа</div>
+<div class="habit-desc">Легкий ужин, прогулка, масло, массаж живота, теплые носки — ваш путь к утру без вздутия.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Анализ месяца</div>
+<div class="habit-desc">Перечитайте дневник питания. Какие продукты — друзья? Какие — лучше ограничить? Вы теперь эксперт по своему животу!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Комплекс для ЖКТ</div>
+<div class="exercise-duration">20-30 минут, можно разбить на части</div>
+<div class="exercise-desc">
+<strong>Утренняя часть (10 минут):</strong><br>
+1. Массаж живота лежа — 2 минуты<br>
+2. Велосипед лежа — 20 раз<br>
+3. Подтягивание коленей к груди — 10 раз<br>
+4. Дыхание животом — 5 минут<br><br>
+
+<strong>Дневная часть (5 минут после обеда):</strong><br>
+1. Медленная ходьба — 3 минуты<br>
+2. Повороты корпуса стоя — по 10 в каждую сторону<br>
+3. Глубокое дыхание — 1 минута<br><br>
+
+<strong>Вечерняя часть (10 минут):</strong><br>
+1. Йога: кошка-корова — 2 минуты<br>
+2. Скрутки лежа — по 2 минуты в каждую сторону<br>
+3. Поза ребенка — 3 минуты<br>
+4. Массаж живота — 2 минуты<br><br>
+
+Наталья, это ваша программа поддержки здорового пищеварения. Делайте то, что комфортно именно сегодня!
+</div>
+</div>
+</div>
+</div>
+
+<!-- Специальный раздел -->
+<div class="section" id="special-guide">
+<div class="focuses-title">Гид по здоровью ЖКТ</div>
+<div class="focuses-subtitle">Ваша шпаргалка для идеального пищеварения</div>
+
+<div class="info-box">
+<div class="info-title">💡 Почему возникает вздутие после 50?</div>
+<div class="info-text">Наталья, с возрастом выработка пищеварительных ферментов снижается на 30-40%. Добавьте сюда гормональные изменения после удаления щитовидки, прием препаратов — и кишечник просто не справляется. Но мы это исправим!</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Продукты — друзья вашего живота</div>
+<div style="margin-bottom:12px">
+<strong>Успокаивают и лечат:</strong><br>
+• Овсянка — обволакивает стенки желудка<br>
+• Печеные яблоки — пектин выводит токсины<br>
+• Тыква — снимает воспаление<br>
+• Кабачки — легко усваиваются<br>
+• Рис — крепит при расстройстве
+</div>
+<div>
+<strong>Восстанавливают микрофлору:</strong><br>
+• Натуральный йогурт — пробиотики<br>
+• Квашеная капуста (немного!) — молочнокислые бактерии<br>
+• Кефир — но не на ночь<br>
+• Простокваша — мягче кефира
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">🚫 Враги вашего пищеварения</div>
+<div class="info-text">
+<strong>Исключаем полностью:</strong> жареное, острое, маринады, копчености, газировка, свежая выпечка, бобовые (пока), сырая капуста.<br><br>
+<strong>Ограничиваем:</strong> кофе (1 чашка утром), свежие огурцы и помидоры, молоко, сыр, черный хлеб.<br><br>
+<strong>С осторожностью:</strong> сырые фрукты (лучше запекать), орехи (не больше горсти), цельнозерновой хлеб.
+</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Правила комфортного пищеварения</div>
+<div>
+<strong>1. Режим — это все:</strong><br>
+Ешьте в одно время. Желудок любит предсказуемость.<br><br>
+
+<strong>2. Температура имеет значение:</strong><br>
+Только теплая еда и питье. Холодное спазмирует, горячее раздражает.<br><br>
+
+<strong>3. Объем порции:</strong><br>
+Не больше 250-300 мл за раз. Лучше чаще и меньше.<br><br>
+
+<strong>4. Правильные сочетания:</strong><br>
+• Белок + овощи = да<br>
+• Фрукты отдельно = да<br>
+• Белок + углеводы = осторожно<br>
+• Фрукты после еды = нет
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">⚡ Экстренная помощь при вздутии</div>
+<div class="info-text">
+<strong>Сразу:</strong> выпейте стакан теплой воды с каплей лимона<br>
+<strong>Через 5 минут:</strong> массаж живота по часовой стрелке<br>
+<strong>Через 10 минут:</strong> поза младенца (колени к груди) на 2 минуты<br>
+<strong>Если не помогло:</strong> укропная вода или препарат с симетиконом<br><br>
+<strong>Профилактика на будущее:</strong> проанализируйте, что ели — запишите продукт в черный список.
+</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Ваши маркеры успеха</div>
+<div>
+<strong>Через 3 дня:</strong> уменьшится вздутие после еды<br>
+<strong>Через неделю:</strong> живот станет мягче, уйдет постоянное напряжение<br>
+<strong>Через 2 недели:</strong> наладится регулярный стул<br>
+<strong>Через 3 недели:</strong> исчезнет тяжесть после еды<br>
+<strong>Через месяц:</strong> вы забудете, что такое проблемы с животом!<br><br>
+
+Наталья, помните: ваш кишечник восстанавливается медленно. Не ждите чудес за день, но первые улучшения вы почувствуете уже в конце первой недели!
+</div>
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+<div class="section letter" id="final-message">
+<div class="letter-content">
+<p>Дорогая Наталья,</p>
+
+<p>Я понимаю, как непросто жить с постоянным дискомфортом в животе. Когда каждый прием пищи — это лотерея: повезет сегодня или опять будет вздутие? Когда приходится отказываться от встреч с друзьями, потому что неловко за свой вздувшийся живот. Когда утром просыпаешься уже с тяжестью, хотя вчера почти ничего не ела.</p>
+
+<p>В ваши 54 года организм прошел через многое — удаление щитовидной железы, годы приема гормонов и препаратов от давления. Все это не могло не сказаться на пищеварении. Но знаете что? Ваш организм удивительно мудрый и способный к восстановлению. Нужно просто дать ему правильные инструменты и немного времени.</p>
+
+<p>Этот план создан специально для вас — максимально бережный, без резких изменений. Мы начнем с самого простого: теплая вода утром, спокойный завтрак без спешки, паузы после еды. Казалось бы, мелочи, но именно они дадут вашему животу возможность вздохнуть с облегчением.</p>
+
+<p>Через три дня вы заметите, что к вечеру живот уже не надувается как барабан. Через неделю — что можете спокойно застегнуть любимую юбку. Через две недели — что перестали бояться есть. А через месяц с удивлением обнаружите, что все эти проблемы остались в прошлом.</p>
+
+<p>Не требуйте от себя совершенства. Если в какой-то день съели что-то "не то" и живот взбунтовался — не корите себя. Просто вернитесь к плану на следующий день. Ваше тело прощает ошибки, если вы в целом движетесь в правильном направлении.</p>
+
+<p>Помните, Наталья: в 54 года — это время мудрости и заботы о себе. Вы заслужили комфортную жизнь без боли и дискомфорта. И у вас все получится — медленно, но верно, шаг за шагом.</p>
+
+<p>Я верю в вас и буду мысленно с вами каждый день этого месяца!</p>
+
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition,behavior:'smooth'});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
