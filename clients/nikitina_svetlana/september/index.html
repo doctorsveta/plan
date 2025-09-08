@@ -1,1 +1,779 @@
-1
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Светлана • Январь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fff;border-bottom:1px solid var(--accent-light)}
+.nav-content.active{max-height:60vh;overflow-y:auto}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Информационные блоки */
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:16px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:15px;color:#6b5d56;line-height:1.6}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Адаптация для мобильных устройств */
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Мягкий старт</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Закрепление привычек</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Расширение практик</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Интеграция в жизнь</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('special-guide')">
+<span class="nav-item-name">Гид по восстановлению энергии</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+<div class="section cover" id="cover">
+<div class="cover-icon">⚡</div>
+<div class="cover-subtitle">Доктор Света</div>
+<div class="cover-name">Светлана</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.5"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">1 месяц заботы о себе</div>
+<div class="cover-dedication-line">От усталости к энергии</div>
+</div>
+<div class="cover-date">Январь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в январе 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Энергия</span>
+<span class="focus-tag">Утренняя бодрость</span>
+<span class="focus-tag">Питание без глютена</span>
+<span class="focus-tag">Комфорт ЖКТ</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Утренняя бодрость через 3 дня</div>
+<div class="focus-item-desc">Простые ритуалы запустят энергию: <span class="focus-item-important">стакан воды с лимоном</span> и растяжка в постели.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Энергия без кофе весь день</div>
+<div class="focus-item-desc">Рецепты с железом и витаминами В поддержат силы <span class="focus-item-important">естественным образом</span>.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Комфорт для ЖКТ</div>
+<div class="focus-item-desc">Без глютена, мягко для желудка. Готовится <span class="focus-item-important">максимум 20 минут</span>.</div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Силы на вечер</div>
+<div class="focus-item-desc">Через неделю вечером останется энергия <span class="focus-item-important">на себя любимую</span>.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Мягкий старт">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">1-7 января • Первая неделя</div>
+<div class="week-title">Мягкий старт</div>
+<div class="week-intro">Светлана, начнём с самого простого. Уже через 3 дня утренняя усталость начнёт отступать.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Стакан тёплой воды с лимоном</div>
+<div class="habit-desc">Сразу после пробуждения. Мягко запустит пищеварение и подарит первый заряд бодрости.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Растяжка 30 секунд</div>
+<div class="habit-desc">Прямо в постели: руки вверх, носочки на себя. Тело сразу проснётся.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Тёплая гречневая каша с яйцом</div>
+<div class="habit-desc"><span class="habit-important">Гречка, яйцо, зелень</span> — максимум железа для борьбы с усталостью.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овощной суп с чечевицей</div>
+<div class="habit-desc"><span class="habit-important">Чечевица, морковь, кабачок</span> — сварите на 3 дня, разогревайте порциями.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Творог с льняным маслом</div>
+<div class="habit-desc"><span class="habit-important">Творог 5%, льняное масло</span> — быстрый ужин за 5 минут.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Минута дыхания в 14:00</div>
+<div class="habit-desc">Когда накатывает усталость: 5 глубоких вдохов животом. Вдох на 4, выдох на 6.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гаджеты off в 21:00</div>
+<div class="habit-desc">Откладываем телефон, включаем мягкий свет. Нервная система отдохнёт.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ванночка для ног</div>
+<div class="habit-desc">10 минут в тёплой воде перед сном. Улучшит кровообращение.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Утренние потягушки</div>
+<div class="exercise-duration">1-2 минуты в постели</div>
+<div class="exercise-desc">
+<strong>1.</strong> Лёжа на спине: руки за голову, ноги тянем вниз — 5 секунд<br>
+<strong>2.</strong> Колени к груди, обхватить руками — покачаться 5 раз<br>
+<strong>3.</strong> Повернуться на правый бок, потянуться. Затем на левый<br>
+<strong>4.</strong> Сесть на край кровати, покрутить плечами назад 5 раз
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 2 -->
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Закрепление привычек">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">8-14 января • Вторая неделя</div>
+<div class="week-title">Закрепление привычек</div>
+<div class="week-intro">Утро уже стало легче? Эта неделя закрепит результат и добавит энергии.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вода с лимоном + массаж живота</div>
+<div class="habit-desc">После воды сделайте 10 круговых поглаживаний живота по часовой стрелке.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Контрастное умывание</div>
+<div class="habit-desc">После обычного умывания — 3 раза прохладной водой. Мгновенная бодрость!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">5 минут свежего воздуха</div>
+<div class="habit-desc">Балкон или окно. 10 глубоких вдохов. Кислород — лучший энергетик.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яйца-пашот с авокадо</div>
+<div class="habit-desc"><span class="habit-important">Яйца, авокадо, зелень</span> — омега-3 зарядит мозг энергией.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Индейка с тушёной брокколи</div>
+<div class="habit-desc"><span class="habit-important">Индейка, брокколи, лук</span> — белковый обед для поддержания сил.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Крем-суп из цветной капусты</div>
+<div class="habit-desc"><span class="habit-important">Цветная капуста, лук, бульон</span> — нежный ужин без тяжести.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Энергетическая пауза в 15:00</div>
+<div class="habit-desc">Вместо сладкого — 5 миндальных орехов. Медленно разжёвывайте каждый.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневник благодарности</div>
+<div class="habit-desc">5 минут записи хорошего за день. Даже мелочи считаются!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Самомассаж</div>
+<div class="habit-desc">Виски круговыми движениями 1 минуту, затем мочки ушей.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Йога на стуле</div>
+<div class="exercise-duration">5 минут сидя</div>
+<div class="exercise-desc">
+<strong>1.</strong> Выпрямить спину, тянуться макушкой вверх — 10 сек<br>
+<strong>2.</strong> Повороты корпуса вправо-влево — по 10 сек<br>
+<strong>3.</strong> Наклон вперёд, руки к полу — расслабить спину 15 сек<br>
+<strong>4.</strong> Откинуться на спинку, руки вверх — прогнуться 10 сек<br>
+<strong>5.</strong> Вращение плечами назад — 10 раз
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 3 -->
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Расширение практик">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">15-21 января • Третья неделя</div>
+<div class="week-title">Расширение практик</div>
+<div class="week-intro">Светлана, глаза начали блестеть? Усилим эффект новыми источниками энергии.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вода с лимоном и имбирём</div>
+<div class="habit-desc">Добавьте четверть ложки молотого имбиря. Природный энергетик!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Точка энергии</div>
+<div class="habit-desc">Массаж точки между бровями 30 секунд. Улучшит концентрацию.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Утренняя аффирмация</div>
+<div class="habit-desc">"Я полна энергии и сил. Сегодня будет прекрасный день!"</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Творожный крем с печёным яблоком</div>
+<div class="habit-desc"><span class="habit-important">Творог, яблоко, корица</span> — сладкий завтрак без вреда.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая сёмга с кабачками</div>
+<div class="habit-desc"><span class="habit-important">Сёмга, кабачок, лимон</span> — омега-3 для мозга и энергии.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Тушёная чечевица с овощами</div>
+<div class="habit-desc"><span class="habit-important">Чечевица, морковь, специи</span> — растительный белок и железо.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Танцевальная минутка в 16:00</div>
+<div class="habit-desc">Включите любимую песню и потанцуйте 1 минуту. Заряд эндорфинов!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Осознанный перекус</div>
+<div class="habit-desc">Ешьте орехи без телефона. Полная концентрация на вкусе.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вечерняя прогулка 15 минут</div>
+<div class="habit-desc">После ужина. Медленный шаг, глубокое дыхание.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ритуал расслабления</div>
+<div class="habit-desc">Напрячь все мышцы на 5 сек, резко расслабить. Повторить 3 раза.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Планирование радости</div>
+<div class="habit-desc">Подумайте об одной приятной вещи на завтра.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Мягкая йога у стены</div>
+<div class="exercise-duration">10 минут</div>
+<div class="exercise-desc">
+<strong>1.</strong> Спиной к стене: руки вверх вдоль стены — тянуться 20 сек<br>
+<strong>2.</strong> Боком к стене: наклон в сторону — по 15 сек<br>
+<strong>3.</strong> Лицом к стене: руки на стену, отойти назад — растяжка спины 30 сек<br>
+<strong>4.</strong> Спиной к стене: "стульчик" — держать 10 сек<br>
+<strong>5.</strong> Встать, потрясти руками и ногами
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 4 -->
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Интеграция в жизнь">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">22-31 января • Четвёртая неделя</div>
+<div class="week-title">Интеграция в жизнь</div>
+<div class="week-intro">Три недели позади! Сделаем все привычки частью вашей новой жизни.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный утренний ритуал</div>
+<div class="habit-desc">Вода → растяжка → контрастное умывание → свежий воздух. 15 минут на всё.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Энергетический завтрак</div>
+<div class="habit-desc">Чередуйте все освоенные рецепты. У вас есть меню на неделю!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Утреннее намерение</div>
+<div class="habit-desc">Одна главная цель дня. Не список, а фокус.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яйцо всмятку с гречкой</div>
+<div class="habit-desc"><span class="habit-important">Яйцо, гречка, масло гхи</span> — простая классика для энергии.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречка с тушёными овощами</div>
+<div class="habit-desc"><span class="habit-important">Гречка, морковь, кабачок</span> — максимум железа для сил.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая рыба с капустой</div>
+<div class="habit-desc"><span class="habit-important">Треска, цветная капуста</span> — лёгкий белковый ужин.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Энергетическая программа дня</div>
+<div class="habit-desc">14:00 дыхание, 15:00 орехи, 16:00 танец. Три точки энергии!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">8 стаканов воды</div>
+<div class="habit-desc">Напоминания каждые 2 часа. Обезвоживание — враг энергии.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный вечерний ритуал</div>
+<div class="habit-desc">Прогулка → ужин до 19:00 → гаджеты off → ванночка → массаж.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подготовка к завтра</div>
+<div class="habit-desc">Одежда и стакан для воды. 5 минут вечером = 20 минут утром.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ритуал гордости</div>
+<div class="habit-desc">Похвалите себя за месяц. Вы молодец!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Полный комплекс энергии</div>
+<div class="exercise-duration">20-30 минут (можно разбить на части)</div>
+<div class="exercise-desc">
+<strong>УТРО (5 мин):</strong> Потягушки в постели + йога на стуле<br>
+<strong>ДЕНЬ (10 мин):</strong> Мягкая йога у стены после обеда<br>
+<strong>ВЕЧЕР (10 мин):</strong><br>
+• Ходьба на месте с высокими коленями — 2 мин<br>
+• Махи руками в стороны — 20 раз<br>
+• Наклоны в стороны — по 10 раз<br>
+• Вращение тазом — по 10 раз<br>
+• Растяжка: руки в замок за спиной — 20 сек<br>
+• Обнять себя за плечи — 20 сек<br>
+• Завершить глубоким дыханием
+</div>
+</div>
+</div>
+</div>
+
+<!-- Специальный раздел -->
+<div class="section" id="special-guide">
+<div class="focuses-title">Гид по восстановлению энергии</div>
+<div class="focuses-subtitle">Ваша персональная инструкция</div>
+
+<div class="info-box">
+<div class="info-title">💡 Почему пропала энергия?</div>
+<div class="info-text">В 45 лет снижается усвоение железа, щитовидка работает иначе, стресс накапливается годами. Добавьте проблемы с ЖКТ — организму не хватает "топлива". Но это решаемо!</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Продукты-энергетики</div>
+<div style="font-size:15px;line-height:1.8">
+<strong>Железо:</strong> гречка, чечевица, яйца, индейка<br>
+<strong>Витамины В:</strong> яйца, творог, рыба, авокадо<br>
+<strong>Щитовидка:</strong> морская рыба, бразильский орех<br>
+<strong>ЖКТ:</strong> цветная капуста, кабачки, льняное масло<br>
+<strong>Быстрая энергия:</strong> яблоки, мёд (1 ч.л.), миндаль
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">🆘 Экстренная помощь при упадке сил</div>
+<div class="info-text">1) Стакан воды. 2) 5 миндальных орехов. 3) 10 глубоких вдохов у окна. 4) Массаж мочек ушей 1 минуту. 5) Полежать с поднятыми ногами 10 минут.</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Ваши результаты по неделям</div>
+<div style="font-size:15px;line-height:1.8">
+<strong>3 дня:</strong> Легче вставать по утрам<br>
+<strong>1 неделя:</strong> Нет тошноты, лучше пищеварение<br>
+<strong>2 недели:</strong> Не тянет спать днём<br>
+<strong>3 недели:</strong> Силы на вечер<br>
+<strong>Месяц:</strong> Стабильная энергия весь день!
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">⚡ Главный секрет энергии после 45</div>
+<div class="info-text">Энергия приходит не от кофе и сахара, а от правильного ритма дня, достаточного белка и железа, хорошего сна и регулярного движения. Дайте организму время перестроиться!</div>
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+<div class="section letter" id="final-message">
+<div class="letter-content">
+<p>Дорогая Светлана,</p>
+<p>Я знаю, как тяжело просыпаться разбитой и тащить себя через день. Но это изменится быстрее, чем вы думаете! Ваш организм просто устал — мы поможем ему вспомнить, как быть полным энергии.</p>
+<p>Через 3 дня утро станет легче. Через неделю заметите — днём больше не тянет прилечь. К концу второй недели близкие спросят: "Ты как будто помолодела!" Просто организм начнёт получать железо и витамины, которых так не хватало.</p>
+<p>Все рецепты учитывают вашу щитовидку, проблемы с ЖКТ и исключение глютена. Готовятся максимум 20 минут — я знаю, времени мало. К концу месяца вы будете просыпаться с желанием жить, а вечером останутся силы на себя любимую.</p>
+<p>Начните с малого — со стакана тёплой воды утром. Не пытайтесь сделать всё сразу. У вас всё получится, Светлана. Через месяц вы станете той энергичной женщиной, которой всегда были внутри!</p>
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition,behavior:'smooth'});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
