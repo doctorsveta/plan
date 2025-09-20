@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Лариса • Сентябрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fff;border-bottom:1px solid var(--accent-light)}
+.nav-content.active{max-height:60vh;overflow-y:auto}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Информационные блоки */
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:16px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:15px;color:#6b5d56;line-height:1.6}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Адаптация для мобильных устройств */
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Мягкий старт</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Укрепление привычек</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Расширение практик</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Интеграция в жизнь</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('special-guide')">
+<span class="nav-item-name">Гид по спокойному сну</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+<div class="section cover" id="cover">
+<div class="cover-icon">🌙</div>
+<div class="cover-subtitle">Доктор Света</div>
+<div class="cover-name">Лариса</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.5"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">1 месяц заботы о себе</div>
+<div class="cover-dedication-line">От тревог к спокойному сну</div>
+</div>
+<div class="cover-date">Сентябрь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в сентябре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Спокойный сон</span>
+<span class="focus-tag">Контроль веса</span>
+<span class="focus-tag">Режим питания</span>
+<span class="focus-tag">Снижение тревожности</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Налаживаем сон через питание</div>
+<div class="focus-item-desc">Начнём с продуктов, богатых магнием и триптофаном. <span class="focus-item-important">Через неделю засыпание станет легче на 15-30 минут, через месяц — стабильный сон 6-7 часов.</span></div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Мягкое снижение веса</div>
+<div class="focus-item-desc">Будем работать с порциями и режимом питания — без жёстких ограничений. <span class="focus-item-important">Реально потерять 1-1.5 кг за месяц при вашем ИМТ и приёме Эгилока.</span></div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Успокаиваем нервную систему</div>
+<div class="focus-item-desc">Особые продукты и режим помогут снизить тревожность на 30-40%. <span class="focus-item-important">Полное решение требует психотерапии, но питание создаст основу.</span></div>
+</div>
+<div class="focus-item">
+<div class="focus-item-title">Важность медицинской поддержки</div>
+<div class="focus-item-desc">При вашей ситуации рекомендую консультацию эндокринолога (для гормонов) и сомнолога. <span class="focus-item-important">План питания — это основа, но комплексный подход даст лучшие результаты.</span></div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Мягкий старт">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">22-28 сентября • Первая неделя</div>
+<div class="week-title">Мягкий старт</div>
+<div class="week-intro">Лариса, начинаем с простых шагов. Через 3-5 дней вы заметите: днём меньше усталости, вечером спокойнее, меньше вздутия после еды. Засыпание пока останется сложным, но тревожные мысли начнут уменьшаться.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Стакан тёплой воды + 5 минут света</div>
+<div class="habit-desc">Сразу после пробуждения выпейте стакан тёплой воды — это запустит пищеварение. Затем 5 минут постойте у окна или выйдите на балкон — солнечный свет синхронизирует циркадные ритмы.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак через 30 минут</div>
+<div class="habit-desc">Обязательный завтрак с белком — это основа стабильного настроения и энергии на весь день. Не пропускайте!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречневая каша с яйцом</div>
+<div class="habit-desc"><span class="habit-important">На завтрак</span> — отличное сочетание магния из гречки и белка из яйца. Поможет снизить тревожность и даст долгую сытость.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овощной суп с чечевицей</div>
+<div class="habit-desc"><span class="habit-important">На обед</span> — лёгкий, но питательный. Чечевица богата железом и клетчаткой, поддержит энергию без тяжести.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая тыква с корицей</div>
+<div class="habit-desc"><span class="habit-important">На ужин</span> — тыква содержит триптофан для хорошего сна, а корица успокаивает нервную систему.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ужин в 19:00 + перекус в 21:00</div>
+<div class="habit-desc">Лариса, вы ужинаете в 18:00, а ложитесь после полуночи — это слишком большой перерыв! Перенесите ужин на 19:00. В 21:00 — лёгкий перекус: банан, горсть миндаля или тёплое молоко с мёдом.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ловите "окно сна"!</div>
+<div class="habit-desc">Почувствовали сонливость? У вас есть 15-20 минут! Бросайте всё и ложитесь. НЕ читайте в постели — это убивает сон. Пропустили момент? Следующее окно через 90 минут.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Постепенный сдвиг времени сна</div>
+<div class="habit-desc">Лариса, ложиться в 1:30-2:30 — это катастрофа для организма! Каждый день ложитесь на 15 минут раньше. За 2 недели сдвинете на 3 часа. Цель первого месяца — отбой в 00:00, далее — 23:00.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Читайте ВНЕ спальни!</div>
+<div class="habit-desc">Вы читаете час в постели — это убивает сон! Читайте в кресле при мягком свете. Почувствовали сонливость? Сразу в постель! Не упускайте момент.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Травяной чай без капель</div>
+<div class="habit-desc">Вы неделю без капель — это прогресс! Продолжайте. В 22:00 пейте ромашку с мёдом. Если очень тревожно — добавьте пассифлору. Капли оставьте как крайний вариант.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Работа с психологией</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневник у кровати</div>
+<div class="habit-desc">Блокнот рядом с кроватью. Тревожная мысль пришла? Записали одним предложением и отпустили. Мозг успокоится — информация сохранена.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Правило 20 минут</div>
+<div class="habit-desc">Не заснули за 20 минут? Встаньте! Посидите при мягком свете, выпейте тёплого молока. Вернитесь только когда снова захочется спать. Не мучайте себя в постели!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Дыхание 4-7-8</div>
+<div class="exercise-duration">2 минуты перед сном</div>
+<div class="exercise-desc">Лёжа в постели: вдох через нос на 4 счёта, задержка дыхания на 7, медленный выдох через рот на 8. Повторите 3-4 раза. Это упражнение активирует парасимпатическую нервную систему и помогает заснуть.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 2 -->
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Укрепление привычек">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">29 сентября - 5 октября • Вторая неделя</div>
+<div class="week-title">Укрепление привычек</div>
+<div class="week-intro">Лариса, вы уже заметили первые изменения? Продолжаем укреплять режим и добавляем новые элементы для ещё более спокойного сна и стабильного веса.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Продолжаем со стаканом воды + 10 минут света</div>
+<div class="habit-desc">Теперь это уже привычка! Добавьте несколько капель лимона в воду для лучшего эффекта. Свет увеличьте до 10 минут — лучше на улице.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">5 минут спокойного времени</div>
+<div class="habit-desc">После воды посидите спокойно 5 минут — без телефона, просто подышите и настройтесь на день. Это снизит утреннюю тревожность.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Сытный завтрак</div>
+<div class="habit-desc">Продолжаем с обязательным завтраком. Теперь следите, чтобы он составлял примерно 25% от дневной калорийности.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овсянка с печёным яблоком</div>
+<div class="habit-desc"><span class="habit-important">Новый вариант завтрака</span> — овсянка успокаивает желудок, яблоко даёт клетчатку. Идеально при ГЭРБ!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Индейка с тушёной брокколи</div>
+<div class="habit-desc"><span class="habit-important">На обед</span> — индейка богата триптофаном, брокколи содержит магний. Оба нутриента улучшают сон!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая рыба с цветной капустой</div>
+<div class="habit-desc"><span class="habit-important">На ужин</span> — лёгкий белок и овощи, которые не нагружают пищеварение перед сном.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дробное питание каждые 3 часа</div>
+<div class="habit-desc">5 приёмов пищи маленькими порциями — это поможет избежать переедания и стабилизирует сахар в крови. Меньше скачков сахара — спокойнее нервная система!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Прогулка после обеда</div>
+<div class="habit-desc">10-15 минут спокойной ходьбы после обеда улучшат пищеварение, снизят сахар в крови и дадут заряд энергии на вторую половину дня.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Тёплая ванна с магнезией</div>
+<div class="habit-desc">2 раза в неделю принимайте ванну с английской солью (магнезией) — магний через кожу поможет расслабить мышцы и улучшить сон.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Выключаем экраны за час до сна</div>
+<div class="habit-desc">Телефон, телевизор, компьютер — всё выключаем. Синий свет блокирует мелатонин. Лучше почитайте книгу при мягком свете.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Работа с психологией</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Техника "5-4-3-2-1" при тревоге</div>
+<div class="habit-desc">Когда накрывает тревога, назовите: 5 вещей, которые видите, 4 звука, 3 ощущения тела, 2 запаха, 1 вкус. Это вернёт вас в реальность.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">"Время для беспокойства"</div>
+<div class="habit-desc">Выделите 15 минут в 18:00 для всех тревог. Приходит тревога днём? Скажите: "Я подумаю об этом в 18:00". Мозг успокоится.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Прогрессивная релаксация</div>
+<div class="exercise-duration">5 минут перед сном</div>
+<div class="exercise-desc">Лёжа в постели, поочерёдно напрягайте и расслабляйте группы мышц: стопы (5 секунд напряжения, затем расслабление), икры, бёдра, живот, руки, плечи, лицо. Это снимет физическое напряжение дня и подготовит тело ко сну.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 3 -->
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Расширение практик">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">6-12 октября • Третья неделя</div>
+<div class="week-title">Расширение практик</div>
+<div class="week-intro">Лариса, вы молодец! Засыпать стало легче, вес начал снижаться. Теперь углубляем результаты и добавляем практики для устойчивых изменений.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вода + 5 минут покоя + лёгкая зарядка</div>
+<div class="habit-desc">К привычному ритуалу добавьте 5 минут простых движений: повороты головы, махи руками, наклоны. Это разгонит лимфу и уменьшит утренние отёки.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак с акцентом на белок</div>
+<div class="habit-desc">Минимум 20 г белка на завтрак — это поможет контролировать аппетит весь день и стабилизировать настроение.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">План на день</div>
+<div class="habit-desc">Запишите 3 главные задачи дня. Это снизит тревожность от неопределённости и поможет чувствовать контроль.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Омлет на пару с зеленью</div>
+<div class="habit-desc"><span class="habit-important">Ещё один вариант завтрака</span> — нежный омлет без жарки, безопасно для ГЭРБ, много белка для сытости.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая сёмга с кабачками</div>
+<div class="habit-desc"><span class="habit-important">На обед</span> — омега-3 жирные кислоты для мозга и настроения, поддержка гормонального баланса.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Крем-суп из цветной капусты</div>
+<div class="habit-desc"><span class="habit-important">На ужин</span> — лёгкий, но сытный, идеален перед сном. Можно готовить на 2 дня вперёд.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Две прогулки по 15 минут</div>
+<div class="habit-desc">После обеда и после ужина. Вечерняя прогулка особенно важна — снижает кортизол перед сном, помогает переварить пищу.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Перекус в 16:00</div>
+<div class="habit-desc">Горсть орехов или яблоко — это поможет избежать вечернего переедания и стабилизирует настроение к вечеру.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневник благодарности</div>
+<div class="habit-desc">Запишите 3 хорошие вещи, которые произошли за день. Это переключит мозг с тревог на позитив перед сном.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ароматерапия</div>
+<div class="habit-desc">Капля лавандового масла на подушку или аромалампа с ромашкой — запахи влияют на лимбическую систему и улучшают сон.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Спальня = только сон</div>
+<div class="habit-desc">Не работайте и не ешьте в постели. Мозг должен ассоциировать спальню только со сном.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Работа с психологией</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневник мыслей</div>
+<div class="habit-desc">Тревожная мысль → запишите → найдите доказательства ЗА и ПРОТИВ → сформулируйте реалистичную мысль. Это разрывает круг руминации.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Визуализация успешного засыпания</div>
+<div class="habit-desc">Днём представьте, как вечером спокойно готовитесь ко сну, ложитесь и легко засыпаете. Мозг начнёт воспринимать это как реальный опыт.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Йога-растяжка перед сном</div>
+<div class="exercise-duration">10 минут</div>
+<div class="exercise-desc">Простые позы: поза ребёнка (1 минута), кошка-корова (10 повторений), скрутка лёжа (по 30 секунд на каждую сторону), ноги на стену (3 минуты). Эти позы снимут напряжение с поясницы, улучшат кровообращение и подготовят тело к отдыху. Делайте медленно, без усилий.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 4 -->
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Интеграция в жизнь">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">13-19 октября • Четвёртая неделя</div>
+<div class="week-title">Интеграция в жизнь</div>
+<div class="week-intro">Лариса, это финальная неделя первого месяца. Вы уже чувствуете изменения: сон стал крепче, вес снижается, тревожность уменьшилась. Закрепляем всё достигнутое!</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный утренний ритуал</div>
+<div class="habit-desc">Вода → 5 минут покоя → зарядка → душ → завтрак. Этот ритуал уже должен стать автоматическим. Он задаёт правильный тон всему дню.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Взвешивание раз в неделю</div>
+<div class="habit-desc">Только по понедельникам утром натощак. Не чаще! Ежедневные взвешивания создают лишний стресс.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Планирование меню на день</div>
+<div class="habit-desc">Утром решите, что будете есть сегодня. Это избавит от спонтанных перекусов и поможет контролировать калории.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овсянка с тыквой</div>
+<div class="habit-desc"><span class="habit-important">Осенний завтрак</span> — тыква + овсянка + корица = идеальное сочетание для уюта, сытости и спокойствия.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Куриный суп с гречкой</div>
+<div class="habit-desc"><span class="habit-important">На обед</span> — классика, которая работает. Лёгкий, но питательный, можно готовить на 2-3 дня.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Запечённая индейка с овощами</div>
+<div class="habit-desc"><span class="habit-important">На ужин</span> — идеальный белок для вечера, овощи дают объём без калорий.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Контроль порций</div>
+<div class="habit-desc">Используйте маленькие тарелки — визуально порция кажется больше. Ешьте медленно, откладывайте приборы между укусами. Насыщение приходит через 20 минут!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вода между приёмами пищи</div>
+<div class="habit-desc">По стакану воды между едой — это снизит ложный голод и поможет не переедать. Всего 8 стаканов в день.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вечерний чек-лист</div>
+<div class="habit-desc">Проверьте: последняя еда была 3 часа назад? Экраны выключены? Комната проветрена? Температура 18-20°C? Это идеальные условия для сна.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Медитация или молитва</div>
+<div class="habit-desc">10 минут спокойного времени с собой. Можете использовать приложение для медитации или просто спокойно подышать.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ритуал отхода ко сну</div>
+<div class="habit-desc">Одно и то же время (22:00-22:30), одни и те же действия. Мозг любит предсказуемость — это сигнал готовиться ко сну.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Работа с психологией</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Оценка прогресса</div>
+<div class="habit-desc">Запишите: как изменилось время засыпания? Уровень тревоги 1-10 в начале и сейчас? Что работает лучше всего?</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">План на второй месяц</div>
+<div class="habit-desc">Если прогресс есть — продолжаем и углубляем. Если минимальный — время обратиться к психотерапевту для КПТ-терапии бессонницы.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Полный вечерний комплекс</div>
+<div class="exercise-duration">20-30 минут (можно разбить)</div>
+<div class="exercise-desc">Соберите всё, что понравилось за месяц: 5 минут лёгкой йоги, 5 минут дыхания, 10 минут прогулки на свежем воздухе (или у открытого окна). Можете разбить на части: прогулка после ужина, йога и дыхание перед сном. Главное — регулярность!</div>
+</div>
+</div>
+</div>
+
+<!-- Специальный раздел -->
+<div class="section" id="special-guide">
+<div class="focuses-title">Гид по спокойному сну</div>
+<div class="focuses-subtitle">Ваш путь к крепкому сну через питание</div>
+
+<div class="info-box">
+<div class="info-title">💡 Почему вы не можете заснуть?</div>
+<div class="info-text">Лариса, у вас классическая психофизиологическая бессонница. Ваше "окно сна" существует — если вовремя лечь, вы засыпаете! Но вы его пропускаете: читаете час, упускаете момент сонливости, потом мозг "просыпается" и начинает крутить мысли. При позднем отходе ко сну (1:30-2:30) и ГЭРБ это создаёт замкнутый круг.</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Правило "окна сна"</div>
+<div style="line-height:1.8">
+<strong>Первые признаки сонливости:</strong> тяжелеют веки, зевота, хочется лечь<br>
+<strong>У вас есть 15-20 минут!</strong> Это ваше окно — ловите его<br>
+<strong>Пропустили момент?</strong> Следующее окно через 90 минут<br>
+<strong>Читать в постели — НЕТ!</strong> Это убивает ассоциацию "кровать = сон"
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">🆘 Когда мысли крутятся в голове</div>
+<div class="info-text">Техника "Дневник у кровати": держите блокнот рядом. Мысль пришла? Запишите одним предложением и отпустите. Мозг успокоится — он знает, что информация сохранена. Если через 20 минут не заснули — встаньте! Посидите при мягком свете, выпейте тёплого молока с мёдом. Вернитесь только когда почувствуете сонливость.</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Продукты для крепкого сна</div>
+<div style="line-height:1.8">
+<strong>Богаты триптофаном:</strong> индейка, курица, яйца, творог, бананы, овсянка<br>
+<strong>Содержат магний:</strong> гречка, тыква, шпинат, миндаль, семена подсолнечника<br>
+<strong>Источники B-витаминов:</strong> цельнозерновые, бобовые, орехи, зелёные овощи<br>
+<strong>Успокаивающие травы:</strong> ромашка, мелисса, пассифлора, валериана
+</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Ваши маркеры успеха</div>
+<div style="line-height:1.8">
+<strong>Неделя 1:</strong> Ложитесь на час раньше (00:30 вместо 1:30), меньше тревожных мыслей<br>
+<strong>Неделя 2:</strong> Засыпаете за 1.5 часа вместо 2-3, просыпаетесь реже<br>
+<strong>Неделя 3:</strong> Засыпаете за час, сон становится глубже<br>
+<strong>Неделя 4:</strong> Засыпаете за 30-40 минут, спите 6-7 часов<br>
+<strong>Бонус:</strong> Минус 1-1.5 кг веса — реалистично при вашем ИМТ и приёме Эгилока
+</div>
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+<div class="section letter" id="final-message">
+<div class="letter-content">
+<p>Дорогая Лариса,</p>
+<p>Я понимаю, как тяжело, когда не можешь нормально выспаться месяцами. Когда мысли крутятся в голове, упускаешь момент сонливости, а потом лежишь до 2:30 ночи. Неделю без капель продержались — это уже прогресс! Но одной силы воли мало, нужна система.</p>
+<p>У вас есть "окно сна" — если вовремя лечь, вы засыпаете. Но вы его пропускаете, читая в постели целый час. Первая задача — научиться ловить эти окна. Вторая — создать условия, чтобы они появлялись раньше.</p>
+<p>Через неделю вы заметите: утром стало легче вставать, днём меньше усталости, вечером — меньше тревоги. Это ещё не решение проблемы сна, но первые признаки, что организм откликается на изменения. К концу второй недели засыпание станет легче на 15-30 минут.</p>
+<p>Через месяц при правильном подходе вы сможете засыпать за 30-40 минут вместо 2-3 часов, спать 6-7 часов вместо 5. Вес начнёт снижаться — реально потерять 1-1.5 кг при вашем ИМТ и приёме Эгилока. Тревожность снизится на 30-40%.</p>
+<p>Но будем честны: в 53 года с хронической бессонницей, ГЭРБ и лишним весом полное восстановление займёт 3-6 месяцев. Рекомендую параллельно обратиться к эндокринологу (проверить гормоны) и сомнологу. Питание — это основа, но комплексный подход даст лучшие результаты.</p>
+<p>Помните, Лариса: каждая ночь, когда вы засыпаете хотя бы на 15 минут раньше — это победа. Не ждите чудес, но верьте в постепенные изменения. У вас всё получится!</p>
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition,behavior:'smooth'});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
