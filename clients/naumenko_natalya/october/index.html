@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Наталья • Октябрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease;background:#fff;border-bottom:1px solid var(--accent-light)}
+.nav-content.active{max-height:60vh;overflow-y:auto}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:60px;height:60px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 16px rgba(212,181,160,0.25)}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+.day-part{margin-bottom:35px}
+.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:16px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:15px;color:#6b5d56;line-height:1.6}
+
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Железный старт</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Осенняя защита</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Энергия изнутри</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Закрепление результатов</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('special-guide')">
+<span class="nav-item-name">Гид по ферритину</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section cover" id="cover">
+<div class="cover-icon">🍂</div>
+<div class="cover-subtitle">Доктор Света</div>
+<div class="cover-name">Наталья</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.5"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">5 месяц заботы о себе</div>
+<div class="cover-dedication-line">Довести начатое до совершенства</div>
+</div>
+<div class="cover-date">ОКТЯБРЬ 2025</div>
+</div>
+
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в октябре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Железо</span>
+<span class="focus-tag">Осенний иммунитет</span>
+<span class="focus-tag">Стабилизация</span>
+<span class="focus-tag">Закрепление</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Ферритин — главная цель октября</div>
+<div class="focus-item-desc">Наталья, ваш гемоглобин держится на уровне 110 — это отличная стабильность! Но ферритин 12.6 говорит о том, что <span class="focus-item-important">"склады" железа почти пусты</span>. Октябрь посвятим тому, чтобы довести его хотя бы до 20-25, а в идеале — до 30. Это даст устойчивый результат без откатов назад.</div>
+</div>
+
+<div class="focus-item">
+<div class="focus-item-title">Осенняя защита после путешествия</div>
+<div class="focus-item-desc">После простуды в поездке и смены климата организму нужна мягкая иммунная поддержка. Будем укреплять через <span class="focus-item-important">питание, витамин С с цинком и проверенные осенние ритуалы</span> — без перегрузки, естественно.</div>
+</div>
+
+<div class="focus-item">
+<div class="focus-item-title">Отслеживание цикла</div>
+<div class="focus-item-desc">Обильные месячные в сентябре были реакцией на стресс путешествия. В октябре <span class="focus-item-important">наблюдаем за циклом</span> — если снова будет сбой, скорректируем поддержку. ДИМ Индол продолжаем как есть.</div>
+</div>
+
+<div class="focus-item">
+<div class="focus-item-title">Закрепление всех побед</div>
+<div class="focus-item-desc">Вы уже создали невероятную базу: поясница и спина совершенно не беспокоят, сон глубокий, кожа сияющая, энергия стабильная. Октябрь — месяц, когда <span class="focus-item-important">всё это становится вашей новой нормой</span> навсегда.</div>
+</div>
+</div>
+</div>
+
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Железный старт">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">1-7 октября • Первая неделя</div>
+<div class="week-title">Железный старт</div>
+<div class="week-intro">Наталья, эта неделя — про максимальное усвоение железа. Будем работать точечно: правильные продукты в правильное время, усиленная поддержка витамином С и проверенные привычки.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Железо с витамином С — усиленная схема</div>
+<div class="habit-desc">Натощак: <span class="habit-important">Железо хелатное 30-35 мг + 1 капсула Витамин С+Цинк</span> от Адженис. Запить водой. Через 40 минут — завтрак с Омегой, витамином D и Спирулиной. Это ваша проверенная схема, просто усилили дозу железа.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Настой крапивы с листом малины</div>
+<div class="habit-desc">Ваш утренний ритуал продолжаем — крапива, мята, душица, лист малины. Эти травы <span class="habit-important">поддерживают кроветворение</span> естественным путём.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Вода с лимоном и щепоткой соли</div>
+<div class="habit-desc">Как всегда по утрам — запускает все системы и помогает усвоению железа.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречка с яйцом и грибами</div>
+<div class="habit-desc"><span class="habit-important">Идеальный белковый завтрак</span> — гречка даёт железо, яйцо помогает усвоению, грибы добавляют медь (нужна для транспорта железа). Готовится за 15 минут.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Печень куриная в томатном соусе с запечённым перцем</div>
+<div class="habit-desc"><span class="habit-important">Чемпион по гемовому железу</span> — 3-4 раза в неделю обязательно! Томаты дают витамин С для усвоения, перец добавляет сладость и витамин А.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Паштет из говяжьей печени с брокколи и орехами</div>
+<div class="habit-desc">Готовьте на несколько дней — <span class="habit-important">говяжья печень даёт больше железа, чем куриная</span>. Орехи добавляют медь и цинк, брокколи — индолы для контроля миомы.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Точечный массаж запястий</div>
+<div class="habit-desc">2-3 минуты в обеденный перерыв. Массируем внутреннюю сторону запястья круговыми движениями — <span class="habit-important">стимулирует кроветворение</span> и снимает усталость. Вы уже делали в августе, помните эффект?</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Настой шиповника с курагой</div>
+<div class="habit-desc">Ваш вечерний напиток — продолжаем. Шиповник даёт витамин С, курага — калий и железо.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дыхательная гимнастика 4-7-8</div>
+<div class="habit-desc">Перед сном — уже вошло в привычку. Помогает усвоению всех нутриентов через глубокое расслабление.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Магний 200-300 мг</div>
+<div class="habit-desc">За час до сна с едой. <span class="habit-important">Продолжаем Solgar Magnesium Bisglycinate</span> — он работает отлично, судороги не возвращались.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Лимфодренажная активация</div>
+<div class="exercise-duration">5-7 минут утром</div>
+<div class="exercise-desc">Наталья, помните это упражнение из августа? Вы писали, что всё тело наполняется теплом. Возвращаем его — <span class="habit-important">усиливает микроциркуляцию и помогает доставке кислорода</span> ко всем тканям, включая костный мозг, где образуются эритроциты.<br><br>
+
+<b>Как выполнять:</b> Стоя, лёгкие круговые движения всеми суставами по очереди — стопы, колени, таз, плечи, шея. Потом мягкие наклоны в стороны. Всё медленно, с дыханием. Делайте всей семьёй, как любите!</div>
+</div>
+</div>
+</div>
+
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Осенняя защита">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">8-14 октября • Вторая неделя</div>
+<div class="week-title">Осенняя защита</div>
+<div class="week-intro">Наталья, на этой неделе добавляем поддержку иммунитета — мягко, через проверенные продукты и ритуалы. Железо держим на том же уровне, добавляем осенние суперфуды.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Железо + Витамин С — продолжаем</div>
+<div class="habit-desc">Та же схема: натощак железо 30-35 мг + Витамин С+Цинк. Не меняем то, что работает!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Имбирная вода с мёдом</div>
+<div class="habit-desc">2-3 раза в неделю вместо обычной воды с лимоном. Тонкий ломтик свежего имбиря + щепотка соли + половина чайной ложки мёда. <span class="habit-important">Противовирусный эффект</span> плюс согревает изнутри.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Настой крапивы + шиповник</div>
+<div class="habit-desc">Утренний настой усилим шиповником — добавьте 5-7 ягод в термос с вечера. <span class="habit-important">Двойная доза витамина С</span> для усвоения железа.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овсянка с запечённым яблоком и корицей</div>
+<div class="habit-desc"><span class="habit-important">Согревающий осенний завтрак</span> — овсянка даёт железо и клетчатку, яблоко помогает работе кишечника (важно для усвоения!), корица регулирует сахар в крови.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Телятина тушеная с цветными овощами</div>
+<div class="habit-desc">2-3 раза в неделю — <span class="habit-important">телятина нежнее говядины, но железа столько же</span>. Тушите с морковью, перцем, брокколи — получается сочно и красиво!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Теплый салат с чечевицей и овощами</div>
+<div class="habit-desc">Чечевица — <span class="habit-important">растительное железо + фолаты</span>. Добавьте помидоры черри, болгарский перец, зелень — витамин С улучшит усвоение в 3 раза!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Невидимая гимнастика на работе</div>
+<div class="habit-desc">Каждый час: 10 круговых движений стопами сидя + 5 глубоких вдохов. <span class="habit-important">Разгоняет кровь</span> после стояния за швейной машинкой, не даёт застаиваться. Коллеги даже не заметят!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Чай с мелиссой и мёдом</div>
+<div class="habit-desc">3-4 раза в неделю вместо шиповника. <span class="habit-important">Успокаивает нервную систему</span> — важно для устойчивого гемоглобина (стресс "съедает" железо!).</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Растяжка всего тела</div>
+<div class="habit-desc">10 минут перед сном — ваш любимый ритуал. Эластичность мышц, которую вы заметили в сентябре, сохраняем и углубляем.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Витамин С+Цинк вечером</div>
+<div class="habit-desc">Вторую капсулу принимайте после ужина — для иммунитета и дополнительной поддержки усвоения железа из пищи.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Мобилизация шейно-воротниковой зоны</div>
+<div class="exercise-duration">7-8 минут</div>
+<div class="exercise-desc">Наталья, это упражнение улучшает кровоснабжение головы и шеи — <span class="habit-important">больше кислорода = лучше самочувствие</span> при восстановлении гемоглобина.<br><br>
+
+<b>Как выполнять:</b> Сидя или стоя, медленные повороты головы влево-вправо (по 5 раз), наклоны ухом к плечу (по 5 раз), круговые движения плечами назад (10 раз). Потом положить ладони на затылок и мягко давить головой назад, сопротивляясь руками (удерживать 5 секунд, повторить 3 раза). Всё медленно, без рывков.</div>
+</div>
+</div>
+</div>
+
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Энергия изнутри">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">15-21 октября • Третья неделя</div>
+<div class="week-title">Энергия изнутри</div>
+<div class="week-intro">Наталья, середина месяца — самое время для контрольной точки. Вы уже почувствуете больше энергии, кожа станет ещё более розовой. Продолжаем углублять результат.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Железо + Витамин С — без изменений</div>
+<div class="habit-desc">Держим курс: 30-35 мг железа + Витамин С+Цинк натощак. Ещё 2 недели — и увидим результат в анализах!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Смузи с гранатом и киви</div>
+<div class="habit-desc">2-3 раза в неделю на завтрак. Гранат + киви + горсть шпината + половина банана + вода. <span class="habit-important">Жидкое железо</span> — быстро усваивается.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ваш утренний травяной ритуал</div>
+<div class="habit-desc">Продолжаем настой крапивы, мяты, душицы, листа малины — это уже часть вас, вашей семьи. Не меняем.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Омлет с брокколи и сыром фета</div>
+<div class="habit-desc">Вы уже готовите этот формат отлично! <span class="habit-important">Яйца + брокколи</span> — железо, B12, индолы для контроля миомы. Фета добавляет кальций и пикантность (но фету ешьте отдельно от железа!).</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Индейка с брокколи на пару</div>
+<div class="habit-desc"><span class="habit-important">Диетический белок + индолы</span> — индейка даёт железо и B-витамины, брокколи работает на гормональный баланс. Готовится за 20 минут в пароварке.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Салат с гранатом, киви и курицей</div>
+<div class="habit-desc">То самое сочетание гранат+киви, которое вам так нравится! Добавили курицу для белка. <span class="habit-important">Витамин С из фруктов + железо из курицы</span> = идеальный обед.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">5 минут без телефона перед обедом</div>
+<div class="habit-desc">Просто посидеть в тишине или посмотреть в окно. <span class="habit-important">Снижает кортизол</span> — гормон стресса, который мешает усвоению железа. Попробуйте хотя бы 5 дней — почувствуете разницу.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Настой шиповника с черносливом</div>
+<div class="habit-desc">Ваш вечерний напиток. Чернослив добавляет железо и магний, помогает работе кишечника (важно для усвоения нутриентов!).</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Упражнения для поясницы и плеч</div>
+<div class="habit-desc">Ваш любимый вечерний комплекс — продолжаем. Поясница, спина, плечи как у младенца — это теперь ваша норма!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дыхание 4-7-8 + магний</div>
+<div class="habit-desc">Перед сном — без изменений. Эта связка даёт вам тот самый глубокий сон и лёгкое пробуждение.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Открытая книга</div>
+<div class="exercise-duration">2-4 минуты</div>
+<div class="exercise-desc">Наталья, это упражнение раскрывает грудную клетку и улучшает дыхание — <span class="habit-important">больше кислорода = лучше транспорт железа к тканям</span>.<br><br>
+
+<b>Как выполнять:</b> Лягте на правый бок, ноги согнуты под 90°. Руки вытянуты перед собой, ладони вместе. На вдохе медленно открывайте левую руку, поворачивая корпус влево, как будто открываете книгу. Задержитесь на 3-5 секунд, выдох — возврат. 5 раз на каждую сторону. Делайте вечером после растяжки.</div>
+</div>
+</div>
+</div>
+
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Закрепление результатов">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">22-31 октября • Четвёртая неделя</div>
+<div class="week-title">Закрепление результатов</div>
+<div class="week-intro">Наталья, финальная неделя октября — время подвести итоги и подготовиться к контрольным анализам. Вы проделали огромную работу, и сейчас всё это превращается в вашу новую реальность.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Железо + Витамин С до конца месяца</div>
+<div class="habit-desc">Держим дозировку: 30-35 мг железа + Витамин С+Цинк. <span class="habit-important">Через неделю сдадим анализы</span> — посмотрим на динамику ферритина!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ваши утренние ритуалы</div>
+<div class="habit-desc">Вода с лимоном и солью, настой трав — всё как обычно. Эти привычки уже стали вашей второй натурой.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Суставная гимнастика 40 минут</div>
+<div class="habit-desc">Всей семьёй — продолжаем традицию! Муж ваш молодец, результаты у него фантастические (давление 120/70, плоскостопие уходит!).</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яичница с красной фасолью и помидорами</div>
+<div class="habit-desc"><span class="habit-important">Необычный, но мощный завтрак</span> — красная фасоль даёт растительное железо и клетчатку, помидоры — витамин С, яйца — B12. Сытно до обеда!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Салат из шпината с авокадо и грецкими орехами</div>
+<div class="habit-desc">Шпинат — <span class="habit-important">чемпион по железу среди зелени</span>, авокадо даёт полезные жиры для усвоения, орехи — медь и цинк. Заправьте лимонным соком!</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Творог с запечённым яблоком и грецкими орехами</div>
+<div class="habit-desc">Ваша традиция выходного утра! <span class="habit-important">Белок + пектин + омега-3</span> из орехов. Можно и на ужин — лёгкий и питательный.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Практика благодарности</div>
+<div class="habit-desc">Вечером перед сном вспомните 3 момента дня, за которые благодарны. <span class="habit-important">Снижает стресс</span> и улучшает усвоение всех нутриентов (работает через нервную систему!). Вы уже делали в прошлом — возвращаем.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Все ваши вечерние ритуалы</div>
+<div class="habit-desc">Настой шиповника, дыхательная гимнастика 4-7-8, растяжка, магний — продолжаем всё как есть. Эта связка даёт вам <span class="habit-important">засыпание за 5 минут и глубокий сон</span> до утра.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Подготовка к анализам</div>
+<div class="habit-desc">В конце недели (28-31 октября) <span class="habit-important">сдайте контрольные анализы: ОАК + ферритин</span>. Утром натощак, не отменяя железо накануне вечером. Посмотрим на динамику!</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Постукивание по тимусу</div>
+<div class="exercise-duration">2 минуты утром</div>
+<div class="exercise-desc">Наталья, простое, но мощное упражнение для <span class="habit-important">активации иммунитета</span> — актуально в конце октября перед холодами.<br><br>
+
+<b>Как выполнять:</b> Утром после пробуждения, стоя или сидя, лёгкими похлопываниями (как будто стучитесь в дверь) простучите центр грудины — от ключиц до середины груди. 20 лёгких постукиваний, 2-3 раза с паузами. Это стимулирует вилочковую железу (тимус), которая отвечает за иммунные клетки.</div>
+</div>
+</div>
+</div>
+
+<div class="section" id="special-guide">
+<div class="focuses-title">Гид по ферритину</div>
+<div class="focuses-subtitle">Как работают запасы железа</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Почему ферритин важнее гемоглобина</div>
+<div style="font-size:15px;line-height:1.6;color:var(--text-main)">
+<p style="margin-bottom:10px">Наталья, представьте, что гемоглобин — это деньги в кошельке, а ферритин — сбережения в банке. Вы можете ходить с полным кошельком (гемоглобин 110), но если в банке пусто (ферритин 12.6), то при любых тратах (обильные месячные, стресс, болезнь) снова окажетесь без денег.</p>
+
+<p style="margin-bottom:10px"><b>Ваша ситуация:</b></p>
+<ul style="margin-left:20px;margin-bottom:10px">
+<li>Гемоглобин 110 — неплохо, но до нормы 120-140 ещё расти</li>
+<li>Ферритин 12.6 — критически низкий (норма 15-150)</li>
+<li>MCV 81.5 — размер эритроцитов нормализовался (была микроцитарная анемия!)</li>
+</ul>
+
+<p><span style="color:var(--secondary-warm);font-weight:500">Вывод:</span> Организм использует всё поступающее железо на производство гемоглобина, но "склады" не пополняются. Поэтому продолжаем усиленную поддержку минимум 2-3 месяца.</p>
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">Реалистичные ожидания на октябрь</div>
+<div class="info-text">
+<b>Через 4 недели ферритин может подняться на 5-10 единиц</b> при идеальном соблюдении плана. То есть с 12.6 до 17-22. Это будет отличный результат!<br><br>
+
+<b>Гемоглобин</b> может подрасти до 115-120 — но главное, что он не упадёт после обильных месячных.<br><br>
+
+<b>Что почувствуете раньше анализов:</b><br>
+• Через 1-2 недели: больше энергии днём, меньше желания прилечь<br>
+• Через 3 недели: кожа станет ещё более розовой<br>
+• К концу месяца: ногти перестанут слоиться, волосы будут ещё более крепкими
+</div>
+</div>
+
+<div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Что мешает усвоению железа</div>
+<div style="font-size:15px;line-height:1.6;color:var(--text-main)">
+<p style="margin-bottom:10px"><b>Блокаторы железа (не принимать вместе!):</b></p>
+<ul style="margin-left:20px;margin-bottom:10px">
+<li>Кальций — поэтому железо пьёте отдельно от Спирулины</li>
+<li>Кофе, чай — минимум через 1 час после железа</li>
+<li>Молочные продукты — отдельный приём пищи</li>
+<li>СорбиоДетокс (если будете делать чистку) — интервал 40 минут</li>
+</ul>
+
+<p style="margin-bottom:10px"><b>Усилители железа (ваши друзья!):</b></p>
+<ul style="margin-left:20px">
+<li>Витамин С — вы уже принимаете правильно!</li>
+<li>Животные белки — печень, мясо, рыба</li>
+<li>Ферментированные продукты — квашеная капуста улучшает всасывание в кишечнике</li>
+<li>Медь и цинк в небольших дозах — есть в Витамин С+Цинк от Адженис</li>
+</ul>
+</div>
+</div>
+
+<div class="info-box">
+<div class="info-title">Когда обращаться к врачу</div>
+<div class="info-text">
+Наталья, если после 2-3 месяцев усиленной поддержки ферритин не растёт или продолжает падать — <b>нужна консультация гематолога</b>.<br><br>
+
+<b>Возможные причины упорного дефицита:</b><br>
+• Скрытые кровопотери (нужно исключить)<br>
+• Проблемы с всасыванием в кишечнике<br>
+• Нехватка кофакторов (B12, фолаты, медь)<br><br>
+
+Но пока ваша ситуация объяснима: обильные месячные в сентябре + долгий путь восстановления после гемоглобина 64. Дадим организму время — октябрь-ноябрь покажут динамику.
+</div>
+</div>
+</div>
+
+<div class="section letter" id="final-message">
+<div class="letter-content">
+<p>Дорогая Наталья,</p>
+
+<p>Пять месяцев назад вы пришли ко мне с гемоглобином 82 (а в феврале он был вообще 64!), постоянными болями в спине, плечах и пояснице. И вот сейчас, в октябре, вы просыпаетесь за 5 минут до будильника — отдохнувшая, с розовой сияющей кожей, гибкими мышцами и спиной, которая больше не напоминает о себе.</p>
+
+<p>Да, гемоглобин пока 110, а ферритин всего 12.6 — и вы расстроились, увидев анализы. Но давайте посмотрим правде в глаза: ваш организм прошёл путь от 82 в мае (а до того был 64 в феврале!) до практически нормы. MCV нормализовался — это значит, что эритроциты теперь правильного размера, способны переносить кислород. Всё работает!</p>
+
+<p>Просто на пополнение "складов" нужно время. Ферритин не может вырасти за месяц — это медленный процесс, особенно на фоне обильных месячных. Но мы на правильном пути, и октябрь — месяц, когда мы доведём начатое до конца.</p>
+
+<p>Я вижу, как вы тревожитесь за дочку — 11 класс, ЕГЭ, высыпания на коже. Наталья, помните: ваш пример — лучшее лекарство для неё. Девочка видит, как мама преобразилась, как в вашей семье изменилось всё — питание, отношение к здоровью, энергия. Это сильнее любых слов.</p>
+
+<p>Этот октябрь — про закрепление всех ваших побед. Про то, чтобы ваше новое состояние стало навсегда. Про доверие процессу, даже когда анализы растут медленнее, чем хочется.</p>
+
+<p>Продолжайте делать то, что делаете. Железо, печень, настои, упражнения, дыхание, любовь к себе. Через месяц посмотрим на контрольные анализы — и я уверена, увидим рост. А главное — вы уже чувствуете результат каждый день, просыпаясь с радостью и энергией.</p>
+
+<p>Спасибо за доверие. Идём дальше — к полному восстановлению.</p>
+
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и верой в вас,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition,behavior:'smooth'});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
