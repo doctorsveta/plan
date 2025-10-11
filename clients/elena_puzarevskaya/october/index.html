@@ -45,11 +45,13 @@ border-bottom:1px solid var(--accent-light);
 .nav-badge{font-size:13px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
 
 /* Секции */
-.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light);opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
 .section:last-child{border-bottom:none}
+.section.visible{opacity:1;transform:translateY(0)}
 
 /* Недели - особый тип секций */
-.week{padding:0;background:#fff}
+.week{padding:0;background:#fff;opacity:0;transform:translateY(30px);transition:opacity 0.8s ease,transform 0.8s ease}
+.week.visible{opacity:1;transform:translateY(0)}
 .week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
 .week-image img{width:100%;height:100%;object-fit:cover;display:block}
 .week-content{padding:20px}
@@ -772,6 +774,27 @@ toggleNav();
 }
 });
 }
+
+// Intersection Observer для анимации появления секций
+const observerOptions={
+root:null,
+rootMargin:'0px',
+threshold:0.1
+};
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+observer.unobserve(entry.target);
+}
+});
+},observerOptions);
+
+// Наблюдаем за всеми секциями и неделями
+document.querySelectorAll('.section, .week').forEach(section=>{
+observer.observe(section);
+});
 });
 </script>
 
