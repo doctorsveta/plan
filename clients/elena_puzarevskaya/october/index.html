@@ -25,7 +25,7 @@ border-bottom:1px solid var(--accent-light);z-index:10001;
 }
 .nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
 .nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
-.nav-title{font-size:14px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-title{font-size:15px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
 .nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
 .nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
 .nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
@@ -34,15 +34,15 @@ border-bottom:1px solid var(--accent-light);z-index:10001;
 .nav-content.active{max-height:60vh;overflow-y:auto}
 .nav-list{padding:10px 0}
 .nav-section-title{
-padding:8px 20px;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+padding:8px 20px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
 color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
 border-bottom:1px solid var(--accent-light);
 }
 .nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
 .nav-item:last-child{border-bottom:none}
 .nav-item:active{background:var(--bg-soft)}
-.nav-item-name{flex:1;font-size:15px;color:var(--text-main);font-weight:400}
-.nav-badge{font-size:11px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+.nav-item-name{flex:1;font-size:16px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:13px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
 
 /* Секции */
 .section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
@@ -68,12 +68,12 @@ border-bottom:1px solid var(--accent-light);
 .focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
 .focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
 .focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
-.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:12px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:13px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
 .focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
 .focus-details{margin-top:40px}
 .focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
-.focus-item-title{font-size:16px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
-.focus-item-desc{font-size:15px;color:var(--text-main);line-height:1.6}
+.focus-item-title{font-size:17px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:16px;color:var(--text-main);line-height:1.6}
 .focus-item-important{color:var(--secondary-warm);font-weight:500}
 
 /* Заголовки недель */
@@ -84,7 +84,7 @@ border-bottom:1px solid var(--accent-light);
 
 /* Блоки дня */
 .day-part{margin-bottom:35px}
-.part-title{font-size:13px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title{font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
 .part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
 
 /* Привычки */
@@ -92,20 +92,20 @@ border-bottom:1px solid var(--accent-light);
 .habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
 .habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
 .habit-content{flex:1}
-.habit-title{font-size:16px;font-weight:500;color:var(--text-main);margin-bottom:3px}
-.habit-desc{font-size:14px;color:var(--text-soft);line-height:1.5}
+.habit-title{font-size:17px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:16px;color:var(--text-soft);line-height:1.5}
 .habit-important{color:var(--secondary-warm);font-weight:500}
 
 /* Упражнения */
 .exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
-.exercise-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
-.exercise-duration{font-size:13px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
-.exercise-desc{font-size:15px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+.exercise-title{font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:14px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:16px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
 
 /* Информационные блоки */
 .info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
-.info-title{font-size:16px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
-.info-text{font-size:15px;color:#6b5d56;line-height:1.6}
+.info-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:16px;color:#6b5d56;line-height:1.6}
 
 /* Письмо */
 .letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:50px 25px}
@@ -236,7 +236,7 @@ body{background:#fff!important}
 <!-- Неделя 1 -->
 <div class="section week" id="week-1">
 <div class="week-image">
-<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Вечерние ритуалы и стабильность">
+<img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=400&fit=crop" alt="Неделя 1: Вечерние ритуалы и стабильность">
 </div>
 <div class="week-content">
 <div class="week-header">
@@ -348,7 +348,7 @@ body{background:#fff!important}
 <!-- Неделя 2 -->
 <div class="section week" id="week-2">
 <div class="week-image">
-<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Поддержка печени и омега-3">
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&h=400&fit=crop" alt="Неделя 2: Поддержка печени и омега-3">
 </div>
 <div class="week-content">
 <div class="week-header">
@@ -448,7 +448,7 @@ body{background:#fff!important}
 <!-- Неделя 3 -->
 <div class="section week" id="week-3">
 <div class="week-image">
-<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Контроль сахара и движение">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=400&fit=crop" alt="Неделя 3: Контроль сахара и движение">
 </div>
 <div class="week-content">
 <div class="week-header">
@@ -549,7 +549,7 @@ body{background:#fff!important}
 <!-- Неделя 4 -->
 <div class="section week" id="week-4">
 <div class="week-image">
-<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Закрепление и профилактика">
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&h=400&fit=crop" alt="Неделя 4: Закрепление и профилактика">
 </div>
 <div class="week-content">
 <div class="week-header">
@@ -653,16 +653,16 @@ body{background:#fff!important}
 <div class="focuses-subtitle">Что на самом деле влияет на качество вашего сна</div>
 
 <div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
-<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Почему вы просыпаетесь ночью</div>
-<div style="font-size:15px;line-height:1.7;color:var(--text-main)">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Почему вы просыпаетесь ночью</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
 <p style="margin-bottom:12px">Елена, ваш кортизол 715 (при норме до 537) — это главная причина. Высокий кортизол держит организм в режиме «бей или беги» даже ночью. Каждый шорох, прилив или позыв в туалет — и вы просыпаетесь, потому что мозг в боевой готовности.</p>
 <p style="margin-bottom:12px">Дополнительные факторы: инсулинорезистентность дает скачки сахара ночью, нагрузка на печень (ГГТ 78) мешает детоксикации, щелочная моча провоцирует циститы.</p>
 </div>
 </div>
 
 <div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
-<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Реалистичные сроки улучшений</div>
-<div style="font-size:15px;line-height:1.7;color:var(--text-main)">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Реалистичные сроки улучшений</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
 <p style="margin-bottom:12px"><strong>Через 5-7 дней:</strong> Засыпать станет легче. Количество пробуждений может сократиться с 2-3 до 1-2 за ночь.</p>
 <p style="margin-bottom:12px"><strong>Через 2-3 недели:</strong> Сон станет глубже. Вы начнете просыпаться более отдохнувшей. Приливы станут реже.</p>
 <p style="margin-bottom:12px"><strong>Через месяц:</strong> Качество сна заметно улучшится. Но для устойчивого результата нужно 2-3 месяца — кортизол снижается медленно.</p>
@@ -671,8 +671,8 @@ body{background:#fff!important}
 </div>
 
 <div style="background:var(--bg-soft);border-radius:12px;padding:20px;margin:20px 0">
-<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Вечерний протокол для глубокого сна</div>
-<div style="font-size:15px;line-height:1.7;color:var(--text-main)">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Вечерний протокол для глубокого сна</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
 <p style="margin-bottom:10px"><strong>За 3 часа до сна (20:00):</strong></p>
 <p style="margin-bottom:6px">• Последний прием пищи — легкий ужин с белком (индейка, рыба)</p>
 <p style="margin-bottom:6px">• Последний стакан воды — дальше только маленькими глотками</p>
@@ -694,6 +694,7 @@ body{background:#fff!important}
 <p style="margin-bottom:6px">• Сделайте что-то спокойное в приглушенном свете 10-15 минут</p>
 <p style="margin-bottom:6px">• Вернитесь в постель только когда почувствуете сонливость</p>
 <p style="margin-bottom:10px">Елена, это учит мозг: постель = только сон. Через неделю эффект станет заметным.</p>
+</div>
 </div>
 </div>
 
