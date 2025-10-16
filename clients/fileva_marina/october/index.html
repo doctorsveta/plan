@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Марина • Октябрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:15px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease,opacity .4s ease;background:#fff;border-bottom:1px solid var(--accent-light);opacity:0}
+.nav-content.active{max-height:60vh;overflow-y:auto;opacity:1}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item:hover .nav-item-name{color:var(--accent-soft);transition:color .3s ease}
+.nav-item-name{flex:1;font-size:16px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:13px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:140px;height:140px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 20px rgba(107,93,86,0.15);overflow:hidden}
+.cover-icon img{width:100%;height:100%;object-fit:cover}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:13px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:17px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:16px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:17px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:16px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:14px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:16px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Информационные блоки */
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:16px;color:#6b5d56;line-height:1.6}
+
+/* Специальный гид */
+.guide{padding:0;background:#fff}
+.guide-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.guide-image img{width:100%;height:100%;object-fit:cover;display:block}
+.guide-content{padding:20px}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:0}
+.letter-image{width:100%;height:280px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.letter-image img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.letter-content-wrapper{padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Адаптация для мобильных устройств */
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+/* Десктоп - больше воздуха */
+@media(min-width:768px){
+.container{max-width:520px}
+.section{padding:40px 30px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image,.guide-image,.letter-image{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Противовирусная защита</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Укрепление иммунитета</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Нейропротекция</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Стабильность и сон</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('special-guide')">
+<span class="nav-item-name">Гид по вирусам</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+<div class="section cover" id="cover">
+<div class="cover-icon">
+<img src="../../../Image/IMG_7783.jpg" alt="Доктор Света">
+</div>
+<div class="cover-name">Марина</div>
+<div class="cover-title">План восстановления</div>
+<div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.3"></div>
+<div class="cover-dedication">
+<div class="cover-dedication-line">Второй месяц заботы о себе</div>
+<div class="cover-dedication-line">От вирусов к устойчивости</div>
+</div>
+<div class="cover-date">Октябрь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в октябре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Противовирусный протокол</span>
+<span class="focus-tag">Укрепление иммунитета</span>
+<span class="focus-tag">Нейропротекция</span>
+<span class="focus-tag">Качество сна</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+<div class="focus-item-title">Главная цель: подавление вирусов ЦМВ и ВЭБ</div>
+<div class="focus-item-desc">Марина, ваши анализы показали <span class="focus-item-important">ЦМВ 18.99 и ВЭБ 11.13</span> — именно они причина частых ОРВИ, тумана в голове и нарушений сна. Лейкоциты 3.28 — рост +0.34 за месяц, программа работает! Этот месяц посвящён подавлению вирусов через питание, БАДы и нейропротекцию.</div>
+</div>
+
+<div class="focus-item">
+<div class="focus-item-title">Почему обострения — это нормально на вашем этапе</div>
+<div class="focus-item-desc">При лейкопении 3.28 организм ещё не может быстро отражать атаки. Через 2 недели противовирусного протокола частота обострений начнёт снижаться. <span class="focus-item-important">Сон улучшится к концу месяца</span> — ваш кортизол идеален (утро 4.04, вечер 0.32), проблема в вирусах.</div>
+</div>
+
+<div class="focus-item">
+<div class="focus-item-title">Реалистичные ожидания</div>
+<div class="focus-item-desc">Через 2 недели: ОРВИ станут реже (каждые 14-20 дней вместо 7-10). Через месяц: лейкоциты до 3.5-3.6, туман в голове на 40-50% меньше, сон начнёт улучшаться. <span class="focus-item-important">Полное подавление вирусов — процесс 2-3 месяцев.</span></div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Противовирусная защита">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">17-23 октября • Первая неделя</div>
+<div class="week-title">Противовирусная защита</div>
+<div class="week-intro">Марина, усиливаем противовирусный протокол. Сохраняем все привычки первого месяца, добавляем чеснок, куркуму, имбирь в каждое блюдо.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Горячая вода 2-3 стакана (сохраняем!)</div>
+<div class="habit-desc">Марина, это уже автоматическая привычка. Продолжаем — горячая вода выводит вирусные токсины.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Витамин С 1000 мг натощак</div>
+<div class="habit-desc">При активных ЦМВ 18.99 и ВЭБ 11.13 витамин С критически важен — подавляет репликацию вирусов.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак в течение часа</div>
+<div class="habit-desc">При лейкопении 3.28 нельзя пропускать приёмы пищи — организму нужны ресурсы для борьбы.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Яичница с красной фасолью</div>
+<div class="habit-desc">Высокое железо для роста лейкоцитов, белок для иммунитета. Готовка под крышкой бережная для ЖКТ. На завтрак 3-4 раза в неделю.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречка с тушёными овощами и маслом гхи</div>
+<div class="habit-desc">Максимальное железо (10/10), ваш любимый продукт. Тушение щадящее для ЖКТ. На обед 3-4 раза в неделю.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Суп-пюре из чечевицы с куркумой</div>
+<div class="habit-desc">МАКСИМАЛЬНЫЙ противовирусный эффект! Железо + куркума + имбирь + чеснок. Можно готовить на 3 дня. На обед или ужин.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Противовирусный протокол при симптомах</div>
+<div class="habit-desc">При першении в горле, заложенности: <span class="habit-important">Кошачий коготь 2 капсулы х 3 раза + Фукоидан 2 капсулы х 3 раза</span>. Полоскание горла каждые 2-3 часа. Тёплое питьё каждый час.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Контрастное умывание + магний (сохраняем!)</div>
+<div class="habit-desc">Продолжаем вечерний ритуал. Магний L-треонат перед сном.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ужин не позже 19:30</div>
+<div class="habit-desc">Ранний ужин даёт время на детоксикацию и борьбу с вирусами во время сна.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Дыхание 5-5-5 (сохраняем!)</div>
+<div class="exercise-duration">5 минут утром и вечером</div>
+<div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Вдох носом на 5 счётов → задержка 5 счётов → выдох через рот 5 счётов. Повторите 10 циклов.<br><br>
+
+<strong>Почему это работает:</strong> Глубокое дыхание снижает вирусное воспаление, успокаивает нервную систему, улучшает лимфоток.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 2 -->
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Укрепление иммунитета">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">24-30 октября • Вторая неделя</div>
+<div class="week-title">Укрепление иммунитета</div>
+<div class="week-intro">Марина, усиливаем поддержку лейкоцитов. Цель — поднять с 3.28 ближе к норме (3.89). Добавляем Омега-3 и продукты с высоким железом.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Витамин С + Омега-3 утром</div>
+<div class="habit-desc">Добавляем Омега-3 к витамину С. Омега-3 снижает вирусное воспаление, поддерживает мембраны клеток.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак с высоким железом</div>
+<div class="habit-desc">Акцент на железосодержащие продукты для роста лейкоцитов: яйца, фасоль, чечевица, гречка.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Блинчики из нутовой муки с чесноком</div>
+<div class="habit-desc"><span class="habit-important">Нутовая мука + яйцо + куркума + чеснок 1 зубчик тёртый в тесто</span> — железо 8/10, противовирусная защита.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Сёмга с брокколи и чесноком</div>
+<div class="habit-desc"><span class="habit-important">Сёмга 110г + брокколи + чеснок 1-2 зубчика на пергамент</span> — иммунитет 9/10! Омега-3 для противовирусной защиты.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Теплый салат с чечевицей</div>
+<div class="habit-desc"><span class="habit-important">Чечевица зелёная + морковь + сельдерей + чеснок 1 зубчик в заправку</span> — железо 9/10, ваш любимый продукт.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">10000-15000 шагов (сохраняем!)</div>
+<div class="habit-desc">Ходьба стимулирует лимфоток, выводит вирусные токсины. Продолжаем в комфортном темпе.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Разминка шеи и плеч (сохраняем!)</div>
+<div class="habit-desc">Продолжаем — разминка улучшает кровоток, снижает напряжение.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Экран выключаем за час до сна</div>
+<div class="habit-desc">Марина, синий свет усугубляет проблемы со сном при вирусном воспалении. Замените экран на книгу.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ужин до 19:30, лёгкий белок</div>
+<div class="habit-desc">Рыба на пару, индейка запечённая или чечевица с овощами.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Лимфодренажная растяжка</div>
+<div class="exercise-duration">10 минут перед сном</div>
+<div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+1. Лёжа, ноги вверх к стене. 3 минуты<br>
+2. Повороты головы влево-вправо. 10 раз<br>
+3. Круговые движения плечами назад. 10 раз<br>
+4. Колени к груди, обхватить руками. 2 минуты<br>
+5. Дыхание 5-5-5. 5 циклов<br><br>
+
+<strong>Почему это работает:</strong> Лимфодренаж выводит вирусные токсины, улучшает сон.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 3 -->
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Нейропротекция">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">31 октября - 6 ноября • Третья неделя</div>
+<div class="week-title">Нейропротекция</div>
+<div class="week-intro">Марина, работаем с туманом в голове. Вирусы ЦМВ и ВЭБ вызывают нейровоспаление — поэтому страдает память, концентрация. Добавляем противовирусную нейропротекцию.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Добавляем витамины группы В</div>
+<div class="habit-desc">В12, В6, фолаты критичны для нервной системы, воспалённой вирусами. Принимайте В-комплекс с завтраком.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак с Омега-3</div>
+<div class="habit-desc">Акцент на продукты для мозга: рыба, яйца, орехи, зелень.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Гречневая лепёшка с тыквой</div>
+<div class="habit-desc"><span class="habit-important">Гречневая мука + пюре тыквы + имбирь 0.5 ч.л. + куркума</span> — тыква ваш любимый продукт, железо 7/10.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Рыба в фольге с чесноком</div>
+<div class="habit-desc"><span class="habit-important">Филе рыбы 150г + овощи + зелень + чеснок 2 зубчика</span> — иммунитет 9/10! Омега-3 для мозга.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Камбала с лимоном и чесноком</div>
+<div class="habit-desc"><span class="habit-important">Камбала 150г + лимон + укроп + чеснок 1-2 зубчика</span> — СОН 9/10! Триптофан для ночного отдыха.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Когнитивная разминка</div>
+<div class="habit-desc">15 минут днём: судоку, чтение вслух, простые задачи. Улучшает кровоток в мозге, снижает туман.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Дневной отдых 20 минут</div>
+<div class="habit-desc">При хронических вирусах организм тратит огромные ресурсы. Короткий отдых помогает восстановлению.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Добавляем магний глицинат 200мг</div>
+<div class="habit-desc">Если есть возможность, добавьте глицинат вечером помимо L-треоната. Улучшает сон.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Комната прохладная, темнота полная</div>
+<div class="habit-desc">18-20°C, полная темнота. При вирусном воспалении мозг особенно чувствителен к свету.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Нейрорелаксация</div>
+<div class="exercise-duration">15 минут перед сном</div>
+<div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Лягте, последовательно напрягайте и расслабляйте каждую часть тела: пальцы ног (5 сек напряжение, 10 сек расслабление), икры, бедра, живот, руки, плечи, шею, лицо. После — сосредоточьтесь на дыхании, считайте вдохи от 1 до 10.<br><br>
+
+<strong>Почему это работает:</strong> Снижает активность симпатической нервной системы, воспалённой вирусами. Уменьшает цитокины, улучшает сон.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 4 -->
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Стабильность и сон">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">7-13 ноября • Четвёртая неделя</div>
+<div class="week-title">Стабильность и сон</div>
+<div class="week-intro">Марина, закрепляем результаты. К этому моменту обострений меньше, туман в голове уменьшился. Продолжаем противовирусный протокол, фокус на качество сна.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Полный утренний ритуал (сохраняем!)</div>
+<div class="habit-desc">Вода + витамин С + Омега-3 + витамины группы В — это уже часть вас. Продолжаем.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Завтрак по графику</div>
+<div class="habit-desc">В одно время каждый день (±30 минут). Стабильность режима критична для сна и иммунитета.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Каша из киноа с авокадо</div>
+<div class="habit-desc"><span class="habit-important">Киноа + авокадо + помидоры + чеснок 1 зубчик в заправку</span> — иммунитет 7/10, триптофан для сна. Подогреть перед подачей.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Овощное рагу с курицей</div>
+<div class="habit-desc"><span class="habit-important">Курица + брокколи, морковь + чеснок 2 зубчика + куркума 0.5 ч.л.</span> — иммунитет 8/10, тушение щадящее.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Паровые котлеты из индейки</div>
+<div class="habit-desc"><span class="habit-important">Индейка + чеснок 1 зубчик в фарш + куркума в салат</span> — НА ПАРУ, иммунитет 7/10, триптофан для сна.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Кофеин только до 14:00</div>
+<div class="habit-desc">При вирусном нейровоспалении нервная система особенно чувствительна. Последняя чашка не позже 14:00.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ужин до 19:00</div>
+<div class="habit-desc">Сдвигаем ещё на 30 минут раньше. Это даёт организму больше времени на детоксикацию и глубокий сон.</div>
+</div>
+</li>
+<li class="habit">
+<div class="habit-content">
+<div class="habit-title">Ложиться в одно время</div>
+<div class="habit-desc">22:30-23:00 каждый день (±15 минут). Стабильность режима критична для восстановления нервной системы.</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="exercise-box">
+<div class="exercise-title">Упражнение недели: Дыхание 4-7-8 перед сном</div>
+<div class="exercise-duration">10 минут перед сном</div>
+<div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Язык прижмите к нёбу. Выдохните полностью. Вдох носом на 4 счёта → задержка 7 счётов → выдох через рот на 8 счётов. Повторите 8 циклов.<br><br>
+
+<strong>Почему это работает:</strong> Естественный транквилизатор для нервной системы. Снижает активность миндалевидного тела, улучшает качество сна. Эффект накопительный — через неделю засыпаете быстрее.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Специальный раздел -->
+<div class="section guide" id="special-guide">
+<div class="guide-image">
+<img src="../../../Image/09_image.jpeg" alt="Гид по вирусам">
+</div>
+<div class="guide-content">
+<div class="focuses-title">Гид по хроническим вирусам</div>
+<div class="focuses-subtitle">Что происходит с вашим организмом</div>
+
+<div style="padding:20px;margin:20px 0 0 0">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Почему вирусы вызывают все ваши симптомы</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
+<p style="margin-bottom:12px">Марина, ЦМВ 18.99 и ВЭБ 11.13 — это активные инфекции. Лимфоциты 50.10% (выше нормы) показывают, что организм активно борется.</p>
+
+<p style="margin-bottom:12px"><strong>Частые ОРВИ каждые 7-10 дней:</strong> Лейкопения 3.28 = иммунитет ослаблен, не успевает восстанавливаться. Хронические вирусы постоянно «нагружают» систему.</p>
+
+<p style="margin-bottom:12px"><strong>Туман в голове:</strong> Вирусы вызывают нейровоспаление. Цитокины (IL-6, TNF-α) нарушают работу нейронов. Гиппокамп (память) и префронтальная кора (концентрация) особенно уязвимы.</p>
+
+<p style="margin-bottom:0"><strong>Нарушения сна:</strong> Ваш кортизол идеален (утро 4.04, вечер 0.32) — проблема НЕ в стрессе. Вирусные цитокины нарушают архитектуру сна, блокируют действие мелатонина.</p>
+</div>
+</div>
+
+<div style="background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0">
+<div style="font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px">Реалистичная динамика</div>
+<div style="font-size:16px;color:#6b5d56;line-height:1.6">
+<p style="margin-bottom:12px"><strong>Через 2 недели:</strong> ОРВИ реже (каждые 14-20 дней). Туман в голове -20-30%. Лейкоциты +0.1-0.2.</p>
+
+<p style="margin-bottom:12px"><strong>Через месяц:</strong> Обострения легче. Туман -40-50%. Сон улучшается — засыпать легче. Лейкоциты 3.5-3.6 (+0.2-0.3).</p>
+
+<p style="margin-bottom:0"><strong>Через 2-3 месяца:</strong> Вирусы в менее активной фазе, титры снижаются. Лейкоциты до 3.9. Сон нормализуется, туман уходит на 70-80%.</p>
+</div>
+</div>
+
+<div style="padding:20px;margin:30px 0 0 0">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Противовирусное питание</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
+
+<p style="margin-bottom:12px"><strong>Чеснок:</strong> Аллицин подавляет репликацию вирусов герпеса. 2-3 зубчика в день снижают частоту обострений на 40-60%. Раздавить, дать полежать 10 минут — так активируется аллицин.</p>
+
+<p style="margin-bottom:12px"><strong>Куркума:</strong> Куркумин блокирует NF-kB — «включатель» воспаления. Подавляет репликацию вирусов. 0.5-1 ч.л. с жиром и чёрным перцем — усвоение увеличивается в 20 раз!</p>
+
+<p style="margin-bottom:0"><strong>Имбирь:</strong> Гингерол стимулирует NK-клетки, которые уничтожают заражённые клетки. Свежий тёртый (5-10г) в супы, смузи, чай.</p>
+</div>
+</div>
+
+<div style="background:#fff;border-radius:12px;padding:20px;margin:30px 0;box-shadow:0 4px 12px rgba(107,93,86,0.1);border:2px solid var(--accent-light)">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Когда нужны врачи</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
+
+<p style="margin-bottom:12px">Марина, при лейкопении 3.28 + хронических вирусах <strong>комплексная работа с врачами ускорит результат</strong>.</p>
+
+<p style="margin-bottom:6px;padding-left:24px;position:relative">
+<span style="position:absolute;left:0;color:var(--accent-soft)">☑</span> <strong>Инфекционист</strong> — для противовирусной терапии (Валацикловир, Ганцикловир)
+</p>
+<p style="margin-bottom:6px;padding-left:24px;position:relative">
+<span style="position:absolute;left:0;color:var(--accent-soft)">☑</span> <strong>Иммунолог</strong> — для работы с лейкопенией
+</p>
+<p style="margin-bottom:0;padding-left:24px;position:relative">
+<span style="position:absolute;left:0;color:var(--accent-soft)">☑</span> <strong>Невролог</strong> — для тумана в голове и сна при вирусном нейровоспалении
+</p>
+</div>
+</div>
+
+<div style="padding:20px;margin:30px 0 0 0">
+<div style="font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:15px">Контроль анализов</div>
+<div style="font-size:16px;line-height:1.7;color:var(--text-main)">
+
+<p style="margin-bottom:12px"><strong>Через месяц (середина ноября):</strong> ОАК — цель лейкоциты 3.5-3.6. Лимфоциты — цель снижение до 48-49%.</p>
+
+<p style="margin-bottom:0"><strong>Через 2-3 месяца:</strong> ЦМВ IgG — цель снижение с 18.99 до 12-15. ВЭБ IgG — цель снижение с 11.13 до 8-9.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+<div class="section letter" id="final-message">
+<div class="letter-image">
+<img src="../../../Image/IMG_7781.JPG" alt="Напутствие на месяц">
+</div>
+<div class="letter-content-wrapper">
+<div class="letter-content">
+
+<p>Дорогая Марина,</p>
+
+<p>Впереди у вас <strong>второй месяц</strong> восстановления — месяц работы с причиной: хроническими вирусами ЦМВ 18.99 и ВЭБ 11.13.</p>
+
+<p>Первый месяц был фундаментом. Посмотрите, что вы уже сделали: лейкоциты выросли с 2.94 до 3.28 (+0.34!), вы научились автоматически делать утренний ритуал, быстро останавливать обострения, слушать свой организм. Марина, вы уже тот человек, кто заботится о себе каждый день.</p>
+
+<p><strong>Реалистичные ожидания на второй месяц:</strong></p>
+
+<p style="padding-left:20px">
+• Через 2 недели: ОРВИ реже (каждые 14-20 дней вместо 7-10). Туман в голове -20-30%<br><br>
+• Через месяц: Лейкоциты до 3.5-3.6 (+0.2-0.3). Обострения реже и легче. Туман -40-50%. Сон начнёт улучшаться<br><br>
+• Через 2-3 месяца: Вирусы в менее активной фазе. Лейкоциты до 3.9. Сон нормализуется, туман уходит на 70-80%
+</p>
+
+<p><strong>Что важно понимать:</strong></p>
+
+<p>Ваш кортизол идеальный (утро 4.04, вечер 0.32) — значит проблемы НЕ от стресса. Проблема в вирусах. Поэтому мы подавляем вирусы — и сон начнёт улучшаться.</p>
+
+<p>Будут дни, когда проснётесь с першением в горле снова. Это нормально при лейкопении 3.28 + активных вирусах. В такие моменты вспоминайте: лейкоциты РАСТУТ (+0.34 за месяц). Программа работает. Каждый день — вклад в восстановление.</p>
+
+<p><strong>После этого месяца мы сможем:</strong></p>
+
+<p style="padding-left:20px">
+• Оценить динамику лейкоцитов (пересдадим ОАК в середине ноября)<br><br>
+• Увидеть снижение частоты обострений<br><br>
+• Заметить улучшение тумана в голове и сна<br><br>
+• Понять, готовы ли переходить к гормональному балансу для дальнейшего улучшения сна
+</p>
+
+<p>Марина, этот месяц — месяц честной работы. Не будет волшебства. Но будут результаты. Каждый день — это вклад в ваше восстановление.</p>
+
+<p>Верю в вас. Вы справитесь.</p>
+
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Светлана Александровна</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
