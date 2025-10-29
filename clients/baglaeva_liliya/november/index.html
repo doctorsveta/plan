@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Лилия • Ноябрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:15px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease,opacity .4s ease;background:#fff;border-bottom:1px solid var(--accent-light);opacity:0}
+.nav-content.active{max-height:60vh;overflow-y:auto;opacity:1}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child{border-bottom:none}
+.nav-item:active{background:var(--bg-soft)}
+.nav-item:hover .nav-item-name{color:var(--accent-soft);transition:color .3s ease}
+.nav-item-name{flex:1;font-size:16px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:13px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child{border-bottom:none}
+
+/* Недели */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:140px;height:140px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 20px rgba(107,93,86,0.15);overflow:hidden}
+.cover-icon img{width:100%;height:100%;object-fit:cover}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:13px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:17px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:16px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:17px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:16px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:14px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:16px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:0}
+.letter-image{width:100%;height:280px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.letter-image img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.letter-content-wrapper{padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child{font-weight:500}
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+}
+
+@media(min-width:768px){
+.container{max-width:520px}
+.section{padding:40px 30px}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Глубокий вечерний покой</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Поддержка нервной системы</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Энергия и лёгкость</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Закрепление ритма</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+<div class="section cover" id="cover">
+  <div class="cover-icon">
+    <img src="../../../Image/IMG_7783.jpg" alt="Доктор Света">
+  </div>
+  <div class="cover-name">Лилия</div>
+  <div class="cover-title">План восстановления</div>
+  <div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.3"></div>
+  <div class="cover-dedication">
+    <div class="cover-dedication-line">Первый месяц заботы о себе</div>
+    <div class="cover-dedication-line">От беспокойных ночей к глубокому сну</div>
+  </div>
+  <div class="cover-date">Ноябрь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в ноябре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Непрерывный сон</span>
+<span class="focus-tag">Поддержка щитовидной железы</span>
+<span class="focus-tag">Спокойствие нервной системы</span>
+<span class="focus-tag">Ментальная разгрузка</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+  <div class="focus-item-title">Главная цель: сон без просыпаний</div>
+  <div class="focus-item-desc">Лилия, этот месяц — ваш путь к непрерывному сну. Вы будете создавать основу: вечерний ритуал, поддержку щитовидной железы через питание, успокоение нервной системы и <span class="focus-item-important">учиться отпускать мысли вечером</span>.</div>
+</div>
+
+<div class="focus-item">
+  <div class="focus-item-title">Поддержка щитовидной железы</div>
+  <div class="focus-item-desc">Субклинический тиреотоксикоз влияет на качество сна — избыток гормонов активирует нервную систему. Через питание вы будете получать <span class="focus-item-important">селен для снижения аутоиммунной активности</span> и вещества, которые блокируют избыточное действие гормонов на клетки.</div>
+</div>
+
+<div class="focus-item">
+  <div class="focus-item-title">Ментальная разгрузка перед сном</div>
+  <div class="focus-item-desc">Ночные мысли — это отложенные дневные задачи. В этом месяце вы научитесь <span class="focus-item-important">завершать день осознанно</span>, чтобы голова не включалась среди ночи. Простые практики помогут освободить ум до того, как ляжете спать.</div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">30 октября — 5 ноября • Первая неделя</div>
+<div class="week-title">Глубокий вечерний покой</div>
+<div class="week-intro">Лилия, этой неделей начинается ваш путь. Вы будете закладывать фундамент — учиться расслабляться вечером, добавлять в питание то, что поддерживает щитовидную железу. Многие женщины замечают первые изменения уже к концу первой недели — засыпать становится чуть легче.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Стакан тёплой воды сразу после пробуждения</div>
+      <div class="habit-desc">Запускает обмен веществ и помогает организму проснуться мягко. Можно добавить каплю лимонного сока.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Завтрак с селеном</div>
+      <div class="habit-desc">Добавьте <span class="habit-important">2 бразильских ореха</span> к завтраку — они дают суточную норму селена для поддержки щитовидной железы. Селен помогает снизить аутоиммунную активность.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Белок в каждый приём пищи</div>
+      <div class="habit-desc">Яйца, творог, мясо, рыба — белок стабилизирует сахар крови и даёт ощущение сытости.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Творожный мусс с льняным маслом</div>
+      <div class="habit-desc"><span class="habit-important">Омега-3 из льняного масла</span> работает как противовоспалительное при аутоиммунных процессах, творог даёт белок и триптофан для сна.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Индейка с брокколи на пару</div>
+      <div class="habit-desc">Индейка богата триптофаном — предшественником мелатонина. <span class="habit-important">Брокколи только в варёном виде</span> поддерживает печень.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплая гречневая каша с яйцом</div>
+      <div class="habit-desc">Гречка — источник магния и триптофана, яйцо добавляет полноценный белок. Сытный завтрак для стабильной энергии.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Вечерняя «выгрузка» мыслей</div>
+      <div class="habit-desc">За час до сна возьмите листок бумаги и запишите 3-5 вещей, которые крутятся в голове. Это помогает мозгу понять, что задачи зафиксированы и можно отпустить контроль. Простое действие, которое снижает ночные просыпания с мыслями.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Ужин до 19:00</div>
+      <div class="habit-desc">Ранний ужин даёт организму время переварить еду до сна. Это улучшает качество ночного отдыха.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Магний перед сном</div>
+      <div class="habit-desc">Принимайте магний вечером — он расслабляет нервную систему и мышцы, помогает телу подготовиться ко сну.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Экраны выключить за час до сна</div>
+      <div class="habit-desc">Синий свет от телефона и ТВ блокирует выработку мелатонина. Замените экраны на книгу или спокойную музыку.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">Упражнение недели: Дыхание 4-7-8</div>
+  <div class="exercise-duration">5 минут перед сном</div>
+  <div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+1. Вдох через нос на 4 счёта<br>
+2. Задержка дыхания на 7 счётов<br>
+3. Медленный выдох через рот на 8 счётов<br>
+Повторите 4-8 циклов.<br><br>
+<strong>Почему это работает:</strong> длинный выдох активирует парасимпатическую нервную систему — она отвечает за расслабление и восстановление. Это физиологический способ успокоить тело перед сном.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 2 -->
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">6-12 ноября • Вторая неделя</div>
+<div class="week-title">Поддержка нервной системы</div>
+<div class="week-intro">Лилия, вы начинаете выстраивать ритм, который поддерживает сон. На этой неделе добавляем противовоспалительные нутриенты и углубляем практики расслабления. Нервная система начинает реагировать на заботу — засыпать будет становиться легче.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплая вода с утра</div>
+      <div class="habit-desc">Начинайте день со стакана тёплой воды — это запускает обмен веществ и помогает организму проснуться мягко.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Бразильские орехи каждый день</div>
+      <div class="habit-desc">Два ореха в день дают суточную норму селена — он снижает аутоиммунную активность и поддерживает щитовидную железу.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Завтрак с витаминами группы B</div>
+      <div class="habit-desc">Яйца, гречка, овсянка — источники B-витаминов для нервной системы. Они помогают справляться со стрессом и улучшают настроение.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Суп-пюре из кабачков и брокколи</div>
+      <div class="habit-desc">Лёгкий, питательный суп. <span class="habit-important">Брокколи варёная</span> поддерживает печень в переработке гормонов, кабачки легко усваиваются.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Овсянка с яблоком и корицей</div>
+      <div class="habit-desc">Овсянка даёт медленные углеводы, яблоко добавляет клетчатку, <span class="habit-important">корица стабилизирует сахар крови</span>. Идеальный завтрак для ровной энергии.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Салат из шпината с орехами</div>
+      <div class="habit-desc">Шпинат — источник магния, орехи дают полезные жиры. Лёгкий ужин, который не перегружает пищеварение перед сном.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Прогулка после ужина</div>
+      <div class="habit-desc">Даже 10-15 минут спокойной прогулки помогают пищеварению и снижают уровень кортизола. Это мягкий способ завершить день и подготовить тело ко сну.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Ужин лёгкий и тёплый</div>
+      <div class="habit-desc">Суп, тушёные овощи, рыба — выбирайте то, что легко переваривается. Избегайте тяжёлого мяса вечером.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый травяной чай</div>
+      <div class="habit-desc">Ромашка, мелисса, мята — травы, которые успокаивают нервную систему. Пейте за 30-40 минут до сна.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый душ за час до сна</div>
+      <div class="habit-desc">Тёплая вода расслабляет мышцы, а последующее охлаждение тела сигнализирует мозгу, что пора спать. Это усиливает естественный ритм засыпания.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">Упражнение недели: Прогрессивная релаксация</div>
+  <div class="exercise-duration">10 минут перед сном</div>
+  <div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Лёжа в постели, последовательно напрягайте и расслабляйте группы мышц:<br>
+1. Напрягите стопы на 5 секунд — расслабьте<br>
+2. Напрягите икры — расслабьте<br>
+3. Бёдра, ягодицы, живот, руки, плечи, лицо<br>
+Двигайтесь снизу вверх.<br><br>
+<strong>Почему это работает:</strong> осознанное напряжение и расслабление помогает телу понять разницу между этими состояниями. После упражнения наступает глубокое физическое расслабление.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 3 -->
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">13-19 ноября • Третья неделя</div>
+<div class="week-title">Энергия и лёгкость</div>
+<div class="week-intro">эта неделя о том, чтобы поддержать печень и обмен веществ. Печень перерабатывает гормоны щитовидной железы — когда она работает хорошо, сон становится глубже, а дневная энергия ровнее. Тело начинает узнавать ритм заботы.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплая вода натощак</div>
+      <div class="habit-desc">Начинайте утро со стакана тёплой воды — это станет сигналом для организма, что день начался.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Бразильские орехи и белковый завтрак</div>
+      <div class="habit-desc">Селен продолжает поддерживать щитовидную железу, белок даёт энергию на утро.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Добавьте зелень</div>
+      <div class="habit-desc">Петрушка, укроп, шпинат — источники антиоксидантов и хлорофилла. Они поддерживают детоксикацию и дают лёгкость.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тыквенный крем-суп с имбирём</div>
+      <div class="habit-desc">Тыква богата бета-каротином для иммунитета, <span class="habit-important">имбирь улучшает пищеварение</span> и обладает противовоспалительным действием.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Пшенная каша с тыквой и орехами</div>
+      <div class="habit-desc">Пшено поддерживает печень, тыква добавляет витамины, орехи — полезные жиры. Сытный и питательный обед.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Омлет с зеленью и индейкой</div>
+      <div class="habit-desc">Яйца дают белок и триптофан, индейка усиливает эффект для сна, зелень добавляет витамины группы B.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Дневное проветривание</div>
+      <div class="habit-desc">Откройте окно на 5-10 минут — свежий воздух улучшает качество сна ночью. Делайте это после обеда или вечером.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Лёгкий ужин до 19:00</div>
+      <div class="habit-desc">Ранний ужин даёт организму время переварить еду до сна — это значительно улучшает качество ночного отдыха.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Магний и травяной чай</div>
+      <div class="habit-desc">Магний расслабляет нервную систему, травяной чай (ромашка, мелисса) успокаивает. Это ваш вечерний ритуал подготовки ко сну.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый душ за час до сна</div>
+      <div class="habit-desc">Тёплая вода расслабляет мышцы, а последующее охлаждение тела сигнализирует мозгу, что пора спать.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">Упражнение недели: Визуализация спокойного места</div>
+  <div class="exercise-duration">7 минут перед сном</div>
+  <div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Лёжа в постели с закрытыми глазами, представьте место, где вы чувствуете себя спокойно и безопасно. Это может быть берег моря, лес, уютная комната. Детально представьте звуки, запахи, ощущения. Оставайтесь в этом образе 5-7 минут.<br><br>
+<strong>Почему это работает:</strong> визуализация переключает внимание с тревожных мыслей на приятные образы. Это снижает активность коры мозга и помогает быстрее заснуть.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 4 -->
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">20-26 ноября • Четвёртая неделя</div>
+<div class="week-title">Закрепление ритма</div>
+<div class="week-intro">последняя неделя первого месяца — время закрепить то, что начало становиться привычкой. Вы создали ритм, который поддерживает ваш сон. Эта неделя о том, чтобы увидеть путь, который вы прошли за месяц.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплая вода сразу после пробуждения</div>
+      <div class="habit-desc">Эта привычка становится частью вашего утреннего ритма — тело начинает узнавать этот сигнал.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Бразильские орехи и белок</div>
+      <div class="habit-desc">Селен работает на снижение аутоиммунной активности — эффект накапливается с каждым днём. Белок даёт энергию.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Завтрак, который вам нравится</div>
+      <div class="habit-desc">Выбирайте завтраки из книги рецептов, которые дают вам энергию и лёгкость. Слушайте своё тело.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Яйцо всмятку с гречкой и маслом</div>
+      <div class="habit-desc">Простой, сытный завтрак. Гречка даёт магний, яйцо — белок и триптофан, масло — полезные жиры.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый салат с яйцом и брокколи</div>
+      <div class="habit-desc">Лёгкий ужин с белком и клетчаткой. <span class="habit-important">Брокколи поддерживает печень</span>, яйцо даёт триптофан для сна.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Любимые блюда из книги рецептов</div>
+      <div class="habit-desc">На четвёртой неделе выбирайте то, что вам больше всего понравилось за месяц. Готовьте то, что приносит радость.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Благодарность перед сном</div>
+      <div class="habit-desc">Перед тем как лечь спать, вспомните три вещи, за которые вы благодарны сегодня. Это переключает внимание с тревоги на позитив и помогает заснуть в спокойном состоянии.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Ранний ужин</div>
+      <div class="habit-desc">Ужинайте до 19:00 — это одна из самых важных привычек для качественного сна.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Магний и тёплый чай</div>
+      <div class="habit-desc">Вечерний ритуал расслабления — магний для нервной системы, травяной чай для спокойствия. Тело начинает ждать этих сигналов.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Все практики, которые работают</div>
+      <div class="habit-desc">Дыхание, релаксация, запись мыслей, визуализация — используйте то, что помогает вам больше всего.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="exercise-box">
+  <div class="exercise-title">Упражнение недели: Сканирование тела</div>
+  <div class="exercise-duration">10 минут перед сном</div>
+  <div class="exercise-desc">
+<strong>Как выполнять:</strong><br>
+Лёжа в постели, медленно перемещайте внимание по телу снизу вверх: стопы, голени, бёдра, живот, грудь, руки, шея, лицо. В каждой зоне задерживайтесь на 20-30 секунд, просто наблюдая за ощущениями. Не пытайтесь расслабиться специально — просто замечайте, что чувствуете.<br><br>
+<strong>Почему это работает:</strong> сканирование тела переключает внимание с мыслей на физические ощущения. Это останавливает ментальную активность и помогает телу войти в состояние покоя.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+<div class="section letter" id="final-message">
+<div class="letter-image">
+<img src="../../../Image/IMG_7781.JPG" alt="Напутствие на месяц">
+</div>
+<div class="letter-content-wrapper">
+<div class="letter-content">
+<p>Дорогая Лилия,</p>
+
+<p>Впереди у вас <strong>первый месяц</strong> вашего пути восстановления. Это начало большого изменения — от рваного сна к глубокому покою, от ночных мыслей к спокойному отдыху.</p>
+
+<p>Этот месяц создаёт основу. Вы будете поддерживать щитовидную железу через селен и правильное питание, успокаивать нервную систему через дыхание и расслабление, учиться отпускать мысли перед сном.</p>
+
+<p><strong>Важно понимать:</strong> восстановление сна при субклиническом тиреотоксикозе — это процесс. Щитовидная железа постепенно приходит в баланс на фоне терапии, и сон улучшается параллельно. Обычно женщины начинают замечать изменения в первые недели — засыпают чуть легче, просыпаются реже. Значительное улучшение приходит через несколько месяцев, когда гормональный фон стабилизируется.</p>
+
+<p>То, что вы делаете сейчас — это создание условий для того, чтобы тело могло восстановиться. Вы убираете то, что мешает (избыток йода, стресс, поздние приёмы пищи), и добавляете то, что помогает (селен, магний, расслабление, правильный ритм).</p>
+
+<p><strong>После этого месяца мы сможем:</strong></p>
+<p style="padding-left:20px">
+• Оценить, как изменился ваш сон — количество просыпаний, скорость засыпания<br>
+• Увидеть, какие практики работают лучше всего именно для вас<br>
+• Понять, насколько стабилизировалась нервная система<br>
+• Скорректировать план на следующий месяц с учётом вашего прогресса
+</p>
+
+<p>Помните: каждая маленькая привычка работает. Стакан тёплой воды утром, бразильские орехи, вечерняя запись мыслей, дыхание перед сном — всё это складывается в большие изменения. Вы не видите результат сразу, но тело чувствует заботу и начинает откликаться.</p>
+
+<p>Доверяйте процессу. Доверяйте себе. Путь продолжается — и вы движетесь в правильном направлении.</p>
+
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
