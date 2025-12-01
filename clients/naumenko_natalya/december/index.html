@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>План восстановления — Наталья • Декабрь 2025</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+:root{
+--primary-warm:#6b5d56;--secondary-warm:#8b7468;--accent-soft:#d4b5a0;--accent-light:#f0e8e0;
+--bg-cream:#fdfcfb;--bg-soft:#faf8f5;--text-main:#3a3a3a;--text-soft:#8a756b;
+--success:#7fb069;--energy:#f4a261;--calm:#a8dadc;--water:#5cade2;
+}
+body{
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',sans-serif;font-weight:400;line-height:1.6;
+color:var(--text-main);background:var(--bg-cream);font-size:17px;-webkit-font-smoothing:antialiased;
+padding-bottom:env(safe-area-inset-bottom);
+}
+.container{max-width:450px;margin:0 auto;background:#fff;min-height:100vh}
+
+/* Навигация */
+.nav-header{
+position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);
+border-bottom:1px solid var(--accent-light);z-index:10001;
+}
+.nav-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;width:100%;background:transparent;border:0}
+.nav-toggle:focus-visible{outline:2px solid var(--accent-soft)}
+.nav-title{font-size:15px;font-weight:500;letter-spacing:.5px;color:var(--secondary-warm);text-transform:uppercase}
+.nav-icon{width:24px;height:24px;display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.3s;pointer-events:none}
+.nav-icon span{width:100%;height:2px;background:var(--secondary-warm);transition:.3s}
+.nav-icon.active span:first-child{transform:rotate(45deg) translate(3px,3px)}
+.nav-icon.active span:last-child{transform:rotate(-45deg) translate(3px,-3px)}
+.nav-content{max-height:0;overflow:hidden;transition:max-height .3s ease,opacity .4s ease;background:#fff;border-bottom:1px solid var(--accent-light);opacity:0}
+.nav-content.active{max-height:60vh;overflow-y:auto;opacity:1}
+.nav-list{padding:10px 0}
+.nav-section-title{
+padding:8px 20px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+color:var(--text-soft);background:var(--bg-soft);border-top:1px solid var(--accent-light);
+border-bottom:1px solid var(--accent-light);
+}
+.nav-item{display:flex;align-items:center;padding:14px 20px;cursor:pointer;transition:.2s;border-bottom:1px solid rgba(240,232,224,.5)}
+.nav-item:last-child
+.nav-item:active{background:var(--bg-soft)}
+.nav-item:hover .nav-item-name{color:var(--accent-soft);transition:color .3s ease}
+.nav-item-name{flex:1;font-size:16px;color:var(--text-main);font-weight:400}
+.nav-badge{font-size:13px;padding:3px 10px;border-radius:12px;background:var(--accent-light);color:var(--secondary-warm);text-transform:uppercase;letter-spacing:.5px;font-weight:500}
+
+/* Секции */
+.section{padding:30px 20px;border-bottom:1px solid var(--accent-light)}
+.section:last-child
+
+/* Недели - особый тип секций */
+.week{padding:0;background:#fff}
+.week-image{width:100%;height:220px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.week-image img{width:100%;height:100%;object-fit:cover;display:block}
+.week-content{padding:20px}
+
+/* Обложка */
+.cover{text-align:center;padding:80px 20px;background:linear-gradient(135deg,#fff 0%,var(--bg-soft) 100%);display:flex;flex-direction:column;justify-content:center;min-height:100vh}
+.cover-icon{width:140px;height:140px;margin:0 auto 20px;background:linear-gradient(135deg,var(--accent-soft) 0%,#c9a188 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:white;box-shadow:0 6px 20px rgba(107,93,86,0.15);overflow:hidden}
+.cover-icon img{width:100%;height:100%;object-fit:cover}
+.cover-subtitle{font-family:Georgia,'Times New Roman',serif;font-size:16px;font-weight:300;color:var(--secondary-warm);margin-bottom:40px;letter-spacing:0.5px}
+.cover-name{font-family:Georgia,'Times New Roman',serif;font-size:52px;font-weight:300;color:var(--primary-warm);margin-bottom:30px;line-height:1;letter-spacing:-1px}
+.cover-title{font-family:Georgia,'Times New Roman',serif;font-size:24px;font-weight:400;color:var(--primary-warm);margin-bottom:8px}
+.cover-dedication{margin-bottom:40px}
+.cover-dedication-line{font-size:15px;color:var(--text-soft);line-height:1.6;letter-spacing:0.3px}
+.cover-date{font-size:14px;color:#c5b4a8;letter-spacing:1.5px;text-transform:uppercase}
+
+/* Ключевые фокусы */
+.focuses-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:8px;text-align:center}
+.focuses-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;text-align:center;margin-bottom:30px}
+.focus-tags{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px}
+.focus-tag{display:inline-flex;align-items:center;gap:6px;background:#fff;padding:8px 14px;border-radius:8px;font-size:13px;letter-spacing:.3px;text-transform:uppercase;color:var(--secondary-warm);border:1px solid var(--accent-light)}
+.focus-tag::before{content:'';width:4px;height:4px;background:var(--accent-soft);border-radius:50%}
+.focus-details{margin-top:40px}
+.focus-item{margin-bottom:20px;padding-left:20px;border-left:2px solid var(--accent-light)}
+.focus-item-title{font-size:17px;font-weight:500;color:var(--primary-warm);margin-bottom:4px}
+.focus-item-desc{font-size:16px;color:var(--text-main);line-height:1.6}
+.focus-item-important{color:var(--secondary-warm);font-weight:500}
+
+/* Заголовки недель */
+.week-header{text-align:center;margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--accent-light)}
+.week-subtitle{font-size:13px;color:var(--text-soft);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+.week-title{font-family:Georgia,'Times New Roman',serif;font-size:26px;font-weight:400;color:var(--primary-warm);margin-bottom:18px}
+.week-intro{font-size:17px;line-height:1.7;color:var(--text-main);max-width:380px;margin:0 auto}
+
+/* Блоки дня */
+.day-part{margin-bottom:35px}
+.part-title{font-size:14px;letter-spacing:1.2px;text-transform:uppercase;color:var(--secondary-warm);margin-bottom:16px;font-weight:500}
+.part-title::before{content:'';display:inline-block;width:4px;height:4px;background:var(--accent-soft);border-radius:50%;margin-right:8px;vertical-align:middle}
+
+/* Привычки */
+.habits-list{list-style:none}
+.habit{display:flex;align-items:flex-start;margin-bottom:14px;padding-left:24px;position:relative}
+.habit::before{content:'✓';position:absolute;left:0;top:2px;color:var(--accent-soft);font-size:14px}
+.habit-content{flex:1}
+.habit-title{font-size:17px;font-weight:500;color:var(--text-main);margin-bottom:3px}
+.habit-desc{font-size:16px;color:var(--text-soft);line-height:1.5}
+.habit-important{color:var(--secondary-warm);font-weight:500}
+
+/* Упражнения */
+.exercise-box{background:linear-gradient(135deg,var(--bg-soft),#fff);border-radius:12px;padding:20px;margin:20px 0 30px;border:1px solid var(--accent-light)}
+.exercise-title{font-size:18px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.exercise-duration{font-size:14px;color:var(--text-soft);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px}
+.exercise-desc{font-size:16px;line-height:1.6;color:var(--text-main);margin-bottom:16px}
+
+/* Информационные блоки */
+.info-box{background:#fff3e0;border:1px solid #f4a261;border-radius:12px;padding:18px;margin:20px 0}
+.info-title{font-size:17px;font-weight:600;color:var(--primary-warm);margin-bottom:8px}
+.info-text{font-size:16px;color:#6b5d56;line-height:1.6}
+
+/* Письмо */
+.letter{background:linear-gradient(to bottom,#fff,var(--bg-soft));padding:0}
+.letter-image{width:100%;height:280px;position:relative;background:repeating-linear-gradient(45deg,#f5f0ea,#f5f0ea 10px,#e8ddd5 10px,#e8ddd5 20px);overflow:hidden}
+.letter-image img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.letter-content-wrapper{padding:50px 25px}
+.letter-content{font-family:Georgia,'Times New Roman',serif;font-size:19px;line-height:1.7;color:var(--primary-warm)}
+.letter-content p{margin-bottom:20px}
+.letter-content p:first-child
+.letter-signature{margin-top:40px;text-align:right}
+.letter-signature-text{font-family:Georgia,'Times New Roman',serif;font-size:20px;color:var(--secondary-warm);font-style:italic}
+.letter-signature-name{font-family:'Brush Script MT',cursive;font-size:28px;color:var(--primary-warm);margin-top:10px;font-weight:300}
+
+/* Адаптация для мобильных устройств */
+@media(max-width:380px){
+.cover-name{font-size:44px}
+.week-title{font-size:24px}
+.letter-content{font-size:19px}
+.focuses-title{font-size:26px}
+.habit-title{font-size:16px}
+.habit-desc{font-size:15px}
+.exercise-title{font-size:17px}
+.exercise-desc{font-size:15px}
+}
+
+/* Десктоп - больше воздуха */
+@media(min-width:768px){
+.container{max-width:520px}
+.section{padding:40px 30px}
+}
+
+/* Печать */
+@page{size:A4;margin:12mm}
+@media print{
+body{background:#fff!important}
+.container{max-width:none;background:#fff}
+.nav-header{display:none!important}
+.section{padding:20px;border:0;page-break-inside:avoid}
+.week{break-inside:avoid;page-break-inside:avoid;margin:0 0 10mm 0}
+.cover{page-break-after:always}
+.letter{page-break-before:always}
+.week-image,.guide-image,.letter-image{display:none}
+} </style>
+
+</head>
+<body>
+
+<div class="container">
+
+<!-- Навигация -->
+
+<div class="nav-header">
+<button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navContent">
+<div class="nav-title">Содержание</div>
+<div class="nav-icon" id="navIcon"><span></span><span></span></div>
+</button>
+<div class="nav-content" id="navContent">
+<div class="nav-list">
+<div class="nav-section-title">Основное</div>
+<div class="nav-item" onclick="scrollToSection('cover')">
+<span class="nav-item-name">Обложка</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('key-focuses')">
+<span class="nav-item-name">Ключевые фокусы месяца</span>
+</div>
+<div class="nav-section-title">Недели</div>
+<div class="nav-item" onclick="scrollToSection('week-1')">
+<span class="nav-item-name">Возвращение в ритм</span>
+<span class="nav-badge">Неделя 1</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-2')">
+<span class="nav-item-name">Световой баланс и тепло</span>
+<span class="nav-badge">Неделя 2</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-3')">
+<span class="nav-item-name">Закрепление и контроль</span>
+<span class="nav-badge">Неделя 3</span>
+</div>
+<div class="nav-item" onclick="scrollToSection('week-4')">
+<span class="nav-item-name">Подготовка к новому году</span>
+<span class="nav-badge">Неделя 4</span>
+</div>
+<div class="nav-section-title">Дополнительно</div>
+<div class="nav-item" onclick="scrollToSection('final-message')">
+<span class="nav-item-name">Напутствие на месяц</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Обложка -->
+
+<div class="section cover" id="cover">
+  <div class="cover-icon">
+    <img src="../../../Image/IMG_7783.jpg" alt="Доктор Света">
+  </div>
+  <div class="cover-name">Наталья</div>
+  <div class="cover-title">План восстановления</div>
+  <div style="width:60px;height:1px;background:var(--accent-soft);margin:30px auto;opacity:0.3"></div>
+  <div class="cover-dedication">
+    <div class="cover-dedication-line">7 месяц заботы о себе</div>
+    <div class="cover-dedication-line">От заботы к устойчивости</div>
+  </div>
+  <div class="cover-date">Декабрь 2025</div>
+</div>
+
+<!-- Ключевые фокусы -->
+
+<div class="section" id="key-focuses">
+<div class="focuses-title">Ключевые фокусы месяца</div>
+<div class="focuses-subtitle">Наш путь в декабре 2025</div>
+
+<div class="focus-tags">
+<span class="focus-tag">Контроль железа</span>
+<span class="focus-tag">Поддержка в полярную ночь</span>
+<span class="focus-tag">Семейная устойчивость</span>
+<span class="focus-tag">Профилактика миомы</span>
+</div>
+
+<div class="focus-details">
+<div class="focus-item">
+  <div class="focus-item-title">Главная цель: стабилизация на фоне вызовов</div>
+  <div class="focus-item-desc">
+    Декабрь — месяц двойной нагрузки: полярная ночь забирает энергию и серотонин, обильные месячные продолжают уносить железо. Наша задача — дать организму всё необходимое, чтобы удержать достигнутые результаты и подготовиться к контрольным анализам. <span class="focus-item-important">Важный акцент: контроль ферритина</span> — после двух месяцев обильных кровопотерь критически важно посмотреть, держатся ли запасы или падают дальше.
+  </div>
+</div>
+
+<div class="focus-item">
+  <div class="focus-item-title">Поддержка семьи: продолжаем вместе</div>
+  <div class="focus-item-desc">
+    Муж чувствует себя отлично — давление стабильное, энергия есть, никакой зависимости от магнитных бурь. Младшая дочь расцветает на глазах: кожа почти чистая, головные боли ушли, настроение выровнялось. Это результат того, что вы создали <span class="focus-item-important">культуру заботы для всех четверых</span>. В декабре закрепляем эту основу и готовим дочку к контрольным анализам в конце месяца.
+  </div>
+</div>
+
+<div class="focus-item">
+  <div class="focus-item-title">Реалистичные ожидания</div>
+  <div class="focus-item-desc">
+    После двух месяцев обильных менструаций ваш гемоглобин может немного просесть — это нормально при таких потерях. Главное сейчас — не допустить глубокого падения и поддержать ферритин хотя бы на текущем уровне. Если месячные в декабре будут обильными снова — усилим кровоостанавливающую поддержку и обсудим дополнительные меры с гинекологом.
+  </div>
+</div>
+</div>
+</div>
+
+<!-- Неделя 1 -->
+
+<div class="section week" id="week-1">
+<div class="week-image">
+<img src="../../../Image/05_image.jpeg" alt="Неделя 1: Возвращение в ритм">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">2–8 декабря • Первая неделя</div>
+<div class="week-title">Возвращение в ритм</div>
+<div class="week-intro">Наталья, после месяца без общения мы снова вместе — и это радость! Полярная ночь уже чувствуется остро, тело просит больше света и тепла. Начнём декабрь мягко, возвращаясь в привычный ритм заботы. Главный фокус этой недели — <strong>стабилизация после обильных месячных</strong> и адаптация к недостатку солнца.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Вода с лимоном и солью</div>
+      <div class="habit-desc">Как обычно — это ваш ритуал пробуждения, который запускает пищеварение и даёт минералы.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Железо хелатное 30&nbsp;мг натощак</div>
+      <div class="habit-desc">
+        Наталья, <span class="habit-important">критически важно</span>: после двух месяцев обильных кровопотерь увеличиваем дозу до 30&nbsp;мг (было 25&nbsp;мг). Через 40 минут — завтрак с витамином&nbsp;С: апельсин или киви обязательно.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Витамин D 4000&nbsp;МЕ</div>
+      <div class="habit-desc">
+        Полярная ночь — это серьёзный вызов для организма. Недостаток солнца бьёт по настроению, энергии, иммунитету. Увеличиваем дозу до 4000&nbsp;МЕ на весь зимний период — это поддержит серотонин и защитит от сезонной депрессии.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Суставная гимнастика 40 минут всей семьёй</div>
+      <div class="habit-desc">Ваш семейный ритуал — продолжаем! Это не просто упражнения, это время связи и заботы друг о друге.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Говяжья печень 3 раза в неделю</div>
+      <div class="habit-desc">
+        После обильных месячных печень становится чемпионом по восстановлению железа — около 30&nbsp;мг на 100&nbsp;г, плюс витамины группы&nbsp;В для нервной системы. Готовьте как любите: паштет с брокколи, в томатном соусе, с запечённым перцем.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Гранатовый сок свежевыжатый (50&nbsp;мл после обеда)</div>
+      <div class="habit-desc">Поддерживает гемоглобин, даёт антиоксиданты. Разбавляйте водой 1:1, чтобы не раздражать желудок.</div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Грецкие орехи — горсть ежедневно</div>
+      <div class="habit-desc">Триптофан для серотонина (против полярной ночи), омега-3, магний. Добавляйте в салаты или ешьте как перекус с курагой.</div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Световая терапия утром 20–30 минут</div>
+      <div class="habit-desc">
+        Наталья, это не просто совет — это необходимость при полярной ночи. Сядьте у окна сразу после пробуждения, даже если на улице сумерки. Или используйте яркую лампу (10&nbsp;000&nbsp;люкс) во время завтрака. Это запускает выработку серотонина и кортизола в правильном ритме.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Травяной настой: курильский чай + крапива + шиповник</div>
+      <div class="habit-desc">
+        Крапива продолжает работать на кроветворение, шиповник даёт витамин&nbsp;С, курильский чай успокаивает. Заваривайте с вечера на следующий день.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">ДИМ Индол — 2 капсулы</div>
+      <div class="habit-desc">
+        Продолжаем без перерыва — это профилактика роста миомы. Контрольное УЗИ в апреле покажет, есть ли эффект от 10&nbsp;месяцев приёма.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Магний бисглицинат 400&nbsp;мг перед сном</div>
+      <div class="habit-desc">
+        Особенно важен сейчас — помогает расслабиться в условиях полярной ночи, когда нервная система на взводе.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+  <div class="part-title">Упражнение недели</div>
+  <div class="exercise-box">
+    <div class="exercise-title">Упражнение недели: Растяжка с глубоким дыханием</div>
+    <div class="exercise-duration">10 минут перед сном</div>
+    <div class="exercise-desc">
+      В условиях полярной ночи и стресса тело зажимается — плечи, шея, поясница. Растяжка с осознанным дыханием снимает физическое и эмоциональное напряжение.<br><br>
+      <strong>Как выполнять:</strong><br>
+      1. Сядьте на коврик, ноги вытянуты вперёд.<br>
+      2. Медленно наклонитесь к ногам на выдохе, тянитесь руками к стопам.<br>
+      3. Задержитесь на 30–60 секунд, дышите глубоко животом.<br>
+      4. Лягте на спину, подтяните колени к груди, обнимите — 1&nbsp;минуту.<br>
+      5. Поза ребёнка (сидя на пятках, лоб к полу, руки вытянуты) — 2&nbsp;минуты.<br><br>
+      <strong>Почему это работает:</strong> растяжка активирует парасимпатическую нервную систему (режим отдыха), глубокое дыхание снижает кортизол, тело получает сигнал: «Можно расслабиться, опасности нет».
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Неделя 2 -->
+
+<div class="section week" id="week-2">
+<div class="week-image">
+<img src="../../../Image/06_image.jpeg" alt="Неделя 2: Световой баланс и тепло">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">9–15 декабря • Вторая неделя</div>
+<div class="week-title">Световой баланс и тепло</div>
+<div class="week-intro">Наталья, продолжаем создавать условия для устойчивости. Полярная ночь в разгаре, но ваше тело помнит ритм заботы — опирайтесь на привычки, которые уже стали естественными. Эта неделя про <strong>внутренний свет и тепло</strong>, когда внешнего мало.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Контрастный душ 3–5 минут</div>
+      <div class="habit-desc">
+        Тёплая вода — 1&nbsp;минута → прохладная — 20–30 секунд → снова тёплая. Это запускает кровообращение, тонизирует, даёт ощущение бодрости даже без солнца. Начинайте мягко — прохладная вода, не ледяная.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Железо 30&nbsp;мг + АльфаОмега — 1 капсула</div>
+      <div class="habit-desc">
+        Омега-3 усиливает работу железа, поддерживает сосуды, снимает воспаление. Продолжаем базу без изменений.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый завтрак с корицей</div>
+      <div class="habit-desc">
+        Овсянка или гречка с запечённым яблоком, корицей и небольшим количеством мёда. Корица стабилизирует уровень сахара в крови и даёт ощущение тепла изнутри — это важно в холодный период.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Куриная печень 2 раза в неделю</div>
+      <div class="habit-desc">
+        Мягче говяжьей, но тоже богата железом (около 17&nbsp;мг на 100&nbsp;г) и витаминами группы&nbsp;В. Готовьте в томатном соусе с болгарским перцем — сочетание вкуса и пользы.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Свёкла с грецкими орехами и черносливом</div>
+      <div class="habit-desc">
+        Салат, который вы любите. Свёкла поддерживает кроветворение, чернослив даёт железо и калий, орехи — триптофан для настроения. Заправка: оливковое масло + лимонный сок.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплые травяные чаи в течение дня</div>
+      <div class="habit-desc">
+        Мята, душица, лист малины, шиповник. Тепло изнутри успокаивает нервную систему и поддерживает водный баланс зимой, когда меньше хочется пить.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">15 минут дневного света на улице</div>
+      <div class="habit-desc">
+        Даже если сумерки, даже если холодно — выходите. Дневной свет (даже слабый) в 10 раз сильнее комнатного для выработки серотонина. Прогулка в обед или сразу после работы — это инвестиция в ваше настроение и энергию.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Расслабляющая ванна с магнием 1–2 раза в неделю</div>
+      <div class="habit-desc">
+        Английская соль (сульфат магния) 200–300&nbsp;г на ванну, температура 37–38&nbsp;°C, 20&nbsp;минут. Магний впитывается через кожу, расслабляет мышцы, успокаивает нервную систему. После ванны — сразу в постель.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">МСТ-масло 1&nbsp;ч.л. в травяной чай</div>
+      <div class="habit-desc">
+        Быстрая энергия для мозга без нагрузки на пищеварение. Поддерживает ясность мышления в условиях недостатка солнца.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Дыхание 4-7-8 перед сном</div>
+      <div class="habit-desc">
+        Ваша любимая практика — продолжаем. 5&nbsp;минут достаточно, чтобы переключить нервную систему в режим отдыха.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+  <div class="part-title">Упражнение недели</div>
+  <div class="exercise-box">
+    <div class="exercise-title">Упражнение недели: «Приветствие солнцу» (адаптированная версия)</div>
+    <div class="exercise-duration">10 минут утром после гимнастики</div>
+    <div class="exercise-desc">
+      Классическая йоговская последовательность, которая «будит» тело и компенсирует недостаток солнечного света энергией движения.<br><br>
+      <strong>Как выполнять:</strong><br>
+      1. Встаньте прямо, руки сложены перед грудью.<br>
+      2. На вдохе поднимите руки вверх, мягко прогнитесь назад.<br>
+      3. На выдохе наклонитесь вперёд, руками к полу (ноги можно согнуть).<br>
+      4. Шаг правой ногой назад в выпад, руки на полу.<br>
+      5. Шаг левой ногой назад — планка на несколько секунд.<br>
+      6. Опуститесь на колени-грудь-подбородок, затем в позу кобры.<br>
+      7. Поза собаки мордой вниз — 5 дыханий.<br>
+      8. Шаг правой ногой вперёд, затем левой — снова наклон.<br>
+      9. Поднимитесь с прямой спиной, руки вверх, мягкий прогиб.<br>
+      10. Вернитесь в исходное положение.<br><br>
+      Повторите 3–5 раз в комфортном темпе.<br><br>
+      <strong>Почему это работает:</strong> последовательность активирует все группы мышц, запускает кровообращение, даёт энергию без кофеина. В йоге считается, что это «собирает солнечную энергию» — метафора, но ощущения реальны.
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Неделя 3 -->
+
+<div class="section week" id="week-3">
+<div class="week-image">
+<img src="../../../Image/07_image.jpeg" alt="Неделя 3: Закрепление и контроль">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">16–22 декабря • Третья неделя</div>
+<div class="week-title">Закрепление и контроль</div>
+<div class="week-intro">Наталья, вы уже в середине месяца — тело адаптируется к зимнему ритму. На этой неделе планируем <strong>контрольные анализы (ОАК + ферритин)</strong>, чтобы увидеть картину после двух месяцев обильных кровопотерь. Результаты покажут, нужна ли коррекция дозировок или дополнительная поддержка.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Все утренние ритуалы как обычно</div>
+      <div class="habit-desc">
+        Вода с лимоном, железо 30&nbsp;мг, витамин&nbsp;D 4000&nbsp;МЕ, суставная гимнастика. Это ваша база, которая работает — не меняем.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Яйца 3–4 раза в неделю на завтрак</div>
+      <div class="habit-desc">
+        Полноценный белок, витамины группы&nbsp;В, лецитин для мозга. Готовьте как любите: омлет с брокколи, варёные яйца, яичница с томатами и шпинатом.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Телятина 2 раза в неделю</div>
+      <div class="habit-desc">
+        Нежнее говядины, легче усваивается, хорошее содержание железа (около 2,9&nbsp;мг на 100&nbsp;г) и цинка. Тушите с цветными овощами или запекайте с травами.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Салат с гранатом, киви и курицей</div>
+      <div class="habit-desc">
+        Ваш любимый салат — обновлённая версия для сытости. Зелень (шпинат, руккола), гранат, киви, отварная курица, грецкие орехи, оливковое масло + лимон. Железо + витамин&nbsp;С + белок в одном блюде.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёмный шоколад 70%+ (20–30&nbsp;г ежедневно)</div>
+      <div class="habit-desc">
+        Источник магния, триптофана и антиоксидантов. Поддерживает настроение в полярную ночь, даёт ощущение «маленькой радости» без вреда.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Контрольные анализы (ОАК + ферритин)</div>
+      <div class="habit-desc">
+        Наталья, это важная точка контроля. После октябрьских и ноябрьских обильных месячных нужно посмотреть, держится ли гемоглобин и ферритин. Сдайте на этой неделе натощак утром. Как только будут результаты — пришлите, разберём и скорректируем схему при необходимости.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Все вечерние ритуалы сохраняем</div>
+      <div class="habit-desc">
+        Травяной настой, ДИМ Индол, магний, дыхание перед сном. Вы уже чувствуете, как тело откликается на эту последовательность — продолжаем.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Лёгкий ужин до 19:00</div>
+      <div class="habit-desc">
+        Рыба на пару с овощами или салат с чечевицей. Ранний ужин даёт телу время на восстановление ночью, не перегружая пищеварение.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+  <div class="part-title">Упражнение недели</div>
+  <div class="exercise-box">
+    <div class="exercise-title">Упражнение недели: Скручивания лёжа для лимфотока</div>
+    <div class="exercise-duration">5–7 минут вечером</div>
+    <div class="exercise-desc">
+      Мягкие скручивания позвоночника стимулируют лимфатическую систему, которая зимой работает медленнее (меньше движения, меньше света).<br><br>
+      <strong>Как выполнять:</strong><br>
+      1. Лягте на спину, руки в стороны.<br>
+      2. Согните правую ногу и опустите колено влево (скручивание).<br>
+      3. Голову поверните вправо, задержитесь на 1–2&nbsp;минуты, дышите спокойно.<br>
+      4. Вернитесь в центр и повторите на другую сторону.<br>
+      5. Подтяните оба колена к груди, обнимите, мягко покачайтесь 30&nbsp;секунд.<br>
+      6. Поза «счастливого ребёнка» (колени к подмышкам, руками держите стопы) — около 1&nbsp;минуты.<br><br>
+      <strong>Почему это работает:</strong> скручивания мягко массируют внутренние органы, стимулируют лимфоузлы в области паха и подмышек, улучшают пищеварение. Лимфа движется только за счёт мышечных сокращений — зимой ей нужна помощь.
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Неделя 4 -->
+
+<div class="section week" id="week-4">
+<div class="week-image">
+<img src="../../../Image/08_image.jpeg" alt="Неделя 4: Подготовка к новому году">
+</div>
+<div class="week-content">
+<div class="week-header">
+<div class="week-subtitle">23–29 декабря • Четвёртая неделя</div>
+<div class="week-title">Подготовка к новому году</div>
+<div class="week-intro">Наталья, завершаем декабрь в спокойном ритме. Новогодняя суета может выбить из колеи, но вы уже создали такую устойчивость, что стресс не зацепит. Эта неделя про <strong>закрепление достигнутого</strong> и подготовку к январю — месяцу, когда полярная ночь начнёт отступать.</div>
+</div>
+
+<div class="day-part">
+<div class="part-title">Утро</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Все привычки без изменений</div>
+      <div class="habit-desc">
+        Утренний ритуал отработан до автоматизма — это ваша опора. Даже если график сбивается из-за праздников, возвращайтесь к железу, витамину&nbsp;D, гимнастике.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Тёплый завтрак с пряностями</div>
+      <div class="habit-desc">
+        Гречка с тыквой и корицей, овсянка с яблоком и кардамоном. Пряности согревают, стимулируют пищеварение, поднимают настроение ароматом.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Добавим в рацион</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Жирная рыба 3 раза в неделю</div>
+      <div class="habit-desc">
+        Скумбрия, сёмга, сельдь. Омега-3 в высоких дозах поддерживает нервную систему, сердце и сосуды. Зимой особенно важно — компенсирует воспаление от стресса и недостатка света.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Квашеная капуста ежедневно (50–100&nbsp;г)</div>
+      <div class="habit-desc">
+        Пробиотики для кишечника, витамин&nbsp;С, поддержка иммунитета. Добавляйте в салаты или ешьте как гарнир.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Ферментированные продукты</div>
+      <div class="habit-desc">
+        Кефир, натуральный йогурт без сахара, кимчи (если любите). Здоровье кишечника = крепкий иммунитет зимой.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Микроритуал дня</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Планирование января</div>
+      <div class="habit-desc">
+        Сядьте в тихий момент и запишите:<br>
+        — Что изменилось за 7&nbsp;месяцев (здоровье, энергия, семья).<br>
+        — Какие привычки стали естественными.<br>
+        — Что хочется усилить в новом году.<br><br>
+        Это не о целях-обязательствах, а о признании пути, который вы уже прошли.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+<div class="part-title">Вечер</div>
+<ul class="habits-list">
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Все ритуалы сохраняем</div>
+      <div class="habit-desc">
+        ДИМ Индол, магний, травяной настой, дыхательные практики. Даже в праздники — это 10&nbsp;минут, которые дают качество сна и восстановление.
+      </div>
+    </div>
+  </li>
+  <li class="habit">
+    <div class="habit-content">
+      <div class="habit-title">Ранний отбой — около 22:00</div>
+      <div class="habit-desc">
+        Несмотря на новогоднюю суету, старайтесь ложиться в привычное время. Сон — самый мощный инструмент восстановления, особенно зимой.
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+<div class="day-part">
+  <div class="part-title">Упражнение недели</div>
+  <div class="exercise-box">
+    <div class="exercise-title">Упражнение недели: Благодарность телу (медитативная практика)</div>
+    <div class="exercise-duration">5–10 минут перед сном</div>
+    <div class="exercise-desc">
+      Завершаем месяц и год практикой признательности — тело прошло огромный путь восстановления, оно заслуживает благодарности.<br><br>
+      <strong>Как выполнять:</strong><br>
+      1. Лягте удобно, закройте глаза.<br>
+      2. Положите руки на сердце, дышите спокойно.<br>
+      3. Мысленно пройдитесь по телу сверху вниз:<br>
+      — «Спасибо, голова, за ясность мыслей».<br>
+      — «Спасибо, сердце, за стабильную работу».<br>
+      — «Спасибо, руки, за силу и гибкость».<br>
+      — «Спасибо, ноги, за то, что несут меня каждый день».<br>
+      4. Задержитесь на тех зонах, где были проблемы:<br>
+      — «Спасибо, кровь, за восстановление гемоглобина».<br>
+      — «Спасибо, кожа, за сияние и упругость».<br>
+      5. Завершите общей благодарностью: «Спасибо, тело, за то, что отзываешься на заботу».<br><br>
+      <strong>Почему это работает:</strong> практика благодарности снижает кортизол, активирует парасимпатическую нервную систему, создаёт позитивную связь с телом. Это не эзотерика — это признание реальных изменений и усиление мотивации продолжать путь.
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+<!-- Напутствие на месяц -->
+
+<div class="section letter" id="final-message">
+<div class="letter-image">
+<img src="../../../Image/IMG_7781.JPG" alt="Напутствие на месяц">
+</div>
+<div class="letter-content-wrapper">
+<div class="letter-content">
+<p>Дорогая Наталья,</p>
+
+<p>Семь месяцев — это серьёзный путь. Когда вы начинали в мае, гемоглобин был 64, боли в спине не отпускали, кожа была тусклой, энергии хватало только на работу. Сейчас — совсем другая история.</p>
+
+<p>Ваш гемоглобин держится на 110, MCV полностью нормализовался (эритроциты восстановили размер!), боли ушли и не возвращаются, кожа розовая и сияющая, волосы перестали выпадать, засыпаете за 5 минут, встаёте легко. Вы не просто восстановили показатели — вы изменили качество жизни.</p>
+
+<p>Но, Наталья, есть то, о чём нужно говорить честно: <strong>ферритин падает</strong> (14,47 → 12,6), <strong>обильные месячные два месяца подряд</strong>, <strong>миома продолжает расти</strong> (6&nbsp;см → 8&nbsp;см за 8&nbsp;месяцев). Это признаки того, что организм борется с глубоким дисбалансом, который не решается только БАДами и питанием.</p>
+
+<p><strong>Почему запасы железа восстанавливаются медленнее гемоглобина?</strong></p>
+
+<p>Когда железа мало, организм работает так: сначала все ресурсы идут на производство новых эритроцитов (гемоглобин), потому что без них не выжить — нет кислорода для клеток. А ферритин — это запасы «на чёрный день», они пополняются в последнюю очередь, когда текущие потребности закрыты.</p>
+
+<p>Но у вас ситуация особая: каждый месяц обильные менструации уносят железо быстрее, чем оно успевает накопиться. Это как наполнять бочку с дырой в дне — вода прибывает, но утекает постоянно. <strong>Поэтому гемоглобин держится (110), но ферритин не растёт.</strong></p>
+
+<p><strong>Что это значит?</strong></p>
+
+<p>При ферритине 12,6 (норма 15–150) организм работает на пределе. Любая дополнительная нагрузка — стресс, простуда, обильные месячные — быстро «сбросит» гемоглобин вниз. Вы не защищены от рецидива анемии.</p>
+
+<p><strong>Миома и обильные месячные — замкнутый круг:</strong></p>
+
+<p>Миома растёт → обильные кровотечения → падает железо → ослабляется иммунитет и гормональная регуляция → миома получает «подкормку» и растёт дальше. ДИМ Индол, Фукоидан, Кошачий коготь, правильное питание — всё это вы делали честно 6–7 месяцев. Но миома не остановилась.</p>
+
+<p><strong>Наталья, я не могу обещать, что консервативными методами мы остановим миому такого размера.</strong> При 8&nbsp;см и продолжающемся росте нужны более серьёзные меры — гормональная терапия или хирургическое лечение. Это не моё решение — это тема для обсуждения с гинекологом. Но откладывать это обсуждение нельзя.</p>
+
+<p><strong>Декабрь — месяц контроля:</strong></p>
+
+<p>Обязательно сдайте анализы на 3-й неделе (ОАК + ферритин). Если ферритин продолжит падать или гемоглобин просядет — это сигнал действовать быстрее. Возможно, понадобится увеличить дозу железа до 50–60&nbsp;мг или перейти на внутривенное введение (если таблетки не справляются с потерями).</p>
+
+<p>Если в декабре месячные снова будут обильными — обсудим с гинекологом усиление кровоостанавливающей терапии или гормональную коррекцию.</p>
+
+<p><strong>Про семью:</strong></p>
+
+<p>Наталья, то, что вы создали для всех четверых — это невероятно. Муж с вами делает упражнения ежедневно уже 4&nbsp;года, давление 120/70 стабильно, плоскостопие продолжает уходить, перхоть прошла. Младшая дочь за месяц преобразилась: кожа зажила, головные боли ушли, тревога отступила, появился аппетит и настроение. Старшая дочь в Ярославле тоже следует рекомендациям.</p>
+
+<p>Вы создали не просто «семейный план здоровья» — вы создали <strong>культуру заботы</strong>, где здоровье — это норма, а не подвиг. Где упражнения, правильное питание, БАДы — естественная часть дня. Где нет зависимости от магнитных бурь и «ретроградного Меркурия», потому что тело в ресурсе.</p>
+
+<p><strong>Полярная ночь:</strong></p>
+
+<p>Декабрь — самый тёмный месяц. Вы остро чувствуете недостаток солнца — это нормально, даже при хорошем здоровье. Витамин&nbsp;D 4000&nbsp;МЕ, световая терапия утром, тёплые завтраки, травяные чаи, ванны с магнием — всё это создаёт внутренний свет и тепло, когда внешнего мало. Тело помнит ритм заботы — опирайтесь на него.</p>
+
+<p><strong>После этого месяца мы сможем:</strong></p>
+<p style="padding-left:20px">
+• Оценить динамику железа после коррекции дозы.<br>
+• Принять решение о дальнейшей стратегии с миомой (на основе анализов и консультации гинеколога).<br>
+• Подготовить семью к январю — месяцу, когда свет начнёт возвращаться.<br>
+• Провести контрольные анализы у дочки (конец декабря) и увидеть, как выросли её показатели.
+</p>
+
+<p><strong>Наталья, вы не одна в этом пути.</strong> Семь месяцев назад вы начали искать выход из ситуации для старшей дочери — и нашли не просто решение, а целую философию заботы о здоровье. Теперь все четверо живут в этом ритме, и жизнь стала качественно другой.</p>
+
+<p>Да, есть вызовы — миома, ферритин, полярная ночь. Но вы уже доказали, что можете справляться. Главное — не терять темп, быть честной с собой о том, что работает, а что требует помощи специалистов.</p>
+
+<p>Держим курс. Я рядом.</p>
+
+<p><strong>С заботой и поддержкой,</strong><br>
+<em>Доктор Света</em></p>
+
+<div class="letter-signature">
+<div class="letter-signature-text">С заботой и поддержкой,</div>
+<div class="letter-signature-name">Доктор Света</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function toggleNav(){
+const navContent=document.getElementById('navContent');
+const navIcon=document.getElementById('navIcon');
+const toggle=document.getElementById('navToggle');
+const open=!navContent.classList.contains('active');
+navContent.classList.toggle('active');
+navIcon.classList.toggle('active');
+toggle.setAttribute('aria-expanded',open?'true':'false');
+}
+
+function scrollToSection(sectionId){
+const nav=document.getElementById('navContent');
+const icon=document.getElementById('navIcon');
+nav.classList.remove('active');
+icon.classList.remove('active');
+document.getElementById('navToggle')?.setAttribute('aria-expanded','false');
+setTimeout(()=>{
+const el=document.getElementById(sectionId);
+if(!el)return;
+const rect=el.getBoundingClientRect();
+const scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+const navHeight=document.querySelector('.nav-header').offsetHeight||60;
+const targetPosition=rect.top+scrollTop-navHeight;
+window.scrollTo({top:targetPosition});
+},100);
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+const t=document.getElementById('navToggle');
+if(t){
+t.addEventListener('click',toggleNav);
+t.addEventListener('keydown',e=>{
+if(e.key==='Enter'||e.key===' '){
+e.preventDefault();
+toggleNav();
+}
+});
+}
+});
+</script>
+
+</body>
+</html>
